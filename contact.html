@@ -105,10 +105,16 @@
       <!-- MENU -->
       <header
         id="header"
-        class="header-effect-shrink"
+        class="header-effect-shrink custom-bg-color-grey-1"
         data-plugin-options="{'stickyEnabled': false, 'stickyEnableOnBoxed': false, 'stickyEnableOnMobile': true, 'stickyChangeLogo': false, 'stickyStartAt': 1, 'stickyHeaderContainerHeight': 70}"
       >
-        <div class="header-body header-border-bottom overflow-visible">
+        <div
+          class="
+            header-body header-border-bottom
+            overflow-visible
+            bg-transparent
+          "
+        >
           <div class="header-container container">
             <div class="header-row py-3">
               <div class="header-column flex-row w-auto">
@@ -191,15 +197,23 @@
         <!-- Header -->
         <section
           class="
+            section section-with-shape-divider
+            border-0
+            m-0
             page-header page-header-modern
-            bg-color-light-scale-1
+            custom-bg-color-grey-1
             page-header-md
           "
         >
-          <div class="container">
-            <div class="row">
+          <div class="container position-relative z-index-2 h-100 py-md-5">
+            <div class="">
               <div
-                class="col-md-8 order-2 order-md-1 align-self-center p-static"
+                class="
+                  text-center
+                  order-2 order-md-1
+                  align-self-center
+                  p-static
+                "
               >
                 <h1
                   class="
@@ -215,198 +229,261 @@
               </div>
             </div>
           </div>
+          <!-- Espaceur -->
+          <div class="spacer pt-5 pb-4"></div>
+          <!-- Séparateur -->
+          <div class="shape-divider shape-divider-bottom" style="height: 215px">
+            <svg
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              viewBox="0 0 1920 215"
+              preserveAspectRatio="xMinYMin"
+            >
+              <path
+                fill="#FFF"
+                d="M-13,24c3.03-0.28,7.53-0.66,13-1c26.45-1.65,46.73-0.59,57,0c76.61,4.41,118,9,118,9
+							c70.55,7.83,105.82,11.74,151,19c32.98,5.3,65.87,11.44,179,37c145.79,32.94,138.71,33.5,203,47c85.09,17.87,149.08,31.32,237,40
+							c113.11,11.17,203.29,8.29,234,7c16.74-0.7,63.49-4.13,157-11c107.74-7.91,117.84-9.32,153-10c52.52-1.02,97.8,0.79,153,3
+							c21.27,0.85,54.96,2.38,96,5c37.55,2.4,68.64,4.91,119,9c30.97,2.52,56.12,4.64,72,6c0,13.33,0,26.67,0,40c-646,0-1292,0-1938,0
+							C-10.33,157.33-11.67,90.67-13,24z"
+              />
+            </svg>
+          </div>
         </section>
 
         <!-- Contenu -->
-        <div class="container shop py-3">
-          <form
-            role="form"
-            class="needs-validation"
-            method="post"
-            action="https://formspree.io/f/mzbyekbl"
-          >
-            <div class="row">
-              <!-- FORMULAIRE -->
-              <div class="col-lg-7 order-2 order-lg-1">
-                <p>
-                  Si vous souhaitez
-                  <strong>des informations sur le projet Kopelio</strong>,
-                  n'hésitez pas à nous laisser vos coordonnées et la nature de
-                  votre demande grâce au formulaire ci-dessous.
-                </p>
-                <hr class="mb-5 mt-3" />
-                <!-- Nom -->
-                <div class="form-row">
-                  <div class="form-group col">
-                    <label
-                      >Nom (complet)
-                      <span class="text-color-danger">*</span></label
-                    >
-                    <input
-                      type="text"
-                      class="form-control h-auto py-2"
-                      name="nom"
-                      value=""
-                    />
-                  </div>
-                </div>
-                <!-- Email -->
-                <div class="form-row">
-                  <div class="form-group col">
-                    <label
-                      >Email <span class="text-color-danger">*</span></label
-                    >
-                    <input
-                      type="email"
-                      class="form-control h-auto py-2"
-                      name="email"
-                      value=""
-                      required
-                    />
-                  </div>
-                </div>
-                <!-- Si lancement -->
-                <div class="form-row">
-                  <div class="form-group col">
-                    <div class="custom-checkbox-1">
-                      <input type="checkbox" name="lancement" value="1" />
-                      <label for="lancement"
-                        >Je veux être informé du
-                        <strong>lancement</strong></label
-                      >
-                    </div>
-                  </div>
-                </div>
-                <!-- Si beta -->
-                <div class="form-row">
-                  <div class="form-group col">
-                    <div class="custom-checkbox-1">
-                      <input type="checkbox" name="beta" value="1" />
-                      <label for="beta"
-                        >Je veux participer à la
-                        <strong>phase de test</strong></label
-                      >
-                    </div>
-                  </div>
-                </div>
-                <!-- Si partenariat -->
-                <div class="form-row">
-                  <div class="form-group col">
-                    <div
-                      class="custom-checkbox-1"
-                      data-toggle="collapse"
-                      data-target=".shipping-field-wrapper"
-                    >
-                      <input
-                        id="shipAddress"
-                        type="checkbox"
-                        name="partenariat"
-                        value="1"
-                      />
-                      <label for="partenariat"
-                        >Je souhaite un <strong>partenariat</strong></label
-                      >
-                    </div>
-                  </div>
-                </div>
-                <!-- Champs conditionnels : si partenariat coché -->
-                <div class="shipping-field-wrapper collapse">
+        <section
+          id="nous"
+          class="
+            section section-with-shape-divider
+            border-0
+            bg-transparent
+            m-0
+            p-0
+          "
+        >
+          <div class="container shop py-5">
+            <form
+              role="form"
+              class="needs-validation"
+              method="post"
+              action="https://formspree.io/f/mzbyekbl"
+            >
+              <div class="row">
+                <!-- FORMULAIRE -->
+                <div class="col-lg-7 order-2 order-lg-1 mb-5">
+                  <p>
+                    Si vous souhaitez
+                    <strong>des informations sur le projet Kopelio</strong>,
+                    n'hésitez pas à nous laisser vos coordonnées et la nature de
+                    votre demande grâce au formulaire ci-dessous.
+                  </p>
+                  <!-- Espaceur -->
+                  <div class="spacer mb-5 mt-3"></div>
+                  <!-- Nom -->
                   <div class="form-row">
                     <div class="form-group col">
                       <label
-                        >Organisme<span class="text-color-danger"
-                          >*</span
-                        ></label
+                        >Nom (complet)
+                        <span class="text-color-danger">*</span></label
                       >
                       <input
                         type="text"
                         class="form-control h-auto py-2"
-                        name="shippingCompanyName"
+                        name="nom"
                         value=""
                       />
                     </div>
                   </div>
+                  <!-- Email -->
                   <div class="form-row">
                     <div class="form-group col">
                       <label
-                        >Téléphone
-                        <span class="text-color-danger">*</span></label
+                        >Email <span class="text-color-danger">*</span></label
                       >
                       <input
-                        type="number"
+                        type="email"
                         class="form-control h-auto py-2"
-                        name="shippingPhone"
+                        name="email"
                         value=""
                         required
                       />
                     </div>
                   </div>
-                </div>
-                <!-- Message -->
-                <div class="form-row">
-                  <div class="form-group col">
-                    <textarea
-                      class="form-control h-auto py-2"
-                      name="orderNotes"
-                      rows="5"
-                      placeholder="Message (optionnel)"
-                    ></textarea>
+                  <!-- Si lancement -->
+                  <div class="form-row">
+                    <div class="form-group col">
+                      <div class="custom-checkbox-1">
+                        <input type="checkbox" name="lancement" value="1" />
+                        <label for="lancement"
+                          >Je veux être informé du
+                          <strong>lancement</strong></label
+                        >
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <a
-                  href="index.html"
-                  data-hash
-                  data-hash-offset="70"
-                  class="
-                    btn btn-primary btn-rounded
-                    font-weight-bold
-                    text-3-5
-                    px-5
-                    py-4
-                    appear-animation
-                  "
-                  data-appear-animation="fadeInUpShorter"
-                  data-appear-animation-delay="1200"
-                  >Envoyer</a
-                >
-              </div>
-
-              <!-- SIDE -->
-              <div class="col-lg-5 order-1 order-lg-2">
-                <div
-                  class="card kpl-custom-bg border-width-3 border-radius-0 mb-5"
-                >
-                  <div class="card-body text-center">
-                    <h4 class="font-weight-bold text-uppercase text-4">
-                      Le projet vous intéresse ?
-                    </h4>
-
-                    <p>
-                      <strong>Kopelio ne peut exister sans VOUS :</strong>
-                      n'hésitez pas à nous soutenir ou à nous faire des retours
-                      afin de finaliser une application à votre image !
-                    </p>
-
-                    <div class="d-lg-block px-3">
+                  <!-- Si beta -->
+                  <div class="form-row">
+                    <div class="form-group col">
+                      <div class="custom-checkbox-1">
+                        <input type="checkbox" name="beta" value="1" />
+                        <label for="beta"
+                          >Je veux participer à la
+                          <strong>phase de test</strong></label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Si partenariat -->
+                  <div class="form-row">
+                    <div class="form-group col">
                       <div
-                        data-plugin-float-element
-                        data-plugin-options="{'startPos': 'top', 'speed': 0.3, 'transition': true, 'transitionDuration': 1000, 'isInsideSVG': true}"
+                        class="custom-checkbox-1"
+                        data-toggle="collapse"
+                        data-target=".shipping-field-wrapper"
                       >
-                        <img
-                          src="img/kpl-contact-ensemble-illu.svg"
-                          class="img-fluid"
-                          alt="Ensemble pour Kopelio"
+                        <input
+                          id="shipAddress"
+                          type="checkbox"
+                          name="partenariat"
+                          value="1"
                         />
+                        <label for="partenariat"
+                          >Je souhaite un <strong>partenariat</strong></label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Champs conditionnels : si partenariat coché -->
+                  <div class="shipping-field-wrapper collapse">
+                    <div class="form-row">
+                      <div class="form-group col">
+                        <label
+                          >Organisme<span class="text-color-danger"
+                            >*</span
+                          ></label
+                        >
+                        <input
+                          type="text"
+                          class="form-control h-auto py-2"
+                          name="shippingCompanyName"
+                          value=""
+                        />
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col">
+                        <label
+                          >Téléphone
+                          <span class="text-color-danger">*</span></label
+                        >
+                        <input
+                          type="number"
+                          class="form-control h-auto py-2"
+                          name="shippingPhone"
+                          value=""
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Message -->
+                  <div class="form-row">
+                    <div class="form-group col">
+                      <textarea
+                        class="form-control h-auto py-2"
+                        name="orderNotes"
+                        rows="5"
+                        placeholder="Message (optionnel)"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <a
+                    href="index.html"
+                    data-hash
+                    data-hash-offset="70"
+                    class="
+                      btn btn-primary btn-rounded
+                      font-weight-bold
+                      text-3-5
+                      px-5
+                      py-3
+                      appear-animation
+                    "
+                    data-appear-animation="fadeInUpShorter"
+                    data-appear-animation-delay="1200"
+                    >Envoyer</a
+                  >
+                </div>
+
+                <!-- SIDE -->
+                <div class="col-lg-5 order-1 order-lg-2">
+                  <div
+                    class="
+                      card
+                      kpl-custom-bg
+                      border-width-3 border-radius-0
+                      mb-5
+                    "
+                  >
+                    <div class="card-body text-center">
+                      <h4 class="font-weight-bold text-uppercase text-4">
+                        Le projet vous intéresse ?
+                      </h4>
+
+                      <p>
+                        <strong>Kopelio ne peut exister sans VOUS :</strong>
+                        n'hésitez pas à nous soutenir ou à nous faire des
+                        retours afin de finaliser une application à votre image
+                        !
+                      </p>
+
+                      <div class="d-lg-block px-3">
+                        <div
+                          data-plugin-float-element
+                          data-plugin-options="{'startPos': 'top', 'speed': 0.3, 'transition': true, 'transitionDuration': 1000, 'isInsideSVG': true}"
+                        >
+                          <img
+                            src="img/kpl-contact-ensemble-illu.svg"
+                            class="img-fluid"
+                            alt="Ensemble pour Kopelio"
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </form>
-        </div>
-        <!-- Espaceur -->
-        <div class="spacer pt-5 pb-3 my-lg-5 my-xl-0"></div>
+            </form>
+          </div>
+          <!-- Espaceur -->
+          <div class="spacer pt-5 pb-5 my-lg-5 my-xl-0"></div>
+          <!-- Séparateur -->
+          <div
+            class="shape-divider shape-divider-bottom shape-divider-reverse-y"
+            style="height: 215px"
+          >
+            <svg
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              viewBox="0 0 1920 215"
+              preserveAspectRatio="xMinYMin"
+            >
+              <path
+                fill="#EFF1F3"
+                d="M-13,24c3.03-0.28,7.53-0.66,13-1c26.45-1.65,46.73-0.59,57,0c76.61,4.41,118,9,118,9
+          c70.55,7.83,105.82,11.74,151,19c32.98,5.3,65.87,11.44,179,37c145.79,32.94,138.71,33.5,203,47c85.09,17.87,149.08,31.32,237,40
+          c113.11,11.17,203.29,8.29,234,7c16.74-0.7,63.49-4.13,157-11c107.74-7.91,117.84-9.32,153-10c52.52-1.02,97.8,0.79,153,3
+          c21.27,0.85,54.96,2.38,96,5c37.55,2.4,68.64,4.91,119,9c30.97,2.52,56.12,4.64,72,6c0,13.33,0,26.67,0,40c-646,0-1292,0-1938,0
+          C-10.33,157.33-11.67,90.67-13,24z"
+              />
+            </svg>
+          </div>
+        </section>
       </div>
 
       <!-- FOOTER -->
