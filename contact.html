@@ -209,7 +209,7 @@
             <div class="">
               <div
                 class="
-                  text-center
+                  text-center text-8
                   order-2 order-md-1
                   align-self-center
                   p-static
@@ -217,10 +217,13 @@
               >
                 <h1
                   class="
-                    font-weight-bold
-                    ls-0
-                    line-height-2
-                    text-7 text-dark
+                    font-weight-extra-bold
+                    text-color-tertiary
+                    text-3
+                    text-sm-3-4
+                    text-md-4
+                    text-lg-3
+                    text-xl-4
                     mb-1
                   "
                 >
@@ -274,11 +277,12 @@
               <div class="row">
                 <!-- FORMULAIRE -->
                 <div class="col-lg-7 order-2 order-lg-1 mb-5">
+                  <!-- Intro -->
                   <p>
                     Si vous souhaitez
                     <strong>des informations sur le projet Kopelio</strong>,
                     n'hésitez pas à nous laisser vos coordonnées et la nature de
-                    votre demande grâce au formulaire ci-dessous.
+                    votre demande grâce au formulaire ci-dessous :
                   </p>
                   <!-- Espaceur -->
                   <div class="spacer mb-5 mt-3"></div>
@@ -286,7 +290,7 @@
                   <div class="form-row">
                     <div class="form-group col">
                       <label
-                        >Nom (complet)
+                        >Nom complet
                         <span class="text-color-danger">*</span></label
                       >
                       <input
@@ -294,6 +298,7 @@
                         class="form-control h-auto py-2"
                         name="nom"
                         value=""
+                        required
                       />
                     </div>
                   </div>
@@ -358,6 +363,7 @@
                   </div>
                   <!-- Champs conditionnels : si partenariat coché -->
                   <div class="shipping-field-wrapper collapse">
+                    <!-- Organisme -->
                     <div class="form-row">
                       <div class="form-group col">
                         <label
@@ -368,11 +374,12 @@
                         <input
                           type="text"
                           class="form-control h-auto py-2"
-                          name="shippingCompanyName"
+                          name="organisme"
                           value=""
                         />
                       </div>
                     </div>
+                    <!-- Tel -->
                     <div class="form-row">
                       <div class="form-group col">
                         <label
@@ -382,9 +389,8 @@
                         <input
                           type="number"
                           class="form-control h-auto py-2"
-                          name="shippingPhone"
+                          name="tel"
                           value=""
-                          required
                         />
                       </div>
                     </div>
@@ -394,31 +400,33 @@
                     <div class="form-group col">
                       <textarea
                         class="form-control h-auto py-2"
-                        name="orderNotes"
+                        name="message"
                         rows="5"
                         placeholder="Message (optionnel)"
                       ></textarea>
                     </div>
                   </div>
-                  <a
-                    href="index.html"
+                  <button
+                    type="submit"
                     data-hash
                     data-hash-offset="70"
                     class="
                       btn btn-primary btn-rounded
                       font-weight-bold
                       text-3-5
+                      mt-3
                       px-5
                       py-3
                       appear-animation
                     "
                     data-appear-animation="fadeInUpShorter"
                     data-appear-animation-delay="1200"
-                    >Envoyer</a
                   >
+                    Envoyer
+                  </button>
                 </div>
 
-                <!-- SIDE -->
+                <!-- Le projet vous intéresse ? -->
                 <div class="col-lg-5 order-1 order-lg-2">
                   <div
                     class="
@@ -429,15 +437,15 @@
                     "
                   >
                     <div class="card-body text-center">
-                      <h4 class="font-weight-bold text-uppercase text-4">
-                        Le projet vous intéresse ?
+                      <h4 class="font-weight-bold text-uppercase text-4 mb-4">
+                        Le concept vous intéresse ?
                       </h4>
 
-                      <p>
-                        <strong>Kopelio ne peut exister sans VOUS :</strong>
-                        n'hésitez pas à nous soutenir ou à nous faire des
-                        retours afin de finaliser une application à votre image
-                        !
+                      <p class="text-justify">
+                        <strong>KOPELIO NE PEUT EXISTER SANS VOUS !</strong>
+                        N'hésitez pas à nous soutenir ou à nous faire des
+                        suggestions afin de mettre en place un service à votre
+                        image !
                       </p>
 
                       <div class="d-lg-block px-3">
