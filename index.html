@@ -16,7 +16,7 @@
     />
     <meta
       name="description"
-      content="Analysez vos expériences de Jeux Vidéo et découvrez votre potentiel"
+      content="Analysez vos expériences de Jeux Vidéo et découvrez votre Potentiel"
     />
     <meta name="author" content="kopelio.com" />
 
@@ -24,25 +24,16 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
 
-    <!-- Share Metas -->
-    <meta
-      property="og:image"
-      content="http://kopelio.com/img/kpl-logo-share.png"
-    />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="500" />
-    <meta property="og:image:height" content="500" />
-
     <!-- Mobile Metas -->
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no"
     />
 
-    <!-- Google Fonts -->
+    <!-- Web Fonts  -->
     <link
       id="googleFonts"
-      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800&display=swap"
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap"
       rel="stylesheet"
       type="text/css"
     />
@@ -67,14 +58,6 @@
       rel="stylesheet"
       href="vendor/magnific-popup/magnific-popup.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="vendor/bootstrap-star-rating/css/star-rating.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="vendor/bootstrap-star-rating/themes/krajee-fas/theme.min.css"
-    />
 
     <!-- Theme CSS -->
     <link rel="stylesheet" href="css/theme.css" />
@@ -83,13 +66,10 @@
     <link rel="stylesheet" href="css/theme-shop.css" />
 
     <!-- Demo CSS -->
-    <link rel="stylesheet" href="css/demos/demo-product-landing.css" />
+    <link rel="stylesheet" href="css/demos/demo-seo-2.css" />
+
     <!-- Skin CSS -->
-    <link
-      id="skinCSS"
-      rel="stylesheet"
-      href="css/skins/skin-product-landing.css"
-    />
+    <link id="skinCSS" rel="stylesheet" href="css/skins/skin-seo-2.css" />
 
     <!-- Theme Custom CSS -->
     <link rel="stylesheet" href="css/custom.css" />
@@ -112,83 +92,225 @@
       gtag('config', 'G-C557RGH53H');
     </script>
   </head>
-  <body data-target="#header" data-spy="scroll" data-offset="100">
+  <body
+    class="loading-overlay-showing"
+    data-loading-overlay
+    data-plugin-options="{'hideDelay': 500, 'effect': 'zenith'}"
+  >
+    <!-- PRELOAD -->
+    <div class="loading-overlay">
+      <div class="bounce-loader">
+        <div class="cssload-zenith-container">
+          <div class="cssload-zenith"></div>
+        </div>
+      </div>
+    </div>
+
     <div class="body">
       <!-- MENU -->
       <header
         id="header"
-        class="header-transparent"
-        data-plugin-options="{'stickyEnabled': false, 'stickyEnableOnBoxed': false, 'stickyEnableOnMobile': true, 'stickyChangeLogo': false, 'stickyStartAt': 1, 'stickyHeaderContainerHeight': 70}"
+        class="header-transparent header-effect-shrink"
+        data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyChangeLogo': true, 'stickyStartAt': 70, 'stickyHeaderContainerHeight': 70}"
       >
-        <div class="header-body header-border-bottom overflow-visible">
-          <div class="header-container container">
-            <div class="header-row py-3">
-              <div class="header-column flex-row w-auto">
-                <div class="header-logo">
-                  <a href="index.html">
-                    <img
-                      src="img/kpl-logo.svg"
-                      alt="Kopelio"
-                      width="42"
-                      height="42"
-                    />
-                  </a>
+        <div
+          class="header-body border-top-0 appear-animation"
+          data-appear-animation="fadeIn"
+        >
+          <div class="header-top">
+            <div class="container">
+              <div class="header-row">
+                <div class="header-column justify-content-start">
+                  <div class="header-row">
+                    <nav class="header-nav-top">
+                      <ul class="nav nav-pills">
+                        <li class="nav-item">
+                          <span
+                            class="
+                              ws-nowrap
+                              custom-text-color-grey-1
+                              text-2
+                              ps-0
+                            "
+                            ><i
+                              class="
+                                icon-screen-smartphone
+                                icons
+                                text-4
+                                top-3
+                                left-1
+                                me-1
+                              "
+                            ></i>
+                            Application bientôt disponible
+                          </span>
+                        </li>
+                        <li class="nav-item d-none d-md-block">
+                          <span
+                            class="ws-nowrap custom-text-color-grey-1 text-2"
+                            ><i
+                              class="icon-clock icons text-4 top-3 left-1 me-1"
+                            ></i>
+                            Lun - Sam 9h00 - 18h00 / Dimanche - FERME</span
+                          >
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+                <div class="header-column justify-content-end">
+                  <div class="header-row">
+                    <ul
+                      class="
+                        header-social-icons
+                        social-icons social-icons-clean
+                        d-none d-lg-block
+                        me-3
+                      "
+                    >
+                      <li class="social-icons-twitch">
+                        <a
+                          href="https://www.twitch.tv/kopelio"
+                          target="_blank"
+                          title="Twitch"
+                          ><i class="fab fa-twitch"></i
+                        ></a>
+                      </li>
+                      <li class="social-icons-instagram">
+                        <a
+                          href="https://www.instagram.com/kopel.io/"
+                          target="_blank"
+                          title="Instagram"
+                          ><i class="fab fa-instagram"></i
+                        ></a>
+                      </li>
+                      <li class="social-icons-linkedin">
+                        <a
+                          href="https://www.linkedin.com/company/kopelio/"
+                          target="_blank"
+                          title="Twitter"
+                          ><i class="fab fa-linkedin-in"></i
+                        ></a>
+                      </li>
+                      <li class="social-icons-twitter">
+                        <a
+                          href="https://twitter.com/KopelioFR"
+                          target="_blank"
+                          title="Twitter"
+                          ><i class="fab fa-twitter"></i
+                        ></a>
+                      </li>
+                      <li class="social-icons-facebook">
+                        <a
+                          href="https://www.facebook.com/kopelio.fr"
+                          target="_blank"
+                          title="Facebook"
+                          ><i class="fab fa-facebook-f"></i
+                        ></a>
+                      </li>
+                    </ul>
+                    <a
+                      href="contact.html"
+                      class="
+                        btn btn-primary
+                        font-weight-semibold
+                        text-3
+                        px-4
+                        custom-height-1
+                        rounded-0
+                        align-items-center
+                        d-none d-md-flex
+                      "
+                    >
+                      <i class="icon-calculator icons text-4 me-2"></i> DEMANDER
+                      DEVIS
+                    </a>
+                  </div>
                 </div>
               </div>
-              <div class="header-column w-100 pl-lg-5">
-                <div class="header-nav w-100 p-0">
-                  <div
-                    class="
-                      header-nav
-                      header-nav-line
-                      header-nav-bottom-line
-                      header-nav-bottom-line-effect-1
-                      justify-content-start
-                      w-100
-                    "
-                  >
+            </div>
+          </div>
+          <div class="header-container container">
+            <div class="header-row">
+              <div class="header-column">
+                <div class="header-row">
+                  <div class="header-logo">
+                    <a href="index.html">
+                      <img
+                        src="img/kpl-logo.svg"
+                        alt="Kopelio"
+                        width="42"
+                        height="42"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="header-column justify-content-end">
+                <div class="header-row">
+                  <div class="header-nav header-nav-links order-2 order-lg-1">
                     <div
                       class="
                         header-nav-main
-                        header-nav-main-arrows
+                        header-nav-main-square
                         header-nav-main-effect-2
                         header-nav-main-sub-effect-1
-                        w-100
                       "
                     >
-                      <nav class="collapse w-100">
-                        <ul
-                          class="nav nav-pills flex-column flex-lg-row w-100"
-                          id="mainNav"
-                        >
-                          <li class="dropdown">
-                            <a class="dropdown-item active" href="#intro"
-                              >Accueil</a
-                            >
+                      <nav class="collapse">
+                        <ul class="nav nav-pills" id="mainNav">
+                          <li>
+                            <a class="nav-link active" href="index.html">
+                              Accueil
+                            </a>
                           </li>
                           <li class="dropdown">
-                            <a class="dropdown-item" href="#fonctionnalites"
-                              >Fonctionnalités</a
+                            <a
+                              class="dropdown-item dropdown-toggle"
+                              href="services.html"
                             >
+                              Nos Services
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li>
+                                <a
+                                  class="nav-link"
+                                  href="service-application.html"
+                                  >Application Kopelio</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  class="nav-link"
+                                  href="service-animations.html"
+                                  >Animations annuelles</a
+                                >
+                              </li>
+                              <li>
+                                <a class="nav-link" href="service-sessions.html"
+                                  >Amélioration candidatures</a
+                                >
+                              </li>
+                            </ul>
                           </li>
-                          <li class="dropdown">
-                            <a class="dropdown-item" href="#cible"
-                              >Pour qui ?</a
-                            >
+                          <li>
+                            <a class="nav-link" href="nous.html"> À propos </a>
                           </li>
-                          <li class="dropdown">
-                            <a class="dropdown-item" href="#nous"
-                              >Qui sommes-nous ?</a
-                            >
-                          </li>
-                          <li class="dropdown">
-                            <a class="dropdown-item" href="contact.html"
-                              >Contact</a
-                            >
+                          <li>
+                            <a class="nav-link" href="contact.html">
+                              Contact
+                            </a>
                           </li>
                         </ul>
                       </nav>
                     </div>
+                    <button
+                      class="btn header-btn-collapse-nav"
+                      data-bs-toggle="collapse"
+                      data-bs-target=".header-nav-main nav"
+                    >
+                      <i class="fas fa-bars"></i>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -197,124 +319,139 @@
         </div>
       </header>
 
+      <!-- CONTENU -->
       <div role="main" class="main">
         <!-- INTRO -->
-        <section
-          id="intro"
-          class="
-            section section-with-shape-divider
-            border-0
-            custom-bg-color-grey-1
-            overflow-visible
-            m-0
-            pt-5
-            pb-5 pb-lg-0
-          "
-        >
-          <div class="container position-relative z-index-2 h-100 py-md-5">
+        <section class="section custom-bg-color-light-1 border-0 pt-5 m-0">
+          <div class="container position-relative z-index-1 pt-5 mt-5">
+            <!-- bulle -->
             <div
               class="
-                row
-                align-items-center
-                justify-content-center
-                h-100
-                pt-5
-                py-xl-5
-                my-xl-5
+                custom-circle custom-circle-medium custom-circle-pos-2
+                appear-animation
               "
+              data-appear-animation="expandInWithBlur"
+              data-appear-animation-delay="1450"
+              data-appear-animation-duration="2s"
             >
               <div
-                class="
-                  col-md-10 col-lg-6
-                  order-2 order-lg-1
-                  pr-lg-0
-                  py-lg-5
-                  my-lg-5
-                "
-              >
+                class="custom-bg-color-grey-2 rounded-circle w-100 h-100"
+                data-plugin-float-element
+                data-plugin-options="{'startPos': 'bottom', 'speed': 0.2, 'transition': true, 'transitionDuration': 2000}"
+              ></div>
+            </div>
+            <!-- bulle -->
+            <div
+              class="
+                custom-circle custom-circle-medium custom-circle-pos-3
+                appear-animation
+              "
+              data-appear-animation="expandIn"
+              data-appear-animation-delay="1300"
+            >
+              <div
+                class="custom-bg-color-grey-2 rounded-circle w-100 h-100"
+                data-plugin-float-element
+                data-plugin-options="{'startPos': 'bottom', 'speed': 0.3, 'transition': true, 'transitionDuration': 1000}"
+              ></div>
+            </div>
+            <!-- bulle -->
+            <div
+              class="
+                custom-circle custom-circle-medium custom-circle-pos-6
+                appear-animation
+              "
+              data-appear-animation="expandInWithBlur"
+              data-appear-animation-delay="1200"
+              data-appear-animation-duration="2s"
+            >
+              <div
+                class="custom-bg-color-grey-2 rounded-circle w-100 h-100"
+                data-plugin-float-element
+                data-plugin-options="{'startPos': 'bottom', 'speed': 0.8, 'transition': true, 'transitionDuration': 500}"
+              ></div>
+            </div>
+            <!-- bulle -->
+            <div
+              class="
+                custom-circle custom-circle-small custom-circle-pos-7
+                appear-animation
+              "
+              data-appear-animation="expandIn"
+              data-appear-animation-delay="1700"
+            >
+              <div
+                class="custom-bg-color-grey-2 rounded-circle w-100 h-100"
+                data-plugin-float-element
+                data-plugin-options="{'startPos': 'top', 'speed': 0.3, 'transition': true, 'transitionDuration': 1000}"
+              ></div>
+            </div>
+            <!-- bulle -->
+            <div
+              class="
+                custom-circle custom-circle-medium custom-circle-pos-8
+                appear-animation
+              "
+              data-appear-animation="expandInWithBlur"
+              data-appear-animation-delay="1350"
+              data-appear-animation-duration="2s"
+            >
+              <div
+                class="custom-bg-color-grey-2 rounded-circle w-100 h-100"
+                data-plugin-float-element
+                data-plugin-options="{'startPos': 'bottom', 'speed': 0.5, 'transition': true, 'transitionDuration': 500}"
+              ></div>
+            </div>
+
+            <!-- CONTENU -->
+            <div class="row align-items-center pt-4">
+              <!-- TEXTE -->
+              <div class="col-md-6 order-2 order-lg-1 pb-5 mb-md-5">
+                <div class="spacer mb-lg-5" style="height: 75px"></div>
                 <h1
                   class="
-                    mb-2
-                    pb-3
+                    text-color-primary
+                    font-weight-extra-bold
                     text-13
-                    ls-0
-                    line-height-1
-                    custom-ws-nowrap
                     mb-3
-                    z-index-1
-                    position-relative
-                  "
-                >
-                  <span class="d-block position-relative">
-                    <span
-                      class="
-                        font-weight-extra-bold
-                        text-color-tertiary
-                        text-3
-                        text-sm-3-4
-                        text-md-4
-                        text-lg-3
-                        text-xl-4
-                        d-inline-block
-                        appear-animation
-                      "
-                      data-appear-animation="fadeInLeftShorter"
-                      data-appear-animation-delay="1000"
-                      >Kopelio</span
-                    >
-                    <svg
-                      class="
-                        d-none d-sm-block
-                        position-absolute
-                        left-0
-                        top-50pct
-                        transform3dy-n50
-                        mt-2
-                      "
-                      height="1"
-                      width="99%"
-                    >
-                      <line
-                        x1="0"
-                        y1="0"
-                        x2="600"
-                        y2="0"
-                        stroke="#969696"
-                        stroke-width="5"
-                        class="appear-animation"
-                        data-appear-animation="customSVGLineAnim"
-                        data-appear-animation-delay="100"
-                        data-appear-animation-duration="2s"
-                      ></line>
-                    </svg>
-                  </span>
-                </h1>
-                <h4
-                  class="
-                    font-weight-bold
-                    text-uppercase text-6
-                    mb-5
                     appear-animation
                   "
-                  data-appear-animation="fadeInLeftShorter"
-                  data-appear-animation-delay="1400"
+                  data-appear-animation="fadeInUpShorter"
+                  data-appear-animation-delay="300"
+                >
+                  Kopelio
+                </h1>
+                <h2
+                  class="
+                    text-color-dark
+                    font-weight-bold
+                    text-7
+                    mt-2
+                    mb-3
+                    appear-animation
+                  "
+                  data-appear-animation="fadeInUpShorter"
+                  data-appear-animation-delay="450"
                 >
                   Est-ce bénéfique de jouer aux jeux vidéo ?
-                </h4>
+                </h2>
                 <p
-                  class="font-weight-light text-4 mb-4 appear-animation"
-                  data-appear-animation="fadeInLeftShorter"
-                  data-appear-animation-delay="1400"
+                  class="custom-text-color-grey-1 text-4 mb-4 appear-animation"
+                  data-appear-animation="fadeInUpShorter"
+                  data-appear-animation-delay="600"
                 >
-                  Découvrez la première application qui associe
-                  <span class="font-weight-normal text-primary"
-                    >pratique de jeux vidéo</span
+                  Découvrez la première
+                  <span class="font-weight-semibold"
+                    >méthode de préqualification</span
                   >
-                  et
-                  <span class="font-weight-normal text-primary"
-                    >orientations scolaires ou professionnelles</span
-                  >
-                  afin d'améliorer ses compétences.
+                  qui analyse les
+                  <span class="text-primary">centres d'intérêt</span> d'un
+                  individu à travers ses
+                  <span class="text-secondary">pratiques de jeux vidéo</span>
+                  afin d'améliorer son
+                  <span class="text-quaternary"
+                    >orientation scolaire ou professionnelle</span
+                  >.
                 </p>
                 <div
                   class="
@@ -323,1009 +460,1836 @@
                     align-items-center
                     justify-content-center justify-content-md-start
                     mb-2
-                    appear-animation
                   "
-                  data-appear-animation="fadeInLeftShorter"
-                  data-appear-animation-delay="1600"
                 >
                   <a
-                    href="#fonctionnalites"
+                    href="services.html"
                     class="
                       btn btn-primary btn-rounded
-                      font-weight-bold
-                      text-4
+                      font-weight-semibold
                       px-5
                       py-3
+                      text-3
+                      mb-md-5
+                      appear-animation
                     "
+                    data-appear-animation="fadeInUpShorter"
+                    data-appear-animation-delay="750"
                     >Je veux découvrir</a
                   >
                 </div>
+                <div
+                  class="spacer d-none d-md-block"
+                  style="height: 310px"
+                ></div>
               </div>
-              <div class="col-lg-6 align-self-xl-stretch order-1 order-lg-2">
-                <div class="custom-product-image-style-1 d-lg-block">
-                  <div
-                    data-plugin-float-element
-                    data-plugin-options="{'startPos': 'top', 'speed': 0.3, 'transition': true, 'transitionDuration': 1000, 'isInsideSVG': true}"
+              <!-- IMAGE -->
+              <div class="col-md-6 order-1 order-lg-2 pb-lg-5">
+                <div
+                  data-plugin-float-element
+                  data-plugin-options="{'startPos': 'top', 'speed': 0.3, 'transition': true, 'transitionDuration': 1000, 'isInsideSVG': true}"
+                >
+                  <img
+                    src="img/kpl-accueil-intro.svg"
+                    class="
+                      img-fluid
+                      position-relative
+                      z-index-1
+                      pb-lg-5
+                      mb-lg-5
+                      ms-lg-5
+                      top-10
+                      appear-animation
+                    "
+                    data-appear-animation="fadeInUpShorter"
+                    data-appear-animation-delay="900"
+                    data-appear-animation-duration="1500ms"
+                    alt="Intro Kopelio"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SERVICES + MISSION -->
+        <section class="section position-relative bg-color-light border-0 m-0">
+          <!-- vague -->
+          <svg
+            class="custom-section-curved-top-1"
+            width="100%"
+            height="600px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              id="svg_1"
+              d="m-12.66406,442.40068c352.72654,-76.36348 565.45337,5.45453 696.36219,19.99996c130.90882,14.54542 270.90852,-23.63632 367.27196,-47.27263c96.36344,-23.63631 379.99921,-154.54513 527.27163,-209.09047c147.27242,-54.54535 381.813,-92.55755 406.36076,-99.00598c12.27388,-3.22421 917.96684,-113.93032 715.00991,10.61478c-202.95693,124.5451 -210.46055,521.28714 -198.64021,540.29354c11.82034,19.0064 -2500.90899,-15.53962 -2500.0019,-16.36399c-0.90709,0.82437 -9.99798,-180.99343 -9.09089,-181.8178"
+              stroke-opacity="null"
+              stroke-width="0"
+              stroke="#000"
+              fill="#f7f8f9"
+            />
+            <path
+              id="svg_2"
+              d="m-116.90461,507.88064c314.5448,-112.72704 523.63527,-21.81814 878.17999,12.72724c354.54471,34.54538 632.72595,-225.45407 978.17978,-294.54484c172.72691,-34.54538 291.36195,-62.7275 368.52007,-78.40952c77.15812,-15.68202 352.84215,-22.50036 359.66142,-7.04537c13.63854,30.90997 97.72734,614.54347 50.90961,639.99858c-46.81772,25.4551 -855.68236,4.54593 -1433.63569,1.81866c-577.95334,-2.72727 -1155.90718,-5.45466 -1155.45364,-5.45491"
+              stroke-opacity="null"
+              stroke-width="0"
+              stroke="#000"
+              fill="#fbfcfc"
+            />
+            <path
+              id="svg_3"
+              d="m-115.93584,623.27542c234.54496,-132.72699 429.09001,-112.72703 678.1804,-83.63619c249.09039,29.09085 389.09011,30.90903 656.36228,-107.2725c267.27217,-138.18153 816.36193,-207.2723 1121.81584,-170.90873c305.45391,36.36356 -292.72666,-19.99996 -293.63778,-18.18228c71.36548,8.18218 627.05432,68.63506 626.48637,265.22584c-0.56794,196.59079 -20.11364,456.59134 -31.02284,531.13767c-10.90919,74.54633 -1561.82313,-36.3646 -1565.45948,-34.54642c-3.63636,1.81818 -1249.08831,-1.81818 -1248.18122,-1.81869c-0.90709,0.00051 39.09282,-234.54445 39.99992,-234.54496c-0.9071,0.00051 -4.54345,-76.36297 -3.63636,-76.36348"
+              stroke-opacity="null"
+              stroke-width="0"
+              stroke="#000"
+              fill="#ffffff"
+            />
+          </svg>
+
+          <!-- CONTENU -->
+          <div
+            class="
+              container
+              position-relative
+              custom-negative-margin-1
+              z-index-3
+              pb-lg-5
+              mb-lg-3
+            "
+          >
+            <!-- bulle -->
+            <div
+              class="
+                custom-circle custom-circle-medium custom-circle-pos-9
+                d-none d-md-block
+              "
+            >
+              <div
+                class="bg-color-secondary rounded-circle w-100 h-100"
+                data-plugin-float-element
+                data-plugin-options="{'startPos': 'top', 'speed': 0.3, 'transition': true, 'transitionDuration': 1000}"
+              ></div>
+            </div>
+            <!-- bulle -->
+            <div
+              class="
+                custom-circle custom-circle-big custom-circle-pos-10
+                appear-animation
+              "
+              data-appear-animation="expandInWithBlur"
+              data-appear-animation-delay="1850"
+              data-appear-animation-duration="2s"
+            >
+              <div
+                class="bg-color-tertiary rounded-circle w-100 h-100"
+                data-plugin-float-element
+                data-plugin-options="{'startPos': 'top', 'speed': 3, 'transition': true, 'transitionDuration': 1000}"
+              ></div>
+            </div>
+            <!-- bulle -->
+            <div
+              class="
+                custom-circle custom-circle-medium custom-circle-pos-11
+                appear-animation
+              "
+              data-appear-animation="expandInWithBlur"
+              data-appear-animation-delay="2000"
+              data-appear-animation-duration="2s"
+            >
+              <div
+                class="custom-bg-color-grey-1 rounded-circle w-100 h-100"
+                data-plugin-float-element
+                data-plugin-options="{'startPos': 'top', 'speed': 1, 'transition': true, 'transitionDuration': 1000}"
+              ></div>
+            </div>
+            <!-- bulle -->
+            <div
+              class="
+                custom-circle custom-circle-small custom-circle-pos-12
+                appear-animation
+              "
+              data-appear-animation="expandInWithBlur"
+              data-appear-animation-delay="2150"
+              data-appear-animation-duration="2s"
+            >
+              <div
+                class="custom-bg-color-grey-2 rounded-circle w-100 h-100"
+                data-plugin-float-element
+                data-plugin-options="{'startPos': 'top', 'speed': 1, 'transition': true, 'transitionDuration': 1000}"
+              ></div>
+            </div>
+            <!-- bulle -->
+            <div
+              class="
+                custom-circle custom-circle-extra-small custom-circle-pos-13
+                appear-animation
+              "
+              data-appear-animation="expandInWithBlur"
+              data-appear-animation-delay="2300"
+              data-appear-animation-duration="2s"
+            >
+              <div
+                class="custom-bg-color-grey-2 rounded-circle w-100 h-100"
+                data-plugin-float-element
+                data-plugin-options="{'startPos': 'top', 'speed': 1, 'transition': true, 'transitionDuration': 1000}"
+              ></div>
+            </div>
+
+            <!-- CONTENU -->
+            <div class="row align-items-center">
+              <!-- NOS SERVICES -->
+              <div class="col-lg-7 pe-lg-5">
+                <div class="row align-items-center">
+                  <div class="col-md-6">
+                    <!-- Application Web et Mobile -->
+                    <div
+                      class="
+                        card
+                        position-relative
+                        border-0
+                        custom-box-shadow-1 custom-border-radius-1
+                        mb-4
+                        appear-animation
+                      "
+                      data-appear-animation="fadeInUpShorter"
+                      data-appear-animation-delay="850"
+                    >
+                      <div class="card-body text-center pt-5">
+                        <div
+                          data-plugin-float-element
+                          data-plugin-options="{'startPos': 'top', 'speed': 0.3, 'transition': true, 'transitionDuration': 1000, 'isInsideSVG': true}"
+                        >
+                          <img
+                            src="img/kpl-application.svg"
+                            class="img-fluid mb-4 pb-2"
+                            width="80"
+                            height="80"
+                            alt=""
+                            data-icon
+                            data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-tertiary pb-2 mb-4'}"
+                          />
+                        </div>
+                        <h4
+                          class="text-color-secondary font-weight-semibold mb-2"
+                        >
+                          Application Web et Mobile
+                        </h4>
+                        <p class="text-justify">
+                          Gratuite et intuitive, l'application Kopelio vous
+                          permet de
+                          <strong
+                            >rechercher des jeux vidéo ou des métiers par centre
+                            d'intérêt</strong
+                          >
+                          avec de nombreux services complémentaires.
+                        </p>
+                        <a
+                          href="service-application.html"
+                          class="text-color-secondary font-weight-bold"
+                          >VOIR PLUS</a
+                        >
+                      </div>
+                    </div>
+
+                    <!-- Amélioration des Candidatures (PRO) -->
+                    <div
+                      class="
+                        card
+                        border-0
+                        custom-box-shadow-1 custom-border-radius-1
+                        mb-4
+                      "
+                    >
+                      <div class="card-body text-center pt-5">
+                        <div
+                          data-plugin-float-element
+                          data-plugin-options="{'startPos': 'top', 'speed': 0.3, 'transition': true, 'transitionDuration': 1000, 'isInsideSVG': true}"
+                        >
+                          <img
+                            src="img/kpl-sessions.svg"
+                            class="img-fluid mb-4 pb-2"
+                            width="80"
+                            height="80"
+                            alt=""
+                            data-icon
+                            data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-tertiary pb-2 mb-4'}"
+                          />
+                        </div>
+                        <h4
+                          class="
+                            text-color-quaternary
+                            font-weight-semibold
+                            mb-2
+                          "
+                        >
+                          Amélioration des Candidatures (PRO)
+                        </h4>
+                        <p class="text-justify">
+                          Envie d'innover dans vos recrutements ? Kopelio met à
+                          disposition son expertise à travers une offre flexible
+                          visant à
+                          <strong
+                            >améliorer la préqualification des candidats</strong
+                          >.
+                        </p>
+                        <a
+                          href="service-sessions.html"
+                          class="text-color-quaternary font-weight-bold"
+                          >VOIR PLUS</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <!-- Animations toute l'année -->
+                    <div
+                      class="
+                        card
+                        position-relative
+                        border-0
+                        custom-box-shadow-1 custom-border-radius-1
+                        mb-4
+                        appear-animation
+                      "
+                      data-appear-animation="fadeInUpShorter"
+                      data-appear-animation-delay="1000"
+                    >
+                      <div class="card-body text-center pt-5">
+                        <div
+                          data-plugin-float-element
+                          data-plugin-options="{'startPos': 'top', 'speed': 0.3, 'transition': true, 'transitionDuration': 1000, 'isInsideSVG': true}"
+                        >
+                          <img
+                            src="img/kpl-animations.svg"
+                            class="img-fluid mb-4 pb-2"
+                            width="70"
+                            height="70"
+                            alt=""
+                            data-icon
+                            data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-tertiary pb-2 mb-4'}"
+                          />
+                        </div>
+                        <h4
+                          class="text-color-tertiary font-weight-semibold mb-2"
+                        >
+                          Animations toute l'année
+                        </h4>
+                        <p class="text-justify">
+                          Suivez le planning et
+                          <strong
+                            >découvrez des métiers et jeux vidéo toute
+                            l'année</strong
+                          >
+                          à traves des animations (interviews, streams,
+                          publications) de la Communauté Kopelio.
+                        </p>
+                        <a
+                          href="service-animations.html"
+                          class="text-color-tertiary font-weight-bold"
+                          >VOIR PLUS</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- NOTRE MISSION -->
+              <div class="col-lg-5 pt-lg-5 ps-lg-4 mt-lg-5 pb-5 pb-lg-0">
+                <span
+                  class="
+                    d-block
+                    pt-5
+                    mt-5
+                    mb-0
+                    text-color-primary
+                    font-weight-semibold
+                    text-3
+                    appear-animation
+                  "
+                  data-appear-animation="fadeInUpShorter"
+                  data-appear-animation-delay="300"
+                  >NOTRE MISSION</span
+                >
+                <h2
+                  class="
+                    text-color-dark
+                    font-weight-semibold
+                    text-6
+                    line-height-3
+                    mb-3
+                    appear-animation
+                  "
+                  data-appear-animation="fadeInUpShorter"
+                  data-appear-animation-delay="450"
+                >
+                  Vers une méilleure adéquation entre Talents et Compétences
+                </h2>
+                <p
+                  class="lead text-justify appear-animation"
+                  data-appear-animation="fadeInUpShorter"
+                  data-appear-animation-delay="600"
+                >
+                  Chez Kopelio, nous sommes convaincus que chacun peut
+                  développer <strong>des Compétences de qualité</strong>, qu'il
+                  peut déceler et optimiser par
+                  <strong>la connaissance de ses Talents</strong>, innés.
+                </p>
+                <p
+                  class="mb-4 pb-2 text-justify appear-animation"
+                  data-appear-animation="fadeInUpShorter"
+                  data-appear-animation-delay="750"
+                >
+                  Utilisant le Jeu vidéo comme support d'analyse des Centres
+                  d'Intérêts, Kopelio développe des Services Numériques à
+                  destination des Particuliers et des Offres Commerciales à
+                  destination des Professionnels.
+                </p>
+                <div
+                  class="
+                    d-flex
+                    flex-column flex-sm-row
+                    align-items-center
+                    justify-content-center justify-content-md-start
+                    mb-2
+                  "
+                >
+                  <a
+                    href="nous.html"
+                    class="
+                      btn btn-primary btn-rounded btn-outline
+                      font-weight-semibold
+                      px-5
+                      py-3
+                      text-3
+                      mb-5 mb-lg-0
+                      appear-animation
+                    "
+                    data-appear-animation="fadeInUpShorter"
+                    data-appear-animation-delay="900"
+                    >QUI SOMMES-NOUS ?</a
                   >
-                    <img
-                      src="img/kpl-accueil-intro-illu.svg"
-                      class="img-fluid text-center appear-animation"
-                      width="600px"
-                      alt=""
-                      data-appear-animation="fadeInLeftShorter"
-                      data-appear-animation-delay="600"
-                    />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- PROBLEMATIQUE -->
+        <section
+          class="
+            section
+            custom-bg-color-light-2
+            position-relative
+            border-0
+            pt-4
+            m-0
+          "
+        >
+          <!-- vague -->
+          <svg
+            class="custom-section-curved-top-2"
+            width="100%"
+            height="298"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              id="svg_3"
+              d="m-79.33393,-38.33344c20.00001,16.00001 346.66686,448.00024 826.66712,236.00013c240.00013,-106.00006 647.58388,-25.45831 786.45913,6.2709c138.87524,31.72921 295.36054,26.21434 359.54203,2.72919c64.18149,-23.48515 718.67317,-158.11072 742.33982,-143.77728c214.66852,222.83259 61.00168,333.66623 77.22357,376.2222c16.22188,42.55598 -2796.23167,-33.44489 -2795.56445,-33.77815c-0.33361,0.16663 -0.83375,-98.08344 -1.16708,-196.41683c-0.33334,-98.33338 -0.49987,-196.75009 -0.16626,-196.91671"
+              stroke-width="0"
+              stroke="#000"
+              fill="#eff1f3"
+            />
+          </svg>
+
+          <!-- CONTENU -->
+          <div class="container position-relative z-index-1 mt-3 mb-5">
+            <!-- bulle -->
+            <div class="custom-circle custom-circle-small custom-circle-pos-14">
+              <div
+                class="custom-bg-color-grey-2 rounded-circle w-100 h-100"
+                data-plugin-float-element
+                data-plugin-options="{'startPos': 'top', 'speed': 1, 'horizontal': true, 'transition': true, 'transitionDuration': 1000}"
+              ></div>
+            </div>
+            <!-- bulle -->
+            <div
+              class="
+                custom-circle custom-circle-extra-small custom-circle-pos-15
+              "
+            >
+              <div
+                class="custom-bg-color-grey-2 rounded-circle w-100 h-100"
+                data-plugin-float-element
+                data-plugin-options="{'startPos': 'top', 'speed': 1, 'horizontal': true, 'transition': true, 'transitionDuration': 1000}"
+              ></div>
+            </div>
+            <!-- bulle -->
+            <div
+              class="custom-circle custom-circle-medium custom-circle-pos-16"
+            >
+              <div
+                class="custom-bg-color-grey-1 rounded-circle w-100 h-100"
+                data-plugin-float-element
+                data-plugin-options="{'startPos': 'top', 'speed': 1, 'horizontal': true, 'transition': true, 'transitionDuration': 1000}"
+              ></div>
+            </div>
+
+            <!-- CONTENU -->
+            <div class="row align-items-center pb-5">
+              <!-- TEXTE -->
+              <div
+                class="col-lg-6 pb-0 pb-lg-5 mb-0 appear-animation"
+                data-appear-animation="fadeInRightShorter"
+                data-appear-animation-delay="450"
+              >
+                <span
+                  class="
+                    d-block
+                    text-color-primary
+                    font-weight-semibold
+                    text-3
+                    mb-0
+                  "
+                  >LA PROBLÉMATIQUE</span
+                >
+                <h2
+                  class="
+                    text-color-dark
+                    font-weight-semibold
+                    text-6
+                    line-height-3
+                    mb-3
+                  "
+                >
+                  Le Poste Idéal : trop difficile à trouver en France
+                </h2>
+                <p class="lead text-justify mb-4 pb-2">
+                  Entre chômage, difficultés de recrutements et taux d'échecs
+                  scolaires, on peut constater de fortes inadéquations entre
+                  candidats, postes et formations. Pour causes principales :
+                </p>
+                <!-- Connaissance des Métiers -->
+                <div
+                  class="feature-box feature-box-style-2 feature-box-tertiary"
+                >
+                  <div
+                    class="
+                      feature-box-icon
+                      custom-feature-box-icon-size-1
+                      top-0
+                    "
+                  >
+                    <i
+                      class="fas fa-user-secret position-relative top-2 right-1"
+                    ></i>
+                  </div>
+                  <div class="feature-box-info mb-4 pb-3">
+                    <h4
+                      class="
+                        font-weight-bold
+                        line-height-3
+                        custom-font-size-1
+                        mb-1
+                      "
+                    >
+                      Beaucoup de Métiers et Formations trop peu connus
+                    </h4>
+                    <p class="mb-0 text-justify">
+                      Kopelio organise tout au long de l'année des mises en
+                      avant de Métiers et de Formations selon plusieurs
+                      Thématiques.
+                      <a
+                        href="service-animations.html"
+                        class="text-color-tertiary"
+                        >En savoir plus...</a
+                      >
+                    </p>
+                  </div>
+                </div>
+                <!-- CV -->
+                <div
+                  class="feature-box feature-box-style-2 feature-box-secondary"
+                >
+                  <div
+                    class="
+                      feature-box-icon
+                      custom-feature-box-icon-size-1
+                      top-0
+                    "
+                  >
+                    <i class="fas fa-heart-broken position-relative left-1"></i>
+                  </div>
+                  <div class="feature-box-info mb-4 pb-3">
+                    <h4
+                      class="
+                        font-weight-bold
+                        line-height-3
+                        custom-font-size-1
+                        mb-1
+                      "
+                    >
+                      Des CVs trop peu orientés Talents
+                    </h4>
+                    <p class="mb-0 text-justify">
+                      En complémement du CV classique, Kopelio App permet
+                      d'éditer un CV Gaming permettant d'identifier des talents.
+                      <a
+                        href="service-application.html"
+                        class="text-color-secondary"
+                        >En savoir plus...</a
+                      >
+                    </p>
+                  </div>
+                </div>
+                <!-- Préqualifications -->
+                <div
+                  class="feature-box feature-box-style-2 feature-box-quaternary"
+                >
+                  <div
+                    class="
+                      feature-box-icon
+                      custom-feature-box-icon-size-1
+                      top-0
+                    "
+                  >
+                    <i
+                      class="fas fa-filter position-relative top-2 right-1"
+                    ></i>
+                  </div>
+                  <div class="feature-box-info mb-4 pb-3">
+                    <h4
+                      class="
+                        font-weight-bold
+                        line-height-3
+                        custom-font-size-1
+                        mb-1
+                      "
+                    >
+                      Des Préqualifications trop peu qualitatives
+                    </h4>
+                    <p class="mb-0 text-justify">
+                      Afin d'aider les professionnels à préqualifier leurs
+                      candidats, nous proposons une offre inédite de Quizz
+                      Métier.
+                      <a
+                        href="service-sessions.html"
+                        class="text-color-quaternary"
+                        >En savoir plus...</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- IMAGE -->
+              <div class="col-lg-6 pb-5 pb-lg-0 text-center">
+                <div
+                  data-plugin-float-element
+                  data-plugin-options="{'startPos': 'top', 'speed': 0.3, 'transition': true, 'transitionDuration': 1000, 'isInsideSVG': true}"
+                >
+                  <img
+                    src="img/kpl-accueil-problematique.svg"
+                    class="img-fluid appear-animation"
+                    data-appear-animation="fadeInRightShorter"
+                    data-appear-animation-delay="600"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SOLUTION -->
+        <section
+          class="section bg-color-light position-relative border-0 pt-0 m-0"
+        >
+          <!-- vague -->
+          <svg
+            class="custom-section-curved-top-3"
+            width="100%"
+            height="298"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              id="svg_2"
+              fill="#FFF"
+              stroke="#000"
+              stroke-width="0"
+              d="m-19.87006,126.33922c0,0 2.16796,-1.48437 6.92379,-3.91356c4.75584,-2.42918 12.09956,-5.80319 22.45107,-9.58247c20.70303,-7.55856 53.43725,-16.7382 101.56202,-23.22255c48.12477,-6.48434 111.6401,-10.27339 193.90533,-7.05074c41.13262,1.61132 88.20271,5.91306 140.3802,12.50726c52.17748,6.59421 -86.4742,-15.61273 171.02458,26.26208c64.37469,10.4687 130.09704,0.19531 175.01626,-5.4736c44.91922,-5.66892 49.93384,-12.28022 191.44685,-45.34647c141.51301,-33.06625 221.34662,-61.99188 426.81438,-59.4919c102.73388,1.24999 203.44102,29.65927 398.99543,109.88821c195.55441,80.22895 668.78972,-44.38181 814.0537,-9.88704c-76.25064,69.23438 407.49874,281.32592 331.2481,350.5603c-168.91731,29.52009 85.02254,247.61162 -83.89478,277.13171c84.07062,348.27313 -2948.95065,-242.40222 -2928.39024,-287.84045"
+            />
+          </svg>
+
+          <!-- CONTENU -->
+          <div class="container position-relative pb-lg-5 mb-5">
+            <!-- bulle -->
+            <div
+              class="
+                custom-circle custom-circle-extra-small custom-circle-pos-24
+                appear-animation
+              "
+              data-appear-animation="expandIn"
+              data-appear-animation-delay="200"
+            >
+              <div
+                class="custom-bg-color-grey-2 rounded-circle w-100 h-100"
+                data-plugin-float-element
+                data-plugin-options="{'startPos': 'bottom', 'speed': 0.3, 'transition': true, 'transitionDuration': 2000}"
+              ></div>
+            </div>
+            <!-- bulle -->
+            <div
+              class="
+                custom-circle custom-circle-small custom-circle-pos-25
+                appear-animation
+              "
+              data-appear-animation="expandIn"
+              data-appear-animation-delay="500"
+            >
+              <div
+                class="custom-bg-color-grey-2 rounded-circle w-100 h-100"
+                data-plugin-float-element
+                data-plugin-options="{'startPos': 'bottom', 'speed': 0.3, 'transition': true, 'transitionDuration': 3000}"
+              ></div>
+            </div>
+            <!-- bulle -->
+            <div
+              class="
+                custom-circle custom-circle-extra-small custom-circle-pos-26
+                appear-animation
+              "
+              data-appear-animation="expandIn"
+              data-appear-animation-delay="800"
+            >
+              <div
+                class="custom-bg-color-grey-2 rounded-circle w-100 h-100"
+                data-plugin-float-element
+                data-plugin-options="{'startPos': 'bottom', 'speed': 0.3, 'horizontal': true, 'transition': true, 'transitionDuration': 1500}"
+              ></div>
+            </div>
+            <!-- bulle -->
+            <div
+              class="
+                custom-circle
+                custom-circle-extra-small
+                custom-circle-pos-27
+                custom-bg-color-grey-2
+              "
+            ></div>
+            <!-- bulle -->
+            <div
+              class="
+                custom-circle custom-circle-extra-small custom-circle-pos-28
+                appear-animation
+              "
+              data-appear-animation="expandIn"
+              data-appear-animation-delay="1100"
+            >
+              <div
+                class="custom-bg-color-grey-2 rounded-circle w-100 h-100"
+                data-plugin-float-element
+                data-plugin-options="{'startPos': 'bottom', 'speed': 0.3, 'transition': true, 'transitionDuration': 2500}"
+              ></div>
+            </div>
+            <!-- bulle -->
+            <div
+              class="
+                custom-circle custom-circle-small custom-circle-pos-29
+                appear-animation
+              "
+              data-appear-animation="expandIn"
+              data-appear-animation-delay="1400"
+            >
+              <div
+                class="custom-bg-color-grey-2 rounded-circle w-100 h-100"
+                data-plugin-float-element
+                data-plugin-options="{'startPos': 'bottom', 'speed': 0.3, 'transition': true, 'transitionDuration': 3500}"
+              ></div>
+            </div>
+            <!-- bulle -->
+            <div
+              class="
+                custom-circle custom-circle-extra-small custom-circle-pos-30
+                appear-animation
+              "
+              data-appear-animation="expandIn"
+              data-appear-animation-delay="1700"
+            >
+              <div
+                class="custom-bg-color-grey-2 rounded-circle w-100 h-100"
+                data-plugin-float-element
+                data-plugin-options="{'startPos': 'bottom', 'speed': 0.3, 'transition': true, 'transitionDuration': 2000}"
+              ></div>
+            </div>
+
+            <!-- CONTENU -->
+            <div class="row align-items-center">
+              <!-- IMAGE -->
+              <div class="col-lg-6 order-2 order-lg-1 pb-5 pb-lg-0 text-center">
+                <div
+                  data-plugin-float-element
+                  data-plugin-options="{'startPos': 'top', 'speed': 0.3, 'transition': true, 'transitionDuration': 1000, 'isInsideSVG': true}"
+                >
+                  <img
+                    src="img/kpl-accueil-approche.svg"
+                    class="img-fluid appear-animation"
+                    data-appear-animation="fadeInRightShorter"
+                    data-appear-animation-delay="600"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <!-- TEXTE -->
+              <div class="col-lg-6 order-1 order-lg-2 pb-0 pb-lg-5">
+                <span
+                  class="
+                    text-color-primary
+                    font-weight-semibold
+                    text-3
+                    d-block
+                    mb-0
+                  "
+                  >NOTRE APPROCHE</span
+                >
+                <h2
+                  class="
+                    text-color-dark
+                    font-weight-semibold
+                    text-6
+                    line-height-3
+                    mb-3
+                    pb-2
+                  "
+                >
+                  Le Jeu vidéo : un support d'analyse populaire, intéractif et
+                  pluridisciplinaire
+                </h2>
+                <p class="text-justify mb-5">
+                  Avec de plus en plus d'investissements et de considération du
+                  Grand Public,
+                  <strong
+                    >l'industrie du Jeu vidéo en France et dans le Monde est
+                    actuellement en pleine croissance</strong
+                  >
+                  et de plus en plus accessible et diversifiée.
+                </p>
+                <div class="row counters counters-sm mb-5">
+                  <div class="col-sm-6 col-lg-5 mb-4 mb-lg-0">
+                    <div class="counter counter-with-unit counter-primary">
+                      <strong data-to="36">36</strong>
+                      <strong>millions</strong>
+                      <label>Joueurs en France</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-3 mb-4 mb-sm-0">
+                    <div class="counter counter-with-unit counter-primary">
+                      <strong data-to="52">52</strong>
+                      <strong>%</strong>
+                      <label>Joueurs réguliers</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-4">
+                    <div class="counter counter-with-unit counter-primary">
+                      <strong data-to="39">39</strong>
+                      <strong> ans</strong>
+                      <label>Âge moyen</label>
+                    </div>
+                  </div>
+                </div>
+                <p class="text-justify">
+                  Le choix de ce média/art comme axe d'analyse des Talents par
+                  Kopelio provient de cette conjoncture, mais également
+                  <strong>la diversité des controles</strong> (joystick,
+                  manette, clavier/souris, Réalité Virtuelle, Réalité
+                  Augmentée), <strong>des modes</strong> (solo, coop local, coop
+                  en ligne, massivement, esport...) et
+                  <strong>des thématiques abordées</strong> (économie,
+                  politique, militaire, transport...).
+                </p>
+              </div>
+            </div>
+            <!-- bulle -->
+            <div
+              class="
+                custom-circle custom-circle-medium custom-circle-pos-41
+                bg-color-quaternary
+              "
+            ></div>
+            <!-- bulle -->
+            <div
+              class="
+                custom-circle
+                custom-circle-small
+                custom-circle-pos-42
+                custom-bg-color-grey-1
+              "
+            ></div>
+            <!-- bulle -->
+            <div
+              class="
+                custom-circle
+                custom-circle-extra-small
+                custom-circle-pos-43
+                custom-bg-color-grey-2
+              "
+            ></div>
+          </div>
+        </section>
+
+        <!-- PARTENAIRES -->
+        <section
+          class="
+            section
+            position-relative
+            custom-bg-color-light-2
+            border-0
+            pt-5
+            m-0
+          "
+        >
+          <!-- vague -->
+          <svg
+            class="custom-section-curved-top-5"
+            width="100%"
+            height="284"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              id="svg_2"
+              fill="#eff1f3"
+              stroke="#000"
+              stroke-width="0"
+              d="m-30.75698,18.18081c99.6013,28.33304 337.54319,327.06425 868.97187,168.96887c265.71434,-79.04769 585.03969,-5.59538 690.67474,14.9602c105.63504,20.55559 381.87048,2.11063 555.67444,-75.27753c86.90199,-38.69407 736.04117,-78.60276 742.95015,12.26524c6.90898,90.86801 -66.08835,361.6009 -103.97283,363.40912c-37.88449,1.80823 -2793.7397,-55.67435 -2792.62804,-56.56315"
+            />
+          </svg>
+
+          <!-- CONTENU -->
+          <div class="container position-relative z-index-1 pb-5 mb-lg-5">
+            <!-- bulle -->
+            <div
+              class="
+                custom-circle custom-circle-medium custom-circle-pos-44
+                appear-animation
+              "
+              data-appear-animation="expandIn"
+              data-appear-animation-delay="200"
+            >
+              <div
+                class="custom-bg-color-grey-1 rounded-circle w-100 h-100"
+                data-plugin-float-element
+                data-plugin-options="{'startPos': 'bottom', 'speed': 0.8, 'transition': true, 'transitionDuration': 3000}"
+              ></div>
+            </div>
+            <!-- bulle -->
+            <div
+              class="
+                custom-circle custom-circle-small custom-circle-pos-45
+                appear-animation
+              "
+              data-appear-animation="expandIn"
+              data-appear-animation-delay="500"
+            >
+              <div
+                class="custom-bg-color-grey-2 rounded-circle w-100 h-100"
+                data-plugin-float-element
+                data-plugin-options="{'startPos': 'bottom', 'speed': 0.3, 'transition': true, 'transitionDuration': 2000}"
+              ></div>
+            </div>
+            <!-- bulle -->
+            <div
+              class="
+                custom-circle custom-circle-extra-small custom-circle-pos-46
+                appear-animation
+              "
+              data-appear-animation="expandIn"
+              data-appear-animation-delay="800"
+            >
+              <div
+                class="custom-bg-color-grey-2 rounded-circle w-100 h-100"
+                data-plugin-float-element
+                data-plugin-options="{'startPos': 'bottom', 'speed': 0.3, 'transition': true, 'transitionDuration': 1500}"
+              ></div>
+            </div>
+
+            <!-- TITRE -->
+            <div class="row justify-content-center pt-lg-4 mb-2">
+              <div class="col-md-10 col-lg-8 text-center">
+                <div class="overflow-hidden">
+                  <span
+                    class="
+                      d-block
+                      text-color-primary
+                      font-weight-semibold
+                      text-3
+                      appear-animation
+                    "
+                    data-appear-animation="maskUp"
+                    data-appear-animation-delay="250"
+                    >MERCI À NOS PARTENAIRES</span
+                  >
+                </div>
+                <div class="overflow-hidden mb-2">
+                  <h2
+                    class="
+                      font-weight-semibold
+                      text-color-dark
+                      line-height-3
+                      text-6
+                      mb-0
+                      appear-animation
+                    "
+                    data-appear-animation="maskUp"
+                    data-appear-animation-delay="400"
+                  >
+                    Ils nous ont fait confiance
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <!-- CONTENU -->
+            <div
+              class="
+                row
+                text-center
+                align-items-center
+                pb-4
+                pt-lg-4
+                mt-5
+                mb-5
+                appear-animation
+              "
+              data-appear-animation="fadeInLeftShorter"
+              data-appear-animation-delay="300"
+            >
+              <!-- Ministère de l'Éducation -->
+              <div class="col-md-4 col-lg-2 mb-4">
+                <div class="porto-image-frame m-b-xl">
+                  <span class="thumb-info"
+                    ><a
+                      href="https://www.education.gouv.fr/"
+                      title="Lien vers Ministère de l'Éducation"
+                      target="_blank"
+                      ><span class="thumb-info-wrapper"
+                        ><img
+                          alt=""
+                          src="img/partenaires/ministere-education.jpg"
+                          class="img-responsive" /><span
+                          class="thumb-info-action"
+                          ><span class="thumb-info-action-icon"
+                            ><i class="fas fa-link"></i></span></span></span></a
+                  ></span>
+                </div>
+                <h5 class="text-semibold text-uppercase align-left mt-3">
+                  Ministère de l'Éducation
+                </h5>
+              </div>
+              <!-- Pôle Emploi -->
+              <div class="col-md-4 col-lg-2 mb-4">
+                <div class="porto-image-frame m-b-xl">
+                  <span class="thumb-info"
+                    ><a
+                      href="https://www.pole-emploi.fr/"
+                      title="Lien vers Pôle Emploi"
+                      target="_blank"
+                      ><span class="thumb-info-wrapper"
+                        ><img
+                          alt=""
+                          src="img/partenaires/pole-emploi.jpg"
+                          class="img-responsive" /><span
+                          class="thumb-info-action"
+                          ><span class="thumb-info-action-icon"
+                            ><i class="fas fa-link"></i></span></span></span></a
+                  ></span>
+                </div>
+                <h5 class="text-semibold text-uppercase align-left mt-3">
+                  Pôle Emploi
+                </h5>
+              </div>
+              <!-- AFPA -->
+              <div class="col-md-4 col-lg-2 mb-4">
+                <div class="porto-image-frame m-b-xl">
+                  <span class="thumb-info"
+                    ><a
+                      href="https://www.afpa.fr/"
+                      title="Lien vers AFPA"
+                      target="_blank"
+                      ><span class="thumb-info-wrapper"
+                        ><img
+                          alt=""
+                          src="img/partenaires/afpa.jpg"
+                          class="img-responsive" /><span
+                          class="thumb-info-action"
+                          ><span class="thumb-info-action-icon"
+                            ><i class="fas fa-link"></i></span></span></span></a
+                  ></span>
+                </div>
+                <h5 class="text-semibold text-uppercase align-left mt-3">
+                  AFPA
+                </h5>
+              </div>
+              <!-- ANAF -->
+              <div class="col-md-4 col-lg-2 mb-4">
+                <div class="porto-image-frame m-b-xl">
+                  <span class="thumb-info"
+                    ><a
+                      href="https://www.anaf.fr/"
+                      title="Lien vers ANAF"
+                      target="_blank"
+                      ><span class="thumb-info-wrapper"
+                        ><img
+                          alt=""
+                          src="img/partenaires/anaf.jpg"
+                          class="img-responsive" /><span
+                          class="thumb-info-action"
+                          ><span class="thumb-info-action-icon"
+                            ><i class="fas fa-link"></i></span></span></span></a
+                  ></span>
+                </div>
+                <h5 class="text-semibold text-uppercase align-left mt-3">
+                  ANAF
+                </h5>
+              </div>
+              <!-- APEC -->
+              <div class="col-md-4 col-lg-2 mb-4">
+                <div class="porto-image-frame m-b-xl">
+                  <span class="thumb-info"
+                    ><a
+                      href="https://www.apec.fr/"
+                      title="Lien vers APEC"
+                      target="_blank"
+                      ><span class="thumb-info-wrapper"
+                        ><img
+                          alt=""
+                          src="img/partenaires/apec.png"
+                          class="img-responsive" /><span
+                          class="thumb-info-action"
+                          ><span class="thumb-info-action-icon"
+                            ><i class="fas fa-link"></i></span></span></span></a
+                  ></span>
+                </div>
+                <h5 class="text-semibold text-uppercase align-left mt-3">
+                  APEC
+                </h5>
+              </div>
+              <!-- ONISEP -->
+              <div class="col-md-4 col-lg-2 mb-4">
+                <div class="porto-image-frame m-b-xl">
+                  <span class="thumb-info"
+                    ><a
+                      href="https://www.onisep.fr/"
+                      title="Lien vers ONISEP"
+                      target="_blank"
+                      ><span class="thumb-info-wrapper"
+                        ><img
+                          alt=""
+                          src="img/partenaires/onisep.jpg"
+                          class="img-responsive" /><span
+                          class="thumb-info-action"
+                          ><span class="thumb-info-action-icon"
+                            ><i class="fas fa-link"></i></span></span></span></a
+                  ></span>
+                </div>
+                <h5 class="text-semibold text-uppercase align-left mt-3">
+                  ONISEP
+                </h5>
+              </div>
+              <!-- France Compétences -->
+              <div class="col-md-4 col-lg-2 mb-4">
+                <div class="porto-image-frame m-b-xl">
+                  <span class="thumb-info"
+                    ><a
+                      href="https://www.francecompetences.fr/"
+                      title="Lien vers France Compétences"
+                      target="_blank"
+                      ><span class="thumb-info-wrapper"
+                        ><img
+                          alt=""
+                          src="img/partenaires/france-competences.jpg"
+                          class="img-responsive" /><span
+                          class="thumb-info-action"
+                          ><span class="thumb-info-action-icon"
+                            ><i class="fas fa-link"></i></span></span></span></a
+                  ></span>
+                </div>
+                <h5 class="text-semibold text-uppercase align-left mt-3">
+                  France Compétences
+                </h5>
+              </div>
+              <!-- OMNSH -->
+              <div class="col-md-4 col-lg-2 mb-4">
+                <div class="porto-image-frame m-b-xl">
+                  <span class="thumb-info"
+                    ><a
+                      href="http://omnsh.org/"
+                      title="Lien vers OMNSH"
+                      target="_blank"
+                      ><span class="thumb-info-wrapper"
+                        ><img
+                          alt=""
+                          src="img/partenaires/omnsh.png"
+                          class="img-responsive" /><span
+                          class="thumb-info-action"
+                          ><span class="thumb-info-action-icon"
+                            ><i class="fas fa-link"></i></span></span></span></a
+                  ></span>
+                </div>
+                <h5 class="text-semibold text-uppercase align-left mt-3">
+                  OMNSH
+                </h5>
+              </div>
+              <!-- Jeuxvideo.com -->
+              <div class="col-md-4 col-lg-2 mb-4">
+                <div class="porto-image-frame m-b-xl">
+                  <span class="thumb-info"
+                    ><a
+                      href="https://www.jeuxvideo.com/"
+                      title="Lien vers Jeuxvideo.com"
+                      target="_blank"
+                      ><span class="thumb-info-wrapper"
+                        ><img
+                          alt=""
+                          src="img/partenaires/jv.jpg"
+                          class="img-responsive" /><span
+                          class="thumb-info-action"
+                          ><span class="thumb-info-action-icon"
+                            ><i class="fas fa-link"></i></span></span></span></a
+                  ></span>
+                </div>
+                <h5 class="text-semibold text-uppercase align-left mt-3">
+                  Jeuxvideo.com
+                </h5>
+              </div>
+              <!-- AFJV -->
+              <div class="col-md-4 col-lg-2 mb-4">
+                <div class="porto-image-frame m-b-xl">
+                  <span class="thumb-info"
+                    ><a
+                      href="https://www.afjv.com/"
+                      title="Lien vers AFJV"
+                      target="_blank"
+                      ><span class="thumb-info-wrapper"
+                        ><img
+                          alt=""
+                          src="img/partenaires/afjv.png"
+                          class="img-responsive" /><span
+                          class="thumb-info-action"
+                          ><span class="thumb-info-action-icon"
+                            ><i class="fas fa-link"></i></span></span></span></a
+                  ></span>
+                </div>
+                <h5 class="text-semibold text-uppercase align-left mt-3">
+                  AFJV
+                </h5>
+              </div>
+              <!-- Game Impact -->
+              <div class="col-md-4 col-lg-2 mb-4">
+                <div class="porto-image-frame m-b-xl">
+                  <span class="thumb-info"
+                    ><a
+                      href="https://gameimpact.fr/"
+                      title="Lien vers Game Impact"
+                      target="_blank"
+                      ><span class="thumb-info-wrapper"
+                        ><img
+                          alt=""
+                          src="img/partenaires/game-impact.jpg"
+                          class="img-responsive" /><span
+                          class="thumb-info-action"
+                          ><span class="thumb-info-action-icon"
+                            ><i class="fas fa-link"></i></span></span></span></a
+                  ></span>
+                </div>
+                <h5 class="text-semibold text-uppercase align-left mt-3">
+                  Game Impact
+                </h5>
+              </div>
+              <!-- Gaming Campus -->
+              <div class="col-md-4 col-lg-2 mb-4">
+                <div class="porto-image-frame m-b-xl">
+                  <span class="thumb-info"
+                    ><a
+                      href="https://gamingcampus.fr/"
+                      title="Lien vers Gaming Campus"
+                      target="_blank"
+                      ><span class="thumb-info-wrapper"
+                        ><img
+                          alt=""
+                          src="img/partenaires/gaming-campus.jpg"
+                          class="img-responsive" /><span
+                          class="thumb-info-action"
+                          ><span class="thumb-info-action-icon"
+                            ><i class="fas fa-link"></i></span></span></span></a
+                  ></span>
+                </div>
+                <h5 class="text-semibold text-uppercase align-left mt-3">
+                  Gaming Campus
+                </h5>
+              </div>
+              <!-- SELL -->
+              <div class="col-md-4 col-lg-2 mb-4">
+                <div class="porto-image-frame m-b-xl">
+                  <span class="thumb-info"
+                    ><a
+                      href="https://www.sell.fr/"
+                      title="Lien vers SELL"
+                      target="_blank"
+                      ><span class="thumb-info-wrapper"
+                        ><img
+                          alt=""
+                          src="img/partenaires/sell.jpg"
+                          class="img-responsive" /><span
+                          class="thumb-info-action"
+                          ><span class="thumb-info-action-icon"
+                            ><i class="fas fa-link"></i></span></span></span></a
+                  ></span>
+                </div>
+                <h5 class="text-semibold text-uppercase align-left mt-3">
+                  SELL
+                </h5>
+              </div>
+              <!-- Diversidays -->
+              <div class="col-md-4 col-lg-2 mb-4">
+                <div class="porto-image-frame m-b-xl">
+                  <span class="thumb-info"
+                    ><a
+                      href="https://diversidays.com/"
+                      title="Lien vers Diversidays"
+                      target="_blank"
+                      ><span class="thumb-info-wrapper"
+                        ><img
+                          alt=""
+                          src="img/partenaires/diversidays.jpg"
+                          class="img-responsive" /><span
+                          class="thumb-info-action"
+                          ><span class="thumb-info-action-icon"
+                            ><i class="fas fa-link"></i></span></span></span></a
+                  ></span>
+                </div>
+                <h5 class="text-semibold text-uppercase align-left mt-3">
+                  Diversidays
+                </h5>
+              </div>
+              <!-- Afrogameuses -->
+              <div class="col-md-4 col-lg-2 mb-4">
+                <div class="porto-image-frame m-b-xl">
+                  <span class="thumb-info"
+                    ><a
+                      href="https://www.afrogameuses.com/"
+                      title="Lien vers Afrogameuses"
+                      target="_blank"
+                      ><span class="thumb-info-wrapper"
+                        ><img
+                          alt=""
+                          src="img/partenaires/afrogameuses.jpg"
+                          class="img-responsive" /><span
+                          class="thumb-info-action"
+                          ><span class="thumb-info-action-icon"
+                            ><i class="fas fa-link"></i></span></span></span></a
+                  ></span>
+                </div>
+                <h5 class="text-semibold text-uppercase align-left mt-3">
+                  Afrogameuses
+                </h5>
+              </div>
+              <!-- Bpifrance -->
+              <div class="col-md-4 col-lg-2 mb-4">
+                <div class="porto-image-frame m-b-xl">
+                  <span class="thumb-info"
+                    ><a
+                      href="https://www.bpifrance.fr/"
+                      title="Lien vers Bpifrance"
+                      target="_blank"
+                      ><span class="thumb-info-wrapper"
+                        ><img
+                          alt=""
+                          src="img/partenaires/bpifrance.jpg"
+                          class="img-responsive" /><span
+                          class="thumb-info-action"
+                          ><span class="thumb-info-action-icon"
+                            ><i class="fas fa-link"></i></span></span></span></a
+                  ></span>
+                </div>
+                <h5 class="text-semibold text-uppercase align-left mt-3">
+                  Bpifrance
+                </h5>
+              </div>
+              <!-- French Tech -->
+              <div class="col-md-4 col-lg-2 mb-4">
+                <div class="porto-image-frame m-b-xl">
+                  <span class="thumb-info"
+                    ><a
+                      href="https://lafrenchtech.com/fr/"
+                      title="Lien vers French Tech"
+                      target="_blank"
+                      ><span class="thumb-info-wrapper"
+                        ><img
+                          alt=""
+                          src="img/partenaires/french-tech.jpg"
+                          class="img-responsive" /><span
+                          class="thumb-info-action"
+                          ><span class="thumb-info-action-icon"
+                            ><i class="fas fa-link"></i></span></span></span></a
+                  ></span>
+                </div>
+                <h5 class="text-semibold text-uppercase align-left mt-3">
+                  French Tech
+                </h5>
+              </div>
+              <!-- Région Sud -->
+              <div class="col-md-4 col-lg-2 mb-4">
+                <div class="porto-image-frame m-b-xl">
+                  <span class="thumb-info"
+                    ><a
+                      href="https://www.maregionsud.fr/"
+                      title="Lien vers Région Sud"
+                      target="_blank"
+                      ><span class="thumb-info-wrapper"
+                        ><img
+                          alt=""
+                          src="img/partenaires/ma-region-sud.jpg"
+                          class="img-responsive" /><span
+                          class="thumb-info-action"
+                          ><span class="thumb-info-action-icon"
+                            ><i class="fas fa-link"></i></span></span></span></a
+                  ></span>
+                </div>
+                <h5 class="text-semibold text-uppercase align-left mt-3">
+                  Région Sud
+                </h5>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FEEDBACKS -->
+        <section
+          class="our-blog section bg-color-light position-relative border-0 m-0"
+        >
+          <!-- vague -->
+          <svg
+            class="custom-section-curved-top-6"
+            width="100%"
+            height="600px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              id="svg_1"
+              d="m-12.66406,442.40068c352.72654,-76.36348 565.45337,5.45453 696.36219,19.99996c130.90882,14.54542 270.90852,-23.63632 367.27196,-47.27263c96.36344,-23.63631 379.99921,-154.54513 527.27163,-209.09047c147.27242,-54.54535 381.813,-92.55755 406.36076,-99.00598c12.27388,-3.22421 917.96684,-113.93032 715.00991,10.61478c-202.95693,124.5451 -210.46055,521.28714 -198.64021,540.29354c11.82034,19.0064 -2500.90899,-15.53962 -2500.0019,-16.36399c-0.90709,0.82437 -9.99798,-180.99343 -9.09089,-181.8178"
+              stroke-opacity="null"
+              stroke-width="0"
+              stroke="#000"
+              fill="#f7f8f9"
+            />
+            <path
+              id="svg_2"
+              d="m-116.90461,507.88064c314.5448,-112.72704 523.63527,-21.81814 878.17999,12.72724c354.54471,34.54538 632.72595,-225.45407 978.17978,-294.54484c172.72691,-34.54538 291.36195,-62.7275 368.52007,-78.40952c77.15812,-15.68202 352.84215,-22.50036 359.66142,-7.04537c13.63854,30.90997 97.72734,614.54347 50.90961,639.99858c-46.81772,25.4551 -855.68236,4.54593 -1433.63569,1.81866c-577.95334,-2.72727 -1155.90718,-5.45466 -1155.45364,-5.45491"
+              stroke-opacity="null"
+              stroke-width="0"
+              stroke="#000"
+              fill="#fbfcfc"
+            />
+            <path
+              id="svg_3"
+              d="m-115.93584,623.27542c234.54496,-132.72699 429.09001,-112.72703 678.1804,-83.63619c249.09039,29.09085 389.09011,30.90903 656.36228,-107.2725c267.27217,-138.18153 816.36193,-207.2723 1121.81584,-170.90873c305.45391,36.36356 -292.72666,-19.99996 -293.63778,-18.18228c71.36548,8.18218 627.05432,68.63506 626.48637,265.22584c-0.56794,196.59079 -20.11364,456.59134 -31.02284,531.13767c-10.90919,74.54633 -1561.82313,-36.3646 -1565.45948,-34.54642c-3.63636,1.81818 -1249.08831,-1.81818 -1248.18122,-1.81869c-0.90709,0.00051 39.09282,-234.54445 39.99992,-234.54496c-0.9071,0.00051 -4.54345,-76.36297 -3.63636,-76.36348"
+              stroke-opacity="null"
+              stroke-width="0"
+              stroke="#000"
+              fill="#ffffff"
+            />
+          </svg>
+
+          <!-- CONTENU -->
+          <div class="container pb-lg-4 mb-lg-5">
+            <div class="row">
+              <div class="col">
+                <h2
+                  class="
+                    text-color-primary
+                    font-weight-semibold
+                    text-3
+                    positive-ls-2
+                    mb-0
+                  "
+                >
+                  ILS EN PARLENT
+                </h2>
+                <h3
+                  class="
+                    text-color-dark
+                    font-weight-semibold
+                    text-transform-none text-6
+                    line-height-3
+                    mb-5
+                  "
+                >
+                  Comment est perçue la méthode Kopelio ?
+                </h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col pb-5">
+                <div
+                  class="owl-carousel custom-dots-style-1 dots-dark mb-0"
+                  data-plugin-options="{'responsive': {'576': {'items': 1}, '768': {'items': 1}, '992': {'items': 2}, '1200': {'items': 2}}, 'autoplay': true, 'autoplayTimeout': 7000, 'loop': true, 'dots': true, 'nav': false}"
+                >
+                  <div>
+                    <div
+                      class="
+                        custom-testimonial-style-1
+                        testimonial
+                        testimonial-with-quotes
+                        testimonial-remove-right-quote
+                        testimonial-style-5
+                        text-start
+                        mb-0
+                      "
+                    >
+                      <blockquote class="pt-0">
+                        <p
+                          class="
+                            text-color-dark
+                            font-weight-medium
+                            text-5
+                            line-height-6
+                          "
+                        >
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Ducimus dicta culpa esse eius provident qui
+                          animi.
+                        </p>
+                        <div
+                          class="
+                            divider divider-small divider-small-sm
+                            ps-4
+                            ms-3
+                          "
+                        >
+                          <hr />
+                        </div>
+                        <div class="testimonial-author ps-4 ms-3">
+                          <p class="alternative-font-4 text-start">
+                            <strong
+                              class="
+                                font-weight-medium
+                                text-color-dark
+                                opacity-9
+                              "
+                              >John Albert Doe</strong
+                            >
+                          </p>
+                        </div>
+                      </blockquote>
+                    </div>
+                  </div>
+                  <div>
+                    <div
+                      class="
+                        custom-testimonial-style-1
+                        testimonial
+                        testimonial-with-quotes
+                        testimonial-remove-right-quote
+                        testimonial-style-5
+                        text-start
+                        mb-0
+                      "
+                    >
+                      <blockquote class="pt-0">
+                        <p
+                          class="
+                            text-color-dark
+                            font-weight-medium
+                            text-5
+                            line-height-6
+                          "
+                        >
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Ducimus dicta culpa esse eius provident qui
+                          animi.
+                        </p>
+                        <div
+                          class="
+                            divider divider-small divider-small-sm
+                            ps-4
+                            ms-3
+                          "
+                        >
+                          <hr />
+                        </div>
+                        <div class="testimonial-author ps-4 ms-3">
+                          <p class="alternative-font-4 text-start">
+                            <strong
+                              class="
+                                font-weight-medium
+                                text-color-dark
+                                opacity-9
+                              "
+                              >John Albert Doe</strong
+                            >
+                          </p>
+                        </div>
+                      </blockquote>
+                    </div>
+                  </div>
+                  <div>
+                    <div
+                      class="
+                        custom-testimonial-style-1
+                        testimonial
+                        testimonial-with-quotes
+                        testimonial-remove-right-quote
+                        testimonial-style-5
+                        text-start
+                        mb-0
+                      "
+                    >
+                      <blockquote class="pt-0">
+                        <p
+                          class="
+                            text-color-dark
+                            font-weight-medium
+                            text-5
+                            line-height-6
+                          "
+                        >
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Ducimus dicta culpa esse eius provident qui
+                          animi.
+                        </p>
+                        <div
+                          class="
+                            divider divider-small divider-small-sm
+                            ps-4
+                            ms-3
+                          "
+                        >
+                          <hr />
+                        </div>
+                        <div class="testimonial-author ps-4 ms-3">
+                          <p class="alternative-font-4 text-start">
+                            <strong
+                              class="
+                                font-weight-medium
+                                text-color-dark
+                                opacity-9
+                              "
+                              >John Albert Doe</strong
+                            >
+                          </p>
+                        </div>
+                      </blockquote>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <!-- Espaceur -->
-          <div class="spacer pt-5 pb-4"></div>
-          <!-- Séparateur -->
-          <div class="shape-divider shape-divider-bottom" style="height: 215px">
-            <svg
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-              x="0px"
-              y="0px"
-              viewBox="0 0 1920 215"
-              preserveAspectRatio="xMinYMin"
-            >
-              <path
-                fill="#FFF"
-                d="M-13,24c3.03-0.28,7.53-0.66,13-1c26.45-1.65,46.73-0.59,57,0c76.61,4.41,118,9,118,9
-							c70.55,7.83,105.82,11.74,151,19c32.98,5.3,65.87,11.44,179,37c145.79,32.94,138.71,33.5,203,47c85.09,17.87,149.08,31.32,237,40
-							c113.11,11.17,203.29,8.29,234,7c16.74-0.7,63.49-4.13,157-11c107.74-7.91,117.84-9.32,153-10c52.52-1.02,97.8,0.79,153,3
-							c21.27,0.85,54.96,2.38,96,5c37.55,2.4,68.64,4.91,119,9c30.97,2.52,56.12,4.64,72,6c0,13.33,0,26.67,0,40c-646,0-1292,0-1938,0
-							C-10.33,157.33-11.67,90.67-13,24z"
-              />
-            </svg>
-          </div>
-        </section>
-
-        <!-- FONCTIONNALITES -->
-        <section
-          id="fonctionnalites"
-          class="
-            section section-with-shape-divider
-            border-0
-            bg-transparent
-            m-0
-            p-0
-          "
-        >
-          <!-- Progresser en jouant -->
-          <div class="container pt-lg-5">
-            <div
-              class="
-                row
-                align-items-center
-                justify-content-center
-                py-5
-                mt-lg-4
-                mb-4
-              "
-            >
-              <div class="col-md-9 col-lg-5 col-xl-6 order-2 order-lg-1">
-                <div
-                  data-plugin-float-element
-                  data-plugin-options="{'startPos': 'bottom', 'speed': 0.3, 'transition': true, 'transitionDuration': 1000, 'isInsideSVG': true}"
-                >
-                  <img
-                    src="img/kpl-accueil-orientation-illu.svg"
-                    class="img-fluid text-center appear-animation"
-                    height="589px"
-                    alt=""
-                    data-appear-animation="fadeInUpShorter"
-                    data-appear-animation-delay="200"
-                  />
-                </div>
-              </div>
-              <div class="col-lg-7 col-xl-6 order-1 order-lg-2 mb-0 pb-0">
-                <div class="overflow-hidden mb-1">
-                  <span
-                    class="
-                      d-block
-                      text-color-default
-                      custom-letter-spacing-1
-                      text-3-5
-                      mb-0
-                      appear-animation
-                    "
-                    data-appear-animation="maskUp"
-                    data-appear-animation-delay="400"
-                    >Suggestion de Jeux Vidéo</span
-                  >
-                </div>
-                <div class="overflow-hidden mb-4">
-                  <h2
-                    class="
-                      font-weight-bold
-                      text-color-tertiary text-9
-                      negative-ls-05
-                      line-height-2
-                      mb-0
-                      appear-animation
-                    "
-                    data-appear-animation="maskUp"
-                    data-appear-animation-delay="600"
-                  >
-                    Progresser en jouant
-                  </h2>
-                </div>
-                <p
-                  class="
-                    font-weight-semibold
-                    text-4-5
-                    line-height-6
-                    text-justify
-                    mb-4
-                    appear-animation
-                  "
-                  data-appear-animation="fadeInUpShorter"
-                  data-appear-animation-delay="800"
-                >
-                  Selon votre orientation scolaire ou professionnelle, Kopelio
-                  vous propose des jeux vidéo qui vous feront gagner en
-                  compétences.
-                </p>
-                <p
-                  class="text-3-5 text-justify pb-0 mb-0 appear-animation"
-                  data-appear-animation="fadeInUpShorter"
-                  data-appear-animation-delay="1000"
-                >
-                  L'application Kopelio vous permet de
-                  <strong>saisir un domaine</strong> (ex: <em>aéronotique</em>)
-                  <strong>ou un métier</strong> (ex: <em>agriculteur</em>) puis
-                  vous <strong>suggère des jeux vidéo</strong> (ex:
-                  <em>Flight Simulator</em>, <em>Airport CEO</em> ou encore
-                  <em>Farming Simulator</em>, <em>Pure Farming</em>) en vous
-                  expliquant leurs bénéfices par rapport à votre saisie.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Comprendre ses loisirs -->
-          <div class="container pt-lg-5">
-            <div class="row align-items-start justify-content-center">
-              <div class="col-lg-7 col-xl-6 pb-3 mb-0">
-                <div class="overflow-hidden mb-1">
-                  <span
-                    class="
-                      d-block
-                      text-color-default
-                      custom-letter-spacing-1
-                      text-3-5
-                      mb-0
-                      appear-animation
-                    "
-                    data-appear-animation="maskUp"
-                    data-appear-animation-delay="400"
-                    >Suggestion de Métiers</span
-                  >
-                </div>
-                <div class="overflow-hidden mb-4">
-                  <h2
-                    class="
-                      font-weight-bold
-                      text-color-tertiary text-9
-                      negative-ls-05
-                      line-height-2
-                      mb-0
-                      appear-animation
-                    "
-                    data-appear-animation="maskUp"
-                    data-appear-animation-delay="600"
-                  >
-                    Comprendre ses loisirs
-                  </h2>
-                </div>
-                <p
-                  class="
-                    font-weight-semibold
-                    text-4-5 text-justify
-                    line-height-6
-                    mb-4
-                    appear-animation
-                  "
-                  data-appear-animation="fadeInUpShorter"
-                  data-appear-animation-delay="800"
-                >
-                  En fonction de vos goûts en jeux vidéo, Kopelio vous suggère
-                  des métiers jugés complémentaires.
-                </p>
-                <p
-                  class="text-3-5 text-justify pb-0 mb-0 appear-animation"
-                  data-appear-animation="fadeInUpShorter"
-                  data-appear-animation-delay="1000"
-                >
-                  L'application Kopelio vous permet de
-                  <strong>saisir un jeu vidéo</strong> (ex:
-                  <em>Mario Kart</em> ou <em>Formula 1</em>) puis vous
-                  <strong>suggère des métiers</strong> (ex: <em>chauffeur</em>,
-                  <em>mécanicien</em> ou <em>gestionnaire de concession</em>) en
-                  vous expliquant en quoi le jeu saisi est bénéfique.
-                </p>
-              </div>
-              <div class="col-md-9 col-lg-5 col-xl-6 mb-5 mb-lg-0">
-                <div
-                  data-plugin-float-element
-                  data-plugin-options="{'startPos': 'top', 'speed': 0.3, 'transition': true, 'transitionDuration': 1000, 'isInsideSVG': true}"
-                >
-                  <img
-                    src="img/kpl-accueil-divertissement-illu.svg"
-                    class="img-fluid custom-xl-margin-top-1 appear-animation"
-                    height="473"
-                    alt=""
-                    data-appear-animation="fadeInUpShorter"
-                    data-appear-animation-delay="200"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Lister ses expériences -->
-          <div class="container">
-            <div
-              class="row align-items-center justify-content-center pb-5 mb-0"
-            >
-              <div class="col-md-9 col-lg-5 col-xl-6 order-2 order-lg-1 mb-0">
-                <div
-                  data-plugin-float-element
-                  data-plugin-options="{'startPos': 'bottom', 'speed': 0.3, 'transition': true, 'transitionDuration': 1000, 'isInsideSVG': true}"
-                >
-                  <img
-                    src="img/kpl-accueil-cv-illu.svg"
-                    class="img-fluid appear-animation"
-                    height="516px"
-                    alt=""
-                    data-appear-animation="fadeInUpShorter"
-                    data-appear-animation-delay="200"
-                  />
-                </div>
-              </div>
-              <div class="col-lg-7 col-xl-6 order-1 order-lg-2">
-                <div class="overflow-hidden mb-1">
-                  <span
-                    class="
-                      d-block
-                      text-color-default
-                      custom-letter-spacing-1
-                      text-3-5
-                      mb-0
-                      appear-animation
-                    "
-                    data-appear-animation="maskUp"
-                    data-appear-animation-delay="400"
-                    >Éditeur de CV Gaming</span
-                  >
-                </div>
-                <div class="overflow-hidden mb-4">
-                  <h2
-                    class="
-                      font-weight-bold
-                      text-color-tertiary text-9
-                      negative-ls-05
-                      line-height-2
-                      mb-0
-                      appear-animation
-                    "
-                    data-appear-animation="maskUp"
-                    data-appear-animation-delay="600"
-                  >
-                    Lister ses expériences
-                  </h2>
-                </div>
-                <p
-                  class="
-                    font-weight-semibold
-                    text-4-5 text-justify
-                    line-height-6
-                    mb-4
-                    appear-animation
-                  "
-                  data-appear-animation="fadeInUpShorter"
-                  data-appear-animation-delay="800"
-                >
-                  Quasiment similaire à un CV classique, le
-                  <em>CV Gaming</em> permet la mise en avant de vos expériences
-                  vidéoludiques.
-                </p>
-                <p
-                  class="text-3-5 text-justify pb-0 mb-0 appear-animation"
-                  data-appear-animation="fadeInUpShorter"
-                  data-appear-animation-delay="1000"
-                >
-                  L'application Kopelio permet d'<strong
-                    >éditer votre CV Gamer</strong
-                  >. Conscient que ce type de CV n'est que très peu utilisé,
-                  nous pouvons
-                  <strong
-                    >vous mettre en relation avec des professionnels qui le
-                    considèrent</strong
-                  >
-                  (écoles, agences de recrutement, psychologues, etc...).
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Gratuite sur web et mobile -->
-          <div class="container">
-            <div class="row align-items-center justify-content-center mb-0">
-              <div class="col-lg-7 col-xl-6 pb-0 mb-0">
-                <div class="overflow-hidden mb-1">
-                  <span
-                    class="
-                      d-block
-                      text-color-default
-                      custom-letter-spacing-1
-                      text-3-5
-                      mb-0
-                      appear-animation
-                    "
-                    data-appear-animation="maskUp"
-                    data-appear-animation-delay="400"
-                    >COMMENT Y ACCEDER ?</span
-                  >
-                </div>
-                <div class="overflow-hidden mb-4">
-                  <h2
-                    class="
-                      font-weight-bold
-                      text-color-tertiary text-9
-                      negative-ls-05
-                      line-height-2
-                      mb-0
-                      appear-animation
-                    "
-                    data-appear-animation="maskUp"
-                    data-appear-animation-delay="600"
-                  >
-                    Gratuite sur web et mobile
-                  </h2>
-                </div>
-                <p
-                  class="
-                    font-weight-semibold
-                    text-4-5 text-justify
-                    line-height-6
-                    pb-2
-                    mb-4
-                    appear-animation
-                  "
-                  data-appear-animation="fadeInUpShorter"
-                  data-appear-animation-delay="800"
-                >
-                  L'application Kopelio proposera la
-                  <em>Suggestion de jeux vidéo</em>, la
-                  <em>Suggestion de métiers</em> et l'<em
-                    >Éditeur de CV Gaming</em
-                  >.
-                </p>
-                <p
-                  class="text-3-5 text-justify mb-0 pb-0 appear-animation"
-                  data-appear-animation="fadeInUpShorter"
-                  data-appear-animation-delay="1000"
-                >
-                  <strong>Actuellement en développement</strong>, l'application
-                  passera en phase de test public
-                  <strong>courant 2<sup>ème</sup> semestre 2021</strong> :
-                  n'hésitez pas à nous aider à tester ou bien nous faire vos
-                  suggestions.
-                </p>
-              </div>
-              <div class="col-md-9 col-lg-5 col-xl-6 mb-0">
-                <div
-                  data-plugin-float-element
-                  data-plugin-options="{'startPos': 'top', 'speed': 0.3, 'transition': true, 'transitionDuration': 1000, 'isInsideSVG': true}"
-                >
-                  <img
-                    src="img/kpl-accueil-app-illu.svg"
-                    class="img-fluid custom-xl-margin-top-1 appear-animation"
-                    height="473"
-                    alt=""
-                    data-appear-animation="fadeInUpShorter"
-                    data-appear-animation-delay="200"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Espaceur -->
-          <div class="spacer pt-4 pb-4"></div>
-
-          <!-- Ça m'intéresse -->
-          <div class="container pb-lg-5 mb-lg-5">
-            <div
-              class="row align-items-center justify-content-center pb-5 mb-4"
-            >
-              <div class="pb-5 pb-lg-0 mb-lg-5 mb-xl-0">
-                <div
-                  class="
-                    d-flex
-                    flex-column flex-sm-row
-                    align-items-center
-                    justify-content-center justify-content-md-start
-                    mb-2
-                  "
-                >
-                  <a
-                    href="contact.html"
-                    data-hash
-                    data-hash-offset="70"
-                    class="
-                      btn btn-primary btn-rounded
-                      font-weight-bold
-                      text-3-5
-                      px-5
-                      py-3
-                      appear-animation
-                    "
-                    data-appear-animation="fadeInUpShorter"
-                    data-appear-animation-delay="1200"
-                    >Ça m'intéresse</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Espaceur -->
-          <div class="spacer pt-5 pb-5 my-5"></div>
-          <!-- Séparateur -->
-          <div
-            class="shape-divider shape-divider-bottom shape-divider-reverse-y"
-            style="height: 215px"
-          >
-            <svg
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-              x="0px"
-              y="0px"
-              viewBox="0 0 1920 215"
-              preserveAspectRatio="xMinYMin"
-            >
-              <path
-                fill="#EFF1F3"
-                d="M-17,20c4.09,0.79,9.94,1.87,17,3c14.01,2.23,24.68,3.35,31,4c25.44,2.62,38.16,3.92,52,5
-								c124.22,9.65,185,12,185,12c68.3,2.64,120.49,4.65,191,2c22.4-0.84,21.56-1.21,158-11c128.51-9.22,140.25-9.68,153-10
-								c22.7-0.57,91-1.79,179,6c80.95,7.16,140.16,18.54,204,31c93.98,18.34,96.08,23.21,217,50c124.45,27.57,213.36,42.61,276,52
-								c77.73,11.66,123.89,15.95,169,18c51.59,2.34,94.89,1.42,126,0c0,16.35,0,32.69,0,49.04c-651.33,0-1302.67,0-1954,0
-								C-14.33,160.69-15.67,90.35-17,20z"
-              />
-            </svg>
-          </div>
-        </section>
-
-        <!-- CIBLE -->
-        <section
-          id="cible"
-          class="
-            section section-with-shape-divider
-            border-0
-            custom-bg-color-grey-1
-            overflow-visible
-            z-index-1
-            m-0
-            pt-0
-            pb-1
-          "
-        >
-          <!-- Contenu -->
-          <div class="container pt-3 pb-lg-5 mb-lg-5">
-            <div class="row pt-4 mt-0">
-              <div class="col text-center">
-                <div class="overflow-hidden mb-1">
-                  <span
-                    class="
-                      d-block
-                      text-color-default
-                      custom-letter-spacing-2
-                      text-3-5
-                      mb-0
-                      appear-animation
-                    "
-                    data-appear-animation="maskUp"
-                    data-appear-animation-delay="300"
-                    >POUR QUI ?</span
-                  >
-                </div>
-                <div class="overflow-hidden">
-                  <h2
-                    class="
-                      font-weight-bold
-                      text-color-tertiary
-                      negative-ls-05
-                      text-9
-                      mb-0
-                      appear-animation
-                    "
-                    data-appear-animation="maskUp"
-                    data-appear-animation-delay="500"
-                  >
-                    Pour ceux qui aiment jouer
-                  </h2>
-                </div>
-              </div>
-            </div>
-            <div class="row justify-content-center py-5 my-4 mt-0 pt-0">
-              <!-- SCOLARITE -->
-              <div class="col-sm-10 col-md-9 col-lg-4 text-center mb-5 mb-lg-0">
-                <h2
-                  class="
-                    text-color-dark
-                    font-weight-bold
-                    text-5
-                    line-height-1
-                    mt-4
-                    mb-0
-                  "
-                >
-                  POUR LA SCOLARITÉ
-                </h2>
-                <span class="d-block text-color-dark mb-3"
-                  >Écoliers & Étudiants</span
-                >
-                <p class="text-3 px-lg-3 mb-2">
-                  <em
-                    >Choisir son orientation scolaire ou comprendre certaines
-                    matières n'est pas toujours évident.</em
-                  >
-                </p>
-                <img
-                  src="img/kpl-accueil-scolarite-illu.svg"
-                  alt="Porto"
-                  width="75%"
-                />
-                <p class="font-weight-bold px-lg-3 mb-0">
-                  Kopelio vous aide à trouver certaines réponses en analysant
-                  vos jeux vidéo favoris.
-                </p>
-              </div>
-              <!-- EMPLOI -->
-              <div class="col-sm-10 col-md-9 col-lg-4 text-center mb-5 mb-lg-0">
-                <h2
-                  class="
-                    text-color-dark
-                    font-weight-bold
-                    text-5
-                    line-height-1
-                    mt-4
-                    mb-0
-                  "
-                >
-                  POUR L'EMPLOI
-                </h2>
-                <span class="d-block text-color-dark mb-3"
-                  >Actifs & Chômeurs</span
-                >
-                <p class="px-lg-3 text-3 mb-2">
-                  <em
-                    >Trouver un emploi, se reconvertir ou s'améliorer sur un
-                    domaine précis paraît souvent difficile.</em
-                  >
-                </p>
-                <img
-                  src="img/kpl-accueil-emploi-illu.svg"
-                  alt="Porto"
-                  width="75%"
-                />
-                <p class="font-weight-bold px-lg-3 mb-0">
-                  Kopelio vous aide à capitaliser sur les compétences qui vous
-                  plaisent.
-                </p>
-              </div>
-              <!-- MAISON -->
-              <div class="col-sm-10 col-md-9 col-lg-4 text-center">
-                <h2
-                  class="
-                    text-color-dark
-                    font-weight-bold
-                    text-5
-                    line-height-1
-                    mt-4
-                    mb-0
-                  "
-                >
-                  POUR LA MAISON
-                </h2>
-                <span class="d-block text-color-dark mb-3"
-                  >Familles & Curieux</span
-                >
-                <p class="font-weight-normal text-3 px-lg-3 mb-2">
-                  <em
-                    >Jouer à des jeux vidéo incompris par sa famille créent
-                    souvent de la distance à la maison.</em
-                  >
-                </p>
-                <img
-                  src="img/kpl-accueil-maison-illu.svg"
-                  alt="Porto"
-                  width="75%"
-                />
-                <p class="font-weight-bold px-lg-3 mb-0">
-                  Kopelio vous aide à suivre l'historique des expériences
-                  vidéoludiques pour toute famille.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Espaceur -->
-          <div class="spacer pt-5 pb-5 my-lg-5 my-xl-0"></div>
-          <!-- Séparateur -->
-          <div class="shape-divider shape-divider-bottom" style="height: 215px">
-            <svg
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-              x="0px"
-              y="0px"
-              viewBox="0 0 1920 215"
-              preserveAspectRatio="xMinYMin"
-            >
-              <path
-                fill="#FFF"
-                d="M-13,24c3.03-0.28,7.53-0.66,13-1c26.45-1.65,46.73-0.59,57,0c76.61,4.41,118,9,118,9
-							c70.55,7.83,105.82,11.74,151,19c32.98,5.3,65.87,11.44,179,37c145.79,32.94,138.71,33.5,203,47c85.09,17.87,149.08,31.32,237,40
-							c113.11,11.17,203.29,8.29,234,7c16.74-0.7,63.49-4.13,157-11c107.74-7.91,117.84-9.32,153-10c52.52-1.02,97.8,0.79,153,3
-							c21.27,0.85,54.96,2.38,96,5c37.55,2.4,68.64,4.91,119,9c30.97,2.52,56.12,4.64,72,6c0,13.33,0,26.67,0,40c-646,0-1292,0-1938,0
-							C-10.33,157.33-11.67,90.67-13,24z"
-              />
-            </svg>
-          </div>
-        </section>
-
-        <!-- NOUS -->
-        <section
-          id="nous"
-          class="
-            section section-with-shape-divider
-            border-0
-            bg-transparent
-            m-0
-            p-0
-          "
-        >
-          <!-- Espaceur -->
-          <div class="spacer pt-5 pb-5 my-lg-5 my-xl-0"></div>
-          <!-- Contenu -->
-          <div class="container pt-5 pb-lg-5 mb-lg-5">
-            <!-- Un projet humain -->
-            <div class="row align-items-start justify-content-center pb-5">
-              <div class="col-lg-7 col-xl-6 pb-0 mb-0">
-                <div class="overflow-hidden mb-1">
-                  <span
-                    class="
-                      d-block
-                      text-color-default
-                      custom-letter-spacing-1
-                      text-3-5
-                      mb-0
-                      appear-animation
-                    "
-                    data-appear-animation="maskUp"
-                    data-appear-animation-delay="400"
-                    >QUI SOMMES-NOUS ?</span
-                  >
-                </div>
-                <div class="overflow-hidden mb-4">
-                  <h2
-                    class="
-                      font-weight-bold
-                      text-color-tertiary text-9
-                      negative-ls-05
-                      line-height-2
-                      mb-0
-                      appear-animation
-                    "
-                    data-appear-animation="maskUp"
-                    data-appear-animation-delay="600"
-                  >
-                    Un projet humain
-                  </h2>
-                </div>
-                <p
-                  class="text-3-5 text-justify pb-1 appear-animation"
-                  data-appear-animation="fadeInUpShorter"
-                  data-appear-animation-delay="800"
-                >
-                  Nous croyons que chacun possède des
-                  <strong>compétences de qualité</strong>, qu'il peut
-                  <strong>déceler par l'analyse de lui-même</strong> afin de
-                  l'aider dans le choix de ses orientations scolaires ou
-                  professionnelles.
-                </p>
-                <p
-                  class="text-3-5 text-justify pb-0 mb-0 appear-animation"
-                  data-appear-animation="fadeInUpShorter"
-                  data-appear-animation-delay="1000"
-                >
-                  Adepte de diversités culturelles, économiques et sociales et
-                  convaincu de l'importance des loisirs dans le pocessus
-                  d'apprentissage, Kopelio a pour mission d'<strong
-                    >améliorer l'adéquation entre divertissements et
-                    orientations scolaires ou professionnelles de chaque
-                    individu</strong
-                  >.
-                </p>
-              </div>
-              <div class="col-md-9 col-lg-5 col-xl-6 mb-0">
-                <div
-                  data-plugin-float-element
-                  data-plugin-options="{'startPos': 'top', 'speed': 0.3, 'transition': true, 'transitionDuration': 1000, 'isInsideSVG': true}"
-                >
-                  <img
-                    src="img/kpl-accueil-humains-illu.svg"
-                    class="img-fluid custom-xl-margin-top-1 appear-animation"
-                    height="373"
-                    alt=""
-                    data-appear-animation="fadeInUpShorter"
-                    data-appear-animation-delay="200"
-                  />
-                </div>
-              </div>
-            </div>
-            <!-- Experts -->
-            <div
-              class="
-                row
-                align-items-start
-                justify-content-center
-                pt-3
-                pb-5
-                mb-4
-              "
-            >
-              <div
-                class="
-                  col-md-9 col-lg-5 col-xl-6
-                  order-2 order-lg-1
-                  mb-5 mb-lg-0
-                "
-              >
-                <div
-                  data-plugin-float-element
-                  data-plugin-options="{'startPos': 'top', 'speed': 0.3, 'transition': true, 'transitionDuration': 1000, 'isInsideSVG': true}"
-                >
-                  <img
-                    src="img/kpl-accueil-experts-illu.svg"
-                    class="img-fluid custom-xl-margin-top-1 appear-animation"
-                    height="373"
-                    alt=""
-                    data-appear-animation="fadeInUpShorter"
-                    data-appear-animation-delay="200"
-                  />
-                </div>
-              </div>
-              <div class="col-lg-7 col-xl-6 order-1 order-lg-2 pb-0 mb-0">
-                <div class="overflow-hidden mb-4">
-                  <h2
-                    class="
-                      font-weight-bold
-                      text-color-tertiary text-9
-                      negative-ls-05
-                      line-height-2
-                      mb-0
-                      appear-animation
-                    "
-                    data-appear-animation="maskUp"
-                    data-appear-animation-delay="600"
-                  >
-                    Une équipe d'expert(e)s
-                  </h2>
-                </div>
-                <p
-                  class="text-3-5 text-justify pb-0 mb-0 appear-animation"
-                  data-appear-animation="fadeInUpShorter"
-                  data-appear-animation-delay="800"
-                >
-                  Fondé en 2020 par un développeur spécialisé en Ressources
-                  Humaines et passionné de Jeux vidéo, le projet Kopelio a
-                  rapidement rassemblé des
-                  <strong
-                    >experts en pédagogie, en recrutement et en culture</strong
-                  >
-                  afin de comprendre le besoin humain, mettre en place nos
-                  services et sélectionner les jeux les plus pertinents.
-                </p>
-              </div>
-            </div>
-            <!-- Contact -->
-            <div
-              class="
-                row
-                align-items-start
-                justify-content-center
-                pt-3
-                pb-5
-                mb-4
-              "
-            >
-              <div class="pb-5 pb-lg-0 mb-lg-5 mb-xl-0">
-                <a
-                  href="contact.html"
-                  data-hash
-                  data-hash-offset="70"
-                  class="
-                    btn btn-primary btn-rounded
-                    font-weight-bold
-                    text-3-5
-                    px-5
-                    py-3
-                    appear-animation
-                  "
-                  data-appear-animation="fadeInUpShorter"
-                  data-appear-animation-delay="1200"
-                  >Nous contacter</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Espaceur -->
-          <div class="spacer pt-5 pb-3 my-lg-5 my-xl-0"></div>
-          <!-- Séparateur -->
-          <div
-            class="shape-divider shape-divider-bottom shape-divider-reverse-y"
-            style="height: 215px"
-          >
-            <svg
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-              x="0px"
-              y="0px"
-              viewBox="0 0 1920 215"
-              preserveAspectRatio="xMinYMin"
-            >
-              <path
-                fill="#EFF1F3"
-                d="M-13,24c3.03-0.28,7.53-0.66,13-1c26.45-1.65,46.73-0.59,57,0c76.61,4.41,118,9,118,9
-            c70.55,7.83,105.82,11.74,151,19c32.98,5.3,65.87,11.44,179,37c145.79,32.94,138.71,33.5,203,47c85.09,17.87,149.08,31.32,237,40
-            c113.11,11.17,203.29,8.29,234,7c16.74-0.7,63.49-4.13,157-11c107.74-7.91,117.84-9.32,153-10c52.52-1.02,97.8,0.79,153,3
-            c21.27,0.85,54.96,2.38,96,5c37.55,2.4,68.64,4.91,119,9c30.97,2.52,56.12,4.64,72,6c0,13.33,0,26.67,0,40c-646,0-1292,0-1938,0
-            C-10.33,157.33-11.67,90.67-13,24z"
-              />
-            </svg>
-          </div>
         </section>
       </div>
 
       <!-- FOOTER -->
-      <footer id="footer" class="custom-bg-color-grey-1 border-0 mt-0">
-        <div class="container">
-          <div class="row py-5 justify-content-center">
-            <!-- MENU -->
-            <div
-              class="
-                col-md-9
-                offset-md-1 offset-lg-0
-                mb-4 mb-lg-0
-                d-flex
-                align-items-center
-              "
-            >
-              <div class="footer-nav footer-nav-links footer-nav-bottom-line">
-                <nav>
-                  <ul class="nav" id="footerNav">
-                    <li>
-                      <a href="#intro" class="text-3">Accueil</a>
-                    </li>
-                    <li>
-                      <a href="#fonctionnalites" class="text-3"
-                        >Fonctionnalités</a
-                      >
-                    </li>
-                    <li>
-                      <a class="text-3" href="#cible">Pour qui ?</a>
-                    </li>
-                    <li>
-                      <a href="#nous" class="text-3">Qui sommes-nous ?</a>
-                    </li>
-                    <li>
-                      <a href="contact.html" class="text-3">Contact</a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
+      <footer
+        id="footer"
+        class="custom-bg-color-light-1 position-relative mt-0"
+      >
+        <!-- vague -->
+        <svg
+          class="custom-section-curved-top-7"
+          width="100%"
+          height="400"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            id="svg_2"
+            fill="#eff1f3"
+            stroke="#000"
+            stroke-width="0"
+            d="m-16.68437,95.44889c0,0 5.33335,176.00075 660.00283,93.33373c327.33474,-41.33351 503.33549,15.3334 639.00274,35.66682c135.66725,20.33342 59.66691,9.66671 358.33487,28.33346c298.66795,18.66676 268.66829,-45.00088 382.66831,-112.00048c114.00002,-66.9996 718.31698,-59.48704 1221.66946,95.563c503.35248,155.05004 -221.83202,184.10564 -243.66935,197.60521c-21.83733,13.49958 -3008.67549,-19.83371 -3008.00467,-20.83335c-0.67082,0.99964 -30.00428,-232.33469 -10.00419,-317.66839z"
+          />
+        </svg>
+
+        <!-- CONTENU -->
+        <div class="container position-relative mt-0 mb-4">
+          <div class="row pt-5 py-lg-5">
+            <!-- HORAIRES -->
+            <div class="col-12 col-md-6 col-lg-3 mb-5 mb-lg-0">
+              <h5
+                class="
+                  text-6 text-transform-none
+                  font-weight-semi-bold
+                  text-color-primary
+                  mb-4
+                "
+              >
+                Horaires
+              </h5>
+              <p class="text-4 mb-0">
+                Lundi au Vendredi:
+                <span class="font-weight-semi-bold">9h à 18h</span>
+              </p>
+              <p class="text-4 mb-0">
+                Samedi:
+                <span class="font-weight-semi-bold">9h à 13h</span>
+              </p>
+              <p class="text-4 mb-0">
+                Dimanche: <span class="font-weight-semi-bold">Fermé</span>
+              </p>
+            </div>
+            <!-- NAVIGATION -->
+            <div class="col-12 col-md-6 col-lg-3 mb-5 mb-lg-0">
+              <h5
+                class="
+                  text-6 text-transform-none
+                  font-weight-semi-bold
+                  text-color-primary
+                  mb-4
+                "
+              >
+                Navigation
+              </h5>
+              <ul class="list list-icons list-icons-sm">
+                <li>
+                  <i class="fas fa-angle-right"></i
+                  ><a
+                    href="index.html"
+                    class="text-color-hover-primary link-hover-style-1 ms-1"
+                  >
+                    Accueil</a
+                  >
+                </li>
+                <li>
+                  <i class="fas fa-angle-right"></i
+                  ><a
+                    href="services.html"
+                    class="text-color-hover-primary link-hover-style-1 ms-1"
+                  >
+                    Services</a
+                  >
+                </li>
+                <li>
+                  <i class="fas fa-angle-right"></i
+                  ><a
+                    href="nous.html"
+                    class="text-color-hover-primary link-hover-style-1 ms-1"
+                  >
+                    À propos</a
+                  >
+                </li>
+                <li>
+                  <i class="fas fa-angle-right"></i
+                  ><a
+                    href="contact.html"
+                    class="text-color-hover-primary link-hover-style-1 ms-1"
+                  >
+                    Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- SERVICES -->
+            <div class="col-12 col-md-6 col-lg-3 mb-5 mb-lg-0">
+              <h5
+                class="
+                  text-6 text-transform-none
+                  font-weight-semi-bold
+                  text-color-primary
+                  mb-4
+                "
+              >
+                Services
+              </h5>
+              <ul class="list list-icons list-icons-sm">
+                <li>
+                  <i class="fas fa-angle-right"></i
+                  ><a
+                    href="service-application.html"
+                    class="text-color-hover-primary link-hover-style-1 ms-1"
+                  >
+                    Application Kopelio</a
+                  >
+                </li>
+                <li>
+                  <i class="fas fa-angle-right"></i
+                  ><a
+                    href="service-animations.html"
+                    class="text-color-hover-primary link-hover-style-1 ms-1"
+                  >
+                    Animations annuelles</a
+                  >
+                </li>
+                <li>
+                  <i class="fas fa-angle-right"></i
+                  ><a
+                    href="service-sessions.html"
+                    class="text-color-hover-primary link-hover-style-1 ms-1"
+                  >
+                    Amélioration candidatures</a
+                  >
+                </li>
+              </ul>
             </div>
             <!-- NOUS SUIVRE -->
-            <div
-              class="col-md-4 col-lg-3 mb-4 mb-lg-0 text-center text-lg-right"
-            >
-              <h5 class="text-3 text-dark mb-2 pb-1 opacity-6">NOUS SUIVRE</h5>
-              <p class="text-8 font-weight-bold pb-1 mb-0">
-                <a href="https://www.twitch.tv/kopelio" target="_blank">
-                  <i
-                    class="
-                      fab
-                      fa-twitch
-                      text-color-primary text-color-hover-tertiary
-                    "
-                  ></i
+            <div class="col-12 col-md-6 col-lg-3">
+              <h5
+                class="
+                  text-6 text-transform-none
+                  font-weight-semi-bold
+                  text-color-primary
+                  mb-4
+                "
+              >
+                Nous suivre
+              </h5>
+              <p class="text-8 font-weight-semi-bold pb-1 mb-0">
+                <a
+                  href="https://www.twitch.tv/kopelio"
+                  target="_blank"
+                  class="text-color-hover-primary"
+                >
+                  <i class="fab fa-twitch"></i
                 ></a>
                 &nbsp;
-                <a href="https://www.instagram.com/kopel.io/" target="_blank">
-                  <i
-                    class="
-                      fab
-                      fa-instagram
-                      text-color-primary text-color-hover-tertiary
-                    "
-                  ></i></a
+                <a
+                  href="https://www.instagram.com/kopel.io/"
+                  target="_blank"
+                  class="text-color-hover-primary"
+                >
+                  <i class="fab fa-instagram"></i></a
                 >&nbsp;
                 <a
                   href="https://www.linkedin.com/company/kopelio/"
                   target="_blank"
+                  class="text-color-hover-primary"
                 >
-                  <i
-                    class="
-                      fab
-                      fa-linkedin-in
-                      text-color-primary text-color-hover-tertiary
-                    "
-                  ></i
+                  <i class="fab fa-linkedin-in"></i
                 ></a>
                 &nbsp;
-                <a href="https://twitter.com/KopelioFR" target="_blank">
-                  <i
-                    class="
-                      fab
-                      fa-twitter
-                      text-color-primary text-color-hover-tertiary
-                    "
-                  ></i
+                <a
+                  href="https://twitter.com/KopelioFR"
+                  target="_blank"
+                  class="text-color-hover-primary"
+                >
+                  <i class="fab fa-twitter"></i
                 ></a>
                 &nbsp;
-                <a href="https://www.facebook.com/kopelio.fr" target="_blank">
-                  <i
-                    class="
-                      fab
-                      fa-facebook-f
-                      text-color-primary text-color-hover-tertiary
-                    "
-                  ></i
+                <a
+                  href="https://www.facebook.com/kopelio.fr"
+                  target="_blank"
+                  class="text-color-hover-primary"
+                >
+                  <i class="fab fa-facebook-f"></i
                 ></a>
               </p>
             </div>
           </div>
         </div>
-        <div
-          class="footer-copyright footer-copyright-style-2 bg-color-transparent"
-        >
+        <div class="footer-copyright custom-bg-color-light-1">
           <div class="container py-2">
-            <div class="row py-4">
-              <div
-                class="
-                  col-lg-1
-                  d-flex
-                  align-items-center
-                  justify-content-center justify-content-lg-start
-                  mb-2 mb-lg-0
-                "
-              >
-                <a href="index.html" class="logo pr-0 pr-lg-3">
-                  <img
-                    alt="Porto Website Template"
-                    src="img/kpl-logo.svg"
-                    height="32"
-                  />
-                </a>
-              </div>
-              <div
-                class="
-                  col-lg-11
-                  d-flex
-                  align-items-center
-                  justify-content-center justify-content-lg-end
-                  mb-4 mb-lg-0
-                "
-              >
-                <p>© Copyright Kopelio 2021. Tous droits réservés.</p>
+            <div class="row justify-content-center py-4">
+              <div class="col-auto">
+                <p class="text-color-dark opacity-5 text-3">
+                  © Copyright Kopelio 2021. Tous droits réservés.
+                </p>
               </div>
             </div>
           </div>
@@ -1338,8 +2302,7 @@
     <script src="vendor/jquery.appear/jquery.appear.min.js"></script>
     <script src="vendor/jquery.easing/jquery.easing.min.js"></script>
     <script src="vendor/jquery.cookie/jquery.cookie.min.js"></script>
-    <script src="vendor/popper/umd/popper.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="vendor/jquery.validation/jquery.validate.min.js"></script>
     <script src="vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
     <script src="vendor/jquery.gmap/jquery.gmap.min.js"></script>
@@ -1349,24 +2312,17 @@
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
     <script src="vendor/vide/jquery.vide.min.js"></script>
     <script src="vendor/vivus/vivus.min.js"></script>
-    <script src="vendor/bootstrap-star-rating/js/star-rating.min.js"></script>
-    <script src="vendor/bootstrap-star-rating/themes/krajee-fas/theme.min.js"></script>
 
     <!-- Theme Base, Components and Settings -->
     <script src="js/theme.js"></script>
 
-    <!-- Current Page Vendor and Views -->
-
     <!-- Demo -->
-    <script src="js/demos/demo-product-landing.js"></script>
+    <script src="js/demos/demo-seo-2.js"></script>
+
     <!-- Theme Custom -->
     <script src="js/custom.js"></script>
 
     <!-- Theme Initialization Files -->
     <script src="js/theme.init.js"></script>
-
-    <!-- Examples -->
-    <script src="js/examples/examples.image360.js"></script>
-    <script src="js/examples/examples.gallery.js"></script>
   </body>
 </html>

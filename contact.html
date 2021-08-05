@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="robots" content="follow" />
 
-    <title>Restons en Contact - Kopelio</title>
+    <title>Nous Contacter - Kopelio</title>
 
     <meta
       name="keywords"
-      content="jeux vidéo, orientation, scolaire, professionnel, métier, compétence, école, formation, emploi, maison"
+      content="contact, orientation, scolaire, professionnel, kopelio"
     />
     <meta
       name="description"
-      content="N'hésitez pas à nous contacter pour découvrir nos services autour du Jeux Vidéo et de l'Orientation"
+      content="N'hésitez pas à nous contacter pour découvrir nos services autour de l'Orientation scolaire ou professionnelle"
     />
     <meta name="author" content="kopelio.com" />
 
@@ -22,25 +22,16 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
 
-    <!-- Share Metas -->
-    <meta
-      property="og:image"
-      content="http://kopelio.com/img/kpl-logo-share.png"
-    />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="500" />
-    <meta property="og:image:height" content="500" />
-
     <!-- Mobile Metas -->
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no"
     />
 
-    <!-- Google Fonts -->
+    <!-- Web Fonts  -->
     <link
       id="googleFonts"
-      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800&display=swap"
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap"
       rel="stylesheet"
       type="text/css"
     />
@@ -65,14 +56,6 @@
       rel="stylesheet"
       href="vendor/magnific-popup/magnific-popup.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="vendor/bootstrap-star-rating/css/star-rating.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="vendor/bootstrap-star-rating/themes/krajee-fas/theme.min.css"
-    />
 
     <!-- Theme CSS -->
     <link rel="stylesheet" href="css/theme.css" />
@@ -81,13 +64,10 @@
     <link rel="stylesheet" href="css/theme-shop.css" />
 
     <!-- Demo CSS -->
-    <link rel="stylesheet" href="css/demos/demo-product-landing.css" />
+    <link rel="stylesheet" href="css/demos/demo-seo-2.css" />
+
     <!-- Skin CSS -->
-    <link
-      id="skinCSS"
-      rel="stylesheet"
-      href="css/skins/skin-product-landing.css"
-    />
+    <link id="skinCSS" rel="stylesheet" href="css/skins/skin-seo-2.css" />
 
     <!-- Theme Custom CSS -->
     <link rel="stylesheet" href="css/custom.css" />
@@ -110,91 +90,223 @@
       gtag('config', 'G-C557RGH53H');
     </script>
   </head>
-  <body data-target="#header" data-spy="scroll" data-offset="100">
+  <body
+    class="loading-overlay-showing"
+    data-loading-overlay
+    data-plugin-options="{'hideDelay': 500, 'effect': 'zenith'}"
+  >
+    <!-- PRELOAD -->
+    <div class="loading-overlay">
+      <div class="bounce-loader">
+        <div class="cssload-zenith-container">
+          <div class="cssload-zenith"></div>
+        </div>
+      </div>
+    </div>
+
     <div class="body">
       <!-- MENU -->
       <header
         id="header"
-        class="header-effect-shrink custom-bg-color-grey-1"
-        data-plugin-options="{'stickyEnabled': false, 'stickyEnableOnBoxed': false, 'stickyEnableOnMobile': true, 'stickyChangeLogo': false, 'stickyStartAt': 1, 'stickyHeaderContainerHeight': 70}"
+        class="header-transparent header-effect-shrink"
+        data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyChangeLogo': true, 'stickyStartAt': 70, 'stickyHeaderContainerHeight': 70}"
       >
         <div
-          class="
-            header-body header-border-bottom
-            overflow-visible
-            bg-transparent
-          "
+          class="header-body border-top-0 appear-animation"
+          data-appear-animation="fadeIn"
         >
-          <div class="header-container container">
-            <div class="header-row py-3">
-              <div class="header-column flex-row w-auto">
-                <div class="header-logo">
-                  <a href="index.html">
-                    <img
-                      src="img/kpl-logo.svg"
-                      alt="Kopelio"
-                      width="42"
-                      height="42"
-                    />
-                  </a>
+          <div class="header-top">
+            <div class="container">
+              <div class="header-row">
+                <div class="header-column justify-content-start">
+                  <div class="header-row">
+                    <nav class="header-nav-top">
+                      <ul class="nav nav-pills">
+                        <li class="nav-item">
+                          <span
+                            class="
+                              ws-nowrap
+                              custom-text-color-grey-1
+                              text-2
+                              ps-0
+                            "
+                            ><i
+                              class="
+                                icon-screen-smartphone
+                                icons
+                                text-4
+                                top-3
+                                left-1
+                                me-1
+                              "
+                            ></i>
+                            Application bientôt disponible
+                          </span>
+                        </li>
+                        <li class="nav-item d-none d-md-block">
+                          <span
+                            class="ws-nowrap custom-text-color-grey-1 text-2"
+                            ><i
+                              class="icon-clock icons text-4 top-3 left-1 me-1"
+                            ></i>
+                            Lun - Sam 9h00 - 18h00 / Dimanche - FERME</span
+                          >
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+                <div class="header-column justify-content-end">
+                  <div class="header-row">
+                    <ul
+                      class="
+                        header-social-icons
+                        social-icons social-icons-clean
+                        d-none d-lg-block
+                        me-3
+                      "
+                    >
+                      <li class="social-icons-twitch">
+                        <a
+                          href="https://www.twitch.tv/kopelio"
+                          target="_blank"
+                          title="Twitch"
+                          ><i class="fab fa-twitch"></i
+                        ></a>
+                      </li>
+                      <li class="social-icons-instagram">
+                        <a
+                          href="https://www.instagram.com/kopel.io/"
+                          target="_blank"
+                          title="Instagram"
+                          ><i class="fab fa-instagram"></i
+                        ></a>
+                      </li>
+                      <li class="social-icons-linkedin">
+                        <a
+                          href="https://www.linkedin.com/company/kopelio/"
+                          target="_blank"
+                          title="Twitter"
+                          ><i class="fab fa-linkedin-in"></i
+                        ></a>
+                      </li>
+                      <li class="social-icons-twitter">
+                        <a
+                          href="https://twitter.com/KopelioFR"
+                          target="_blank"
+                          title="Twitter"
+                          ><i class="fab fa-twitter"></i
+                        ></a>
+                      </li>
+                      <li class="social-icons-facebook">
+                        <a
+                          href="https://www.facebook.com/kopelio.fr"
+                          target="_blank"
+                          title="Facebook"
+                          ><i class="fab fa-facebook-f"></i
+                        ></a>
+                      </li>
+                    </ul>
+                    <a
+                      href="contact.html"
+                      class="
+                        btn btn-primary
+                        font-weight-semibold
+                        text-3
+                        px-4
+                        custom-height-1
+                        rounded-0
+                        align-items-center
+                        d-none d-md-flex
+                      "
+                    >
+                      <i class="icon-calculator icons text-4 me-2"></i> DEMANDER
+                      DEVIS
+                    </a>
+                  </div>
                 </div>
               </div>
-              <div class="header-column w-100 pl-lg-5">
-                <div class="header-nav w-100 p-0">
-                  <div
-                    class="
-                      header-nav
-                      header-nav-line
-                      header-nav-bottom-line
-                      header-nav-bottom-line-effect-1
-                      justify-content-start
-                      w-100
-                    "
-                  >
+            </div>
+          </div>
+          <div class="header-container container">
+            <div class="header-row">
+              <div class="header-column">
+                <div class="header-row">
+                  <div class="header-logo">
+                    <a href="index.html">
+                      <img
+                        src="img/kpl-logo.svg"
+                        alt="Kopelio"
+                        width="42"
+                        height="42"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="header-column justify-content-end">
+                <div class="header-row">
+                  <div class="header-nav header-nav-links order-2 order-lg-1">
                     <div
                       class="
                         header-nav-main
-                        header-nav-main-arrows
+                        header-nav-main-square
                         header-nav-main-effect-2
                         header-nav-main-sub-effect-1
-                        w-100
                       "
                     >
-                      <nav class="collapse w-100">
-                        <ul
-                          class="nav nav-pills flex-column flex-lg-row w-100"
-                          id="mainNav"
-                        >
-                          <li class="dropdown">
-                            <a class="dropdown-item" href="index.html"
-                              >Accueil</a
-                            >
+                      <nav class="collapse">
+                        <ul class="nav nav-pills" id="mainNav">
+                          <li>
+                            <a class="nav-link" href="index.html"> Accueil </a>
                           </li>
                           <li class="dropdown">
                             <a
-                              class="dropdown-item"
-                              href="index.html#fonctionnalites"
-                              >Fonctionnalités</a
+                              class="dropdown-item dropdown-toggle"
+                              href="services.html"
                             >
+                              Nos Services
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li>
+                                <a
+                                  class="nav-link"
+                                  href="service-application.html"
+                                  >Application Kopelio</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  class="nav-link"
+                                  href="service-animations.html"
+                                  >Animations annuelles</a
+                                >
+                              </li>
+                              <li>
+                                <a class="nav-link" href="service-sessions.html"
+                                  >Amélioration candidatures</a
+                                >
+                              </li>
+                            </ul>
                           </li>
-                          <li class="dropdown">
-                            <a class="dropdown-item" href="index.html#cible"
-                              >Pour qui ?</a
-                            >
+                          <li>
+                            <a class="nav-link" href="nous.html"> À propos </a>
                           </li>
-                          <li class="dropdown">
-                            <a class="dropdown-item" href="index.html#nous"
-                              >Qui sommes-nous ?</a
-                            >
-                          </li>
-                          <li class="dropdown">
-                            <a class="dropdown-item active" href="contact.html"
-                              >Contact</a
-                            >
+                          <li>
+                            <a class="nav-link active" href="contact.html">
+                              Contact
+                            </a>
                           </li>
                         </ul>
                       </nav>
                     </div>
+                    <button
+                      class="btn header-btn-collapse-nav"
+                      data-bs-toggle="collapse"
+                      data-bs-target=".header-nav-main nav"
+                    >
+                      <i class="fas fa-bars"></i>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -203,80 +315,189 @@
         </div>
       </header>
 
+      <!-- CONTENU -->
       <div role="main" class="main">
-        <!-- Header -->
+        <!-- HEADER -->
         <section
           class="
-            section section-with-shape-divider
+            page-header page-header-lg
+            custom-bg-color-light-1
             border-0
             m-0
-            page-header page-header-modern
-            custom-bg-color-grey-1
-            page-header-md
           "
         >
-          <div class="container position-relative z-index-2 h-100 py-md-5">
-            <div class="">
+          <!-- CONTENU -->
+          <div class="container position-relative pt-5 pb-4 mt-5">
+            <!-- bulle -->
+            <div
+              class="
+                custom-circle
+                custom-circle-wrapper
+                custom-circle-big
+                custom-circle-pos-1
+                custom-circle-pos-1-1
+                appear-animation
+              "
+              data-appear-animation="expandInWithBlur"
+              data-appear-animation-delay="900"
+              data-appear-animation-duration="2s"
+            >
               <div
-                class="
-                  text-center text-8
-                  order-2 order-md-1
-                  align-self-center
-                  p-static
-                "
-              >
-                <h1
-                  class="
-                    font-weight-extra-bold
-                    text-color-tertiary
-                    text-3
-                    text-sm-3-4
-                    text-md-4
-                    text-lg-3
-                    text-xl-4
-                    mb-1
-                  "
-                >
-                  Restons en contact
-                </h1>
+                class="bg-color-tertiary rounded-circle w-100 h-100"
+                data-plugin-float-element
+                data-plugin-options="{'startPos': 'bottom', 'speed': 0.5, 'transition': true, 'transitionDuration': 1000}"
+              ></div>
+            </div>
+            <!-- bulle -->
+            <div
+              class="
+                custom-circle
+                custom-circle-medium
+                custom-circle-pos-2
+                custom-circle-pos-2-2
+                appear-animation
+              "
+              data-appear-animation="expandInWithBlur"
+              data-appear-animation-delay="1450"
+              data-appear-animation-duration="2s"
+            >
+              <div
+                class="custom-bg-color-grey-2 rounded-circle w-100 h-100"
+                data-plugin-float-element
+                data-plugin-options="{'startPos': 'bottom', 'speed': 0.2, 'transition': true, 'transitionDuration': 2000}"
+              ></div>
+            </div>
+            <!-- bulle -->
+            <div
+              class="
+                custom-circle
+                custom-circle-medium
+                custom-circle-pos-3
+                custom-circle-pos-3-3
+                appear-animation
+              "
+              data-appear-animation="expandIn"
+              data-appear-animation-delay="1300"
+            >
+              <div
+                class="custom-bg-color-grey-2 rounded-circle w-100 h-100"
+                data-plugin-float-element
+                data-plugin-options="{'startPos': 'bottom', 'speed': 0.3, 'transition': true, 'transitionDuration': 1000}"
+              ></div>
+            </div>
+            <!-- bulle -->
+            <div
+              class="
+                custom-circle
+                custom-circle-small
+                custom-circle-pos-4
+                custom-circle-pos-4-4
+                appear-animation
+              "
+              data-appear-animation="expandIn"
+              data-appear-animation-delay="1600"
+            >
+              <div
+                class="custom-bg-color-grey-2 rounded-circle w-100 h-100"
+                data-plugin-float-element
+                data-plugin-options="{'startPos': 'bottom', 'speed': 0.6, 'transition': true, 'transitionDuration': 500}"
+              ></div>
+            </div>
+            <!-- bulle -->
+            <div
+              class="
+                custom-circle
+                custom-circle-medium
+                custom-circle-pos-5
+                custom-circle-pos-5-5
+                appear-animation
+              "
+              data-appear-animation="expandInWithBlur"
+              data-appear-animation-delay="1050"
+              data-appear-animation-duration="2s"
+            >
+              <div
+                class="bg-color-secondary rounded-circle w-100 h-100"
+                data-plugin-float-element
+                data-plugin-options="{'startPos': 'top', 'speed': 0.2, 'transition': true, 'transitionDuration': 2000}"
+              ></div>
+            </div>
+            <!-- bulle -->
+            <div
+              class="
+                custom-circle
+                custom-circle-medium
+                custom-circle-pos-6
+                custom-circle-pos-6-6
+                appear-animation
+              "
+              data-appear-animation="expandInWithBlur"
+              data-appear-animation-delay="1200"
+              data-appear-animation-duration="2s"
+            >
+              <div
+                class="custom-bg-color-grey-2 rounded-circle w-100 h-100"
+                data-plugin-float-element
+                data-plugin-options="{'startPos': 'bottom', 'speed': 0.8, 'transition': true, 'transitionDuration': 500}"
+              ></div>
+            </div>
+
+            <!-- CONTENU -->
+            <div class="row py-5 mb-5 mt-2 p-relative z-index-1">
+              <div class="col">
+                <div class="overflow-hidden">
+                  <ul
+                    class="breadcrumb d-block text-center appear-animation"
+                    data-appear-animation="maskUp"
+                    data-appear-animation-delay="800"
+                  >
+                    <li><a href="index.html">Kopelio</a></li>
+                    <li class="active">Contact</li>
+                  </ul>
+                </div>
+                <div class="overflow-hidden mb-4">
+                  <h1
+                    class="
+                      d-block
+                      text-color-primary
+                      font-weight-bold
+                      text-center
+                      mb-0
+                      appear-animation
+                    "
+                    data-appear-animation="maskUp"
+                    data-appear-animation-delay="1000"
+                  >
+                    Nous contacter
+                  </h1>
+                </div>
               </div>
             </div>
           </div>
-          <!-- Espaceur -->
-          <div class="spacer pt-5 pb-4"></div>
-          <!-- Séparateur -->
-          <div class="shape-divider shape-divider-bottom" style="height: 215px">
-            <svg
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-              x="0px"
-              y="0px"
-              viewBox="0 0 1920 215"
-              preserveAspectRatio="xMinYMin"
-            >
-              <path
-                fill="#FFF"
-                d="M-13,24c3.03-0.28,7.53-0.66,13-1c26.45-1.65,46.73-0.59,57,0c76.61,4.41,118,9,118,9
-							c70.55,7.83,105.82,11.74,151,19c32.98,5.3,65.87,11.44,179,37c145.79,32.94,138.71,33.5,203,47c85.09,17.87,149.08,31.32,237,40
-							c113.11,11.17,203.29,8.29,234,7c16.74-0.7,63.49-4.13,157-11c107.74-7.91,117.84-9.32,153-10c52.52-1.02,97.8,0.79,153,3
-							c21.27,0.85,54.96,2.38,96,5c37.55,2.4,68.64,4.91,119,9c30.97,2.52,56.12,4.64,72,6c0,13.33,0,26.67,0,40c-646,0-1292,0-1938,0
-							C-10.33,157.33-11.67,90.67-13,24z"
-              />
-            </svg>
-          </div>
         </section>
 
-        <!-- Contenu -->
+        <!-- CONTENU -->
         <section
-          id="nous"
-          class="
-            section section-with-shape-divider
-            border-0
-            bg-transparent
-            m-0
-            p-0
-          "
+          class="section bg-color-light position-relative border-0 pt-3 m-0"
         >
+          <!-- vague -->
+          <svg
+            class="custom-page-header-curved-top-1"
+            width="100%"
+            height="700"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              transform="rotate(-3.1329219341278076 1459.172607421877,783.5322875976566) "
+              d="m-12.54488,445.11701c0,0 2.16796,-1.48437 6.92379,-3.91356c4.75584,-2.42918 12.09956,-5.80319 22.45107,-9.58247c20.70303,-7.55856 53.43725,-16.7382 101.56202,-23.22255c48.12477,-6.48434 111.6401,-10.27339 193.90533,-7.05074c41.13262,1.61132 88.20271,5.91306 140.3802,12.50726c230.96006,32.89734 314.60609,102.57281 635.26547,59.88645c320.65938,-42.68635 452.47762,-118.72154 843.58759,3.72964c391.10997,122.45118 553.23416,-82.15958 698.49814,-47.66481c-76.25064,69.23438 407.49874,281.32592 331.2481,350.5603c-168.91731,29.52009 85.02254,247.61162 -83.89478,277.13171c84.07062,348.27313 -2948.95065,-242.40222 -2928.39024,-287.84045"
+              stroke-width="0"
+              stroke="#000"
+              fill="#FFF"
+              id="svg_2"
+            />
+          </svg>
+
+          <!-- CONTENU -->
           <div class="container shop py-5">
             <form
               role="form"
@@ -289,10 +510,23 @@
                 <div class="col-lg-7 order-2 order-lg-1 mb-5">
                   <!-- Intro -->
                   <p>
-                    Si vous souhaitez
-                    <strong>des informations sur le projet Kopelio</strong>,
-                    n'hésitez pas à nous laisser vos coordonnées et la nature de
-                    votre demande grâce au formulaire ci-dessous :
+                    Si vous avez
+                    <strong
+                      >des questions ou suggestions sur le projet ou la méthode
+                      Kopelio</strong
+                    >, n'hésitez pas à utiliser le formulaire ci-dessous.
+                  </p>
+                  <p>
+                    Si par contre vous souhaitez
+                    <a href="service-sessions.html#devis">demander un devis</a>,
+                    <a href="nous.html#partenariat">effectuer un partenariat</a
+                    >,
+                    <a href="service-application.html#beta"
+                      >utiliser l'application en bêta</a
+                    >, ou encore
+                    <a href="service-animations.html#collaboration"
+                      >collaborer pour une animation</a
+                    >, veuillez cliquer sur le lien souhaité.
                   </p>
                   <!-- Espaceur -->
                   <div class="spacer mb-5 mt-3"></div>
@@ -308,6 +542,7 @@
                         class="form-control h-auto py-2"
                         name="nom"
                         value=""
+                        placeholder="Eric Wright"
                         required
                       />
                     </div>
@@ -323,90 +558,16 @@
                         class="form-control h-auto py-2"
                         name="email"
                         value=""
+                        placeholder="ewright@exemple.com"
                         required
                       />
                     </div>
                   </div>
-                  <!-- Si lancement -->
-                  <div class="form-row">
-                    <div class="form-group col">
-                      <div class="custom-checkbox-1">
-                        <input type="checkbox" name="lancement" value="1" />
-                        <label for="lancement"
-                          >Je veux être informé du
-                          <strong>lancement</strong></label
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Si beta -->
-                  <div class="form-row">
-                    <div class="form-group col">
-                      <div class="custom-checkbox-1">
-                        <input type="checkbox" name="beta" value="1" />
-                        <label for="beta"
-                          >Je veux participer à la
-                          <strong>phase de test</strong></label
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Si partenariat -->
-                  <div class="form-row">
-                    <div class="form-group col">
-                      <div
-                        class="custom-checkbox-1"
-                        data-toggle="collapse"
-                        data-target=".shipping-field-wrapper"
-                      >
-                        <input
-                          id="shipAddress"
-                          type="checkbox"
-                          name="partenariat"
-                          value="1"
-                        />
-                        <label for="partenariat"
-                          >Je souhaite un <strong>partenariat</strong></label
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Champs conditionnels : si partenariat coché -->
-                  <div class="shipping-field-wrapper collapse">
-                    <!-- Organisme -->
-                    <div class="form-row">
-                      <div class="form-group col">
-                        <label
-                          >Organisme<span class="text-color-danger"
-                            >*</span
-                          ></label
-                        >
-                        <input
-                          type="text"
-                          class="form-control h-auto py-2"
-                          name="organisme"
-                          value=""
-                        />
-                      </div>
-                    </div>
-                    <!-- Tel -->
-                    <div class="form-row">
-                      <div class="form-group col">
-                        <label
-                          >Téléphone
-                          <span class="text-color-danger">*</span></label
-                        >
-                        <input
-                          type="number"
-                          class="form-control h-auto py-2"
-                          name="tel"
-                          value=""
-                        />
-                      </div>
-                    </div>
-                  </div>
                   <!-- Message -->
                   <div class="form-row">
+                    <label
+                      >Message <span class="text-color-danger">*</span></label
+                    >
                     <div class="form-group col">
                       <textarea
                         class="form-control h-auto py-2"
@@ -464,7 +625,7 @@
                           data-plugin-options="{'startPos': 'top', 'speed': 0.3, 'transition': true, 'transitionDuration': 1000, 'isInsideSVG': true}"
                         >
                           <img
-                            src="img/kpl-contact-ensemble-illu.svg"
+                            src="img/kpl-contact.svg"
                             class="img-fluid"
                             alt="Ensemble pour Kopelio"
                           />
@@ -476,167 +637,212 @@
               </div>
             </form>
           </div>
-          <!-- Espaceur -->
-          <div class="spacer pt-5 pb-5 my-lg-5 my-xl-0"></div>
-          <!-- Séparateur -->
-          <div
-            class="shape-divider shape-divider-bottom shape-divider-reverse-y"
-            style="height: 215px"
-          >
-            <svg
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-              x="0px"
-              y="0px"
-              viewBox="0 0 1920 215"
-              preserveAspectRatio="xMinYMin"
-            >
-              <path
-                fill="#EFF1F3"
-                d="M-13,24c3.03-0.28,7.53-0.66,13-1c26.45-1.65,46.73-0.59,57,0c76.61,4.41,118,9,118,9
-          c70.55,7.83,105.82,11.74,151,19c32.98,5.3,65.87,11.44,179,37c145.79,32.94,138.71,33.5,203,47c85.09,17.87,149.08,31.32,237,40
-          c113.11,11.17,203.29,8.29,234,7c16.74-0.7,63.49-4.13,157-11c107.74-7.91,117.84-9.32,153-10c52.52-1.02,97.8,0.79,153,3
-          c21.27,0.85,54.96,2.38,96,5c37.55,2.4,68.64,4.91,119,9c30.97,2.52,56.12,4.64,72,6c0,13.33,0,26.67,0,40c-646,0-1292,0-1938,0
-          C-10.33,157.33-11.67,90.67-13,24z"
-              />
-            </svg>
-          </div>
         </section>
       </div>
 
       <!-- FOOTER -->
-      <footer id="footer" class="custom-bg-color-grey-1 border-0 mt-0">
-        <div class="container">
-          <div class="row py-5 justify-content-center">
-            <!-- MENU -->
-            <div
-              class="
-                col-md-9
-                offset-md-1 offset-lg-0
-                mb-4 mb-lg-0
-                d-flex
-                align-items-center
-              "
-            >
-              <div class="footer-nav footer-nav-links footer-nav-bottom-line">
-                <nav>
-                  <ul class="nav" id="footerNav">
-                    <li>
-                      <a href="index.html" class="text-3">Accueil</a>
-                    </li>
-                    <li>
-                      <a href="index.html#fonctionnalites" class="text-3"
-                        >Fonctionnalités</a
-                      >
-                    </li>
-                    <li>
-                      <a class="text-3" href="index.html#cible">Pour qui ?</a>
-                    </li>
-                    <li>
-                      <a href="index.html#nous" class="text-3"
-                        >Qui sommes-nous ?</a
-                      >
-                    </li>
-                    <li>
-                      <a href="contact.html" class="text-3">Contact</a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
+      <footer
+        id="footer"
+        class="custom-bg-color-light-1 position-relative mt-0"
+      >
+        <!-- vague -->
+        <svg
+          class="custom-section-curved-top-7"
+          width="100%"
+          height="400"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            id="svg_2"
+            fill="#eff1f3"
+            stroke="#000"
+            stroke-width="0"
+            d="m-16.68437,95.44889c0,0 5.33335,176.00075 660.00283,93.33373c327.33474,-41.33351 503.33549,15.3334 639.00274,35.66682c135.66725,20.33342 59.66691,9.66671 358.33487,28.33346c298.66795,18.66676 268.66829,-45.00088 382.66831,-112.00048c114.00002,-66.9996 718.31698,-59.48704 1221.66946,95.563c503.35248,155.05004 -221.83202,184.10564 -243.66935,197.60521c-21.83733,13.49958 -3008.67549,-19.83371 -3008.00467,-20.83335c-0.67082,0.99964 -30.00428,-232.33469 -10.00419,-317.66839z"
+          />
+        </svg>
+
+        <!-- CONTENU -->
+        <div class="container position-relative mt-0 mb-4">
+          <div class="row pt-5 py-lg-5">
+            <!-- HORAIRES -->
+            <div class="col-12 col-md-6 col-lg-3 mb-5 mb-lg-0">
+              <h5
+                class="
+                  text-6 text-transform-none
+                  font-weight-semi-bold
+                  text-color-primary
+                  mb-4
+                "
+              >
+                Horaires
+              </h5>
+              <p class="text-4 mb-0">
+                Lundi au Vendredi:
+                <span class="font-weight-semi-bold">9h à 18h</span>
+              </p>
+              <p class="text-4 mb-0">
+                Samedi:
+                <span class="font-weight-semi-bold">9h à 13h</span>
+              </p>
+              <p class="text-4 mb-0">
+                Dimanche: <span class="font-weight-semi-bold">Fermé</span>
+              </p>
+            </div>
+            <!-- NAVIGATION -->
+            <div class="col-12 col-md-6 col-lg-3 mb-5 mb-lg-0">
+              <h5
+                class="
+                  text-6 text-transform-none
+                  font-weight-semi-bold
+                  text-color-primary
+                  mb-4
+                "
+              >
+                Navigation
+              </h5>
+              <ul class="list list-icons list-icons-sm">
+                <li>
+                  <i class="fas fa-angle-right"></i
+                  ><a
+                    href="index.html"
+                    class="text-color-hover-primary link-hover-style-1 ms-1"
+                  >
+                    Accueil</a
+                  >
+                </li>
+                <li>
+                  <i class="fas fa-angle-right"></i
+                  ><a
+                    href="services.html"
+                    class="text-color-hover-primary link-hover-style-1 ms-1"
+                  >
+                    Services</a
+                  >
+                </li>
+                <li>
+                  <i class="fas fa-angle-right"></i
+                  ><a
+                    href="nous.html"
+                    class="text-color-hover-primary link-hover-style-1 ms-1"
+                  >
+                    À propos</a
+                  >
+                </li>
+                <li>
+                  <i class="fas fa-angle-right"></i
+                  ><a
+                    href="contact.html"
+                    class="text-color-hover-primary link-hover-style-1 ms-1"
+                  >
+                    Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- SERVICES -->
+            <div class="col-12 col-md-6 col-lg-3 mb-5 mb-lg-0">
+              <h5
+                class="
+                  text-6 text-transform-none
+                  font-weight-semi-bold
+                  text-color-primary
+                  mb-4
+                "
+              >
+                Services
+              </h5>
+              <ul class="list list-icons list-icons-sm">
+                <li>
+                  <i class="fas fa-angle-right"></i
+                  ><a
+                    href="service-application.html"
+                    class="text-color-hover-primary link-hover-style-1 ms-1"
+                  >
+                    Application Kopelio</a
+                  >
+                </li>
+                <li>
+                  <i class="fas fa-angle-right"></i
+                  ><a
+                    href="service-animations.html"
+                    class="text-color-hover-primary link-hover-style-1 ms-1"
+                  >
+                    Animations annuelles</a
+                  >
+                </li>
+                <li>
+                  <i class="fas fa-angle-right"></i
+                  ><a
+                    href="service-sessions.html"
+                    class="text-color-hover-primary link-hover-style-1 ms-1"
+                  >
+                    Amélioration candidatures</a
+                  >
+                </li>
+              </ul>
             </div>
             <!-- NOUS SUIVRE -->
-            <div
-              class="col-md-4 col-lg-3 mb-4 mb-lg-0 text-center text-lg-right"
-            >
-              <h5 class="text-3 text-dark mb-2 pb-1 opacity-6">NOUS SUIVRE</h5>
-              <p class="text-8 font-weight-bold pb-1 mb-0">
-                <a href="https://www.twitch.tv/kopelio" target="_blank">
-                  <i
-                    class="
-                      fab
-                      fa-twitch
-                      text-color-primary text-color-hover-tertiary
-                    "
-                  ></i
+            <div class="col-12 col-md-6 col-lg-3">
+              <h5
+                class="
+                  text-6 text-transform-none
+                  font-weight-semi-bold
+                  text-color-primary
+                  mb-4
+                "
+              >
+                Nous suivre
+              </h5>
+              <p class="text-8 font-weight-semi-bold pb-1 mb-0">
+                <a
+                  href="https://www.twitch.tv/kopelio"
+                  target="_blank"
+                  class="text-color-hover-primary"
+                >
+                  <i class="fab fa-twitch"></i
                 ></a>
                 &nbsp;
-                <a href="https://www.instagram.com/kopel.io/" target="_blank">
-                  <i
-                    class="
-                      fab
-                      fa-instagram
-                      text-color-primary text-color-hover-tertiary
-                    "
-                  ></i></a
+                <a
+                  href="https://www.instagram.com/kopel.io/"
+                  target="_blank"
+                  class="text-color-hover-primary"
+                >
+                  <i class="fab fa-instagram"></i></a
                 >&nbsp;
                 <a
                   href="https://www.linkedin.com/company/kopelio/"
                   target="_blank"
+                  class="text-color-hover-primary"
                 >
-                  <i
-                    class="
-                      fab
-                      fa-linkedin-in
-                      text-color-primary text-color-hover-tertiary
-                    "
-                  ></i
+                  <i class="fab fa-linkedin-in"></i
                 ></a>
                 &nbsp;
-                <a href="https://twitter.com/KopelioFR" target="_blank">
-                  <i
-                    class="
-                      fab
-                      fa-twitter
-                      text-color-primary text-color-hover-tertiary
-                    "
-                  ></i
+                <a
+                  href="https://twitter.com/KopelioFR"
+                  target="_blank"
+                  class="text-color-hover-primary"
+                >
+                  <i class="fab fa-twitter"></i
                 ></a>
                 &nbsp;
-                <a href="https://www.facebook.com/kopelio.fr" target="_blank">
-                  <i
-                    class="
-                      fab
-                      fa-facebook-f
-                      text-color-primary text-color-hover-tertiary
-                    "
-                  ></i
+                <a
+                  href="https://www.facebook.com/kopelio.fr"
+                  target="_blank"
+                  class="text-color-hover-primary"
+                >
+                  <i class="fab fa-facebook-f"></i
                 ></a>
               </p>
             </div>
           </div>
         </div>
-        <div
-          class="footer-copyright footer-copyright-style-2 bg-color-transparent"
-        >
+        <div class="footer-copyright custom-bg-color-light-1">
           <div class="container py-2">
-            <div class="row py-4">
-              <div
-                class="
-                  col-lg-1
-                  d-flex
-                  align-items-center
-                  justify-content-center justify-content-lg-start
-                  mb-2 mb-lg-0
-                "
-              >
-                <a href="index.html" class="logo pr-0 pr-lg-3">
-                  <img
-                    alt="Porto Website Template"
-                    src="img/kpl-logo.svg"
-                    height="32"
-                  />
-                </a>
-              </div>
-              <div
-                class="
-                  col-lg-11
-                  d-flex
-                  align-items-center
-                  justify-content-center justify-content-lg-end
-                  mb-4 mb-lg-0
-                "
-              >
-                <p>© Copyright Kopelio 2021. Tous droits réservés.</p>
+            <div class="row justify-content-center py-4">
+              <div class="col-auto">
+                <p class="text-color-dark opacity-5 text-3">
+                  © Copyright Kopelio 2021. Tous droits réservés.
+                </p>
               </div>
             </div>
           </div>
@@ -649,8 +855,7 @@
     <script src="vendor/jquery.appear/jquery.appear.min.js"></script>
     <script src="vendor/jquery.easing/jquery.easing.min.js"></script>
     <script src="vendor/jquery.cookie/jquery.cookie.min.js"></script>
-    <script src="vendor/popper/umd/popper.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="vendor/jquery.validation/jquery.validate.min.js"></script>
     <script src="vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
     <script src="vendor/jquery.gmap/jquery.gmap.min.js"></script>
@@ -660,24 +865,20 @@
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
     <script src="vendor/vide/jquery.vide.min.js"></script>
     <script src="vendor/vivus/vivus.min.js"></script>
-    <script src="vendor/bootstrap-star-rating/js/star-rating.min.js"></script>
-    <script src="vendor/bootstrap-star-rating/themes/krajee-fas/theme.min.js"></script>
 
     <!-- Theme Base, Components and Settings -->
     <script src="js/theme.js"></script>
 
     <!-- Current Page Vendor and Views -->
+    <script src="js/views/view.contact.js"></script>
 
     <!-- Demo -->
-    <script src="js/demos/demo-product-landing.js"></script>
+    <script src="js/demos/demo-seo-2.js"></script>
+
     <!-- Theme Custom -->
     <script src="js/custom.js"></script>
 
     <!-- Theme Initialization Files -->
     <script src="js/theme.init.js"></script>
-
-    <!-- Examples -->
-    <script src="js/examples/examples.image360.js"></script>
-    <script src="js/examples/examples.gallery.js"></script>
   </body>
 </html>

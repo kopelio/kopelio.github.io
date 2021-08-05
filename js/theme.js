@@ -1,7 +1,7 @@
 /*
 Name: 			Theme Base
 Written by: 	Okler Themes - (http://www.okler.net)
-Theme Version:	8.3.0
+Theme Version:	9.1.0
 */
 
 // Theme
@@ -38,7 +38,7 @@ window.theme.fn = {
 		var func = namespaces.pop();
 		
 		for(var i = 0; i < namespaces.length; i++) {
-		    context = context[namespaces[i]];
+			context = context[namespaces[i]];
 		}
 
 		return context[func].apply(context, args);
@@ -50,15 +50,15 @@ window.theme.fn = {
 			rootMargin: '0px 0px 200px 0px'
 		}
 
-		if( intObsOptions.length ) {
-			$.extend(intersectionObserverOptions, intObsOptions);
+		if( Object.keys(intObsOptions).length ) {
+			intersectionObserverOptions = $.extend(intersectionObserverOptions, intObsOptions);
 		}
 
-        var observer = new IntersectionObserver(function(entries) {
-          	for(var i=0; i < entries.length; i++) {
-              	var entry = entries[i];
+		var observer = new IntersectionObserver(function(entries) {
+			for(var i=0; i < entries.length; i++) {
+				var entry = entries[i];
 
-          		if (entry.intersectionRatio > 0 ) {
+				if (entry.intersectionRatio > 0 ) {
 					if( typeof functionName === 'string' ) {
 						var func = Function( 'return ' + functionName )();
 					} else {
@@ -72,13 +72,13 @@ window.theme.fn = {
 						observer.unobserve(entry.target);   
 					}
 
-            	}
-          	}
-        }, intersectionObserverOptions);
-        
-        $( $el ).each(function(){
-          	observer.observe( $(this)[0] );
-        });
+				}
+			}
+		}, intersectionObserverOptions);
+		
+		$( $el ).each(function(){
+			observer.observe( $(this)[0] );
+		});
 	},
 
 	intObsInit: function(selector, functionName) {
@@ -87,12 +87,12 @@ window.theme.fn = {
 			rootMargin: '200px'
 		}
 
-        var observer = new IntersectionObserver(function(entries) {
-          	for(var i=0; i < entries.length; i++) {
-              	var entry = entries[i];
-            	if (entry.intersectionRatio > 0) {
-	              
-	                var $this = $(entry.target),
+		var observer = new IntersectionObserver(function(entries) {
+			for(var i=0; i < entries.length; i++) {
+				var entry = entries[i];
+				if (entry.intersectionRatio > 0) {
+				  
+					var $this = $(entry.target),
 						opts;
 
 					var pluginOptions = theme.fn.getOptions($this.data('plugin-options'));
@@ -103,13 +103,13 @@ window.theme.fn = {
 
 					// Unobserve
 					observer.unobserve(entry.target);              
-            	}
-          	}
-        }, intersectionObserverOptions);
-        
-        $( $el ).each(function(){
-          	observer.observe( $(this)[0] );
-        });
+				}
+			}
+		}, intersectionObserverOptions);
+		
+		$( $el ).each(function(){
+			observer.observe( $(this)[0] );
+		});
 	},
 
 	dynIntObsInit: function(selector, functionName, pluginDefaults) {
@@ -130,21 +130,27 @@ window.theme.fn = {
 				threshold: 0
 			}
 
-			var observer = new IntersectionObserver(function(entries) {
-	          	for(var i=0; i < entries.length; i++) {
-              		var entry = entries[i];
-	            	
-	            	if (entry.intersectionRatio > 0) {
-						theme.fn.execPluginFunction(functionName, $this, mergedPluginDefaults);	
+			if(!mergedPluginDefaults.forceInit) {
 
-						// Unobserve
-						observer.unobserve(entry.target);              
-	            	}
-	          	}
-	        }, intersectionObserverOptions);
+				var observer = new IntersectionObserver(function(entries) {
+					for(var i=0; i < entries.length; i++) {
+						var entry = entries[i];
+						
+						if (entry.intersectionRatio > 0) {
+							theme.fn.execPluginFunction(functionName, $this, mergedPluginDefaults);	
 
-          	observer.observe( $this[0] );
-        });
+							// Unobserve
+							observer.unobserve(entry.target);              
+						}
+					}
+				}, intersectionObserverOptions);
+
+				observer.observe( $this[0] );
+
+			} else {
+				theme.fn.execPluginFunction(functionName, $this, mergedPluginDefaults);	
+			}
+		});
 	},
 
 	getRootMargin: function(plugin, pluginDefaults) {
@@ -156,6 +162,14 @@ window.theme.fn = {
 			case 'themePluginAnimate':
 				return pluginDefaults.accY ? '0px 0px ' + pluginDefaults.accY + 'px 0px' : '0px 0px 200px 0px';
 				break;
+			
+			case 'themePluginIcon':
+				return pluginDefaults.accY ? '0px 0px ' + pluginDefaults.accY + 'px 0px' : '0px 0px 200px 0px';
+				break;
+
+			case 'themePluginRandomImages':
+				return pluginDefaults.accY ? '0px 0px ' + pluginDefaults.accY + 'px 0px' : '0px 0px 200px 0px';
+				break;
 
 			default:
 				return '0px 0px 200px 0px';
@@ -164,12 +178,12 @@ window.theme.fn = {
 	},
 
 	mergeOptions: function(obj1, obj2){
-    	var obj3 = {};
-    
-	    for (var attrname in obj1) { obj3[attrname] = obj1[attrname]; }
-	    for (var attrname in obj2) { obj3[attrname] = obj2[attrname]; }
-	    
-	    return obj3;
+		var obj3 = {};
+	
+		for (var attrname in obj1) { obj3[attrname] = obj1[attrname]; }
+		for (var attrname in obj2) { obj3[attrname] = obj2[attrname]; }
+		
+		return obj3;
 	},
 
 	execOnceTroughEvent: function( $el, event, callback ) {
@@ -220,11 +234,11 @@ window.theme.fn = {
 	},
 
 	isElementInView: function( $el ) {
-	    var rect = $el[0].getBoundingClientRect();
+		var rect = $el[0].getBoundingClientRect();
 
-	    return (
-	        rect.top <= ( window.innerHeight / 3 )
-	    );
+		return (
+			rect.top <= ( window.innerHeight / 3 )
+		);
 	}
 
 };
@@ -331,45 +345,29 @@ Theme Version:	8.0.0
 	}
 
 	/*
-	Tooltip and Popover
-	*/
-	$(window).on('load', function() {
-		if( $('[data-toggle="tooltip"]').length ) {
-			$('[data-toggle="tooltip"]').tooltip();
-		}
-		if( $('[data-toggle="popover"]').length ) {
-			$('[data-toggle="popover"]').popover();
-		}
-	});
-
-	/*
 	Tabs
 	*/
-	if( $('a[data-toggle="tab"]').length ) {
-		$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+	if( $('a[data-bs-toggle="tab"]').length ) {
+		$('a[data-bs-toggle="tab"]').on('shown.bs.tab', function (e) {
+			var $tabPane = $($(e.target).attr('href'));
+
+			// Carousel Refresh
+			if($tabPane.length) {
+				$tabPane.find('.owl-carousel').trigger('refresh.owl.carousel');
+			}
+
+			// Change Active Class
 			$(this).parents('.nav-tabs').find('.active').removeClass('active');
 			$(this).addClass('active').parent().addClass('active');
 		});	
-	}
 
-	if( window.location.hash ) {
-		$(window).on('load', function(){
-			if( $( window.location.hash ).get(0) ) {
-				$('a.nav-link[href="'+ window.location.hash +'"]:not([data-hash])').trigger('click');
-			}
-		});
-	}
-
-	if( $('a[data-toggle="tab"]').length ) {
-		$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-			var $tabPane = $($(e.target).attr('href'));
-
-			if($tabPane.length) {
-
-				// Carousel Refresh
-				$tabPane.find('.owl-carousel').trigger('refresh.owl.carousel');
-			}
-		});
+		if( window.location.hash ) {
+			$(window).on('load', function(){
+				if( window.location.hash !== '*' && $( window.location.hash ).get(0) ) {
+					new bootstrap.Tab( $('a.nav-link[href="'+ window.location.hash +'"]:not([data-hash])')[0] ).show();
+				}
+			});
+		}
 	}
 
 	/*
@@ -890,7 +888,7 @@ function aspectRatioSVG() {
 */
 document.addEventListener('lazybeforeunveil', function(e){
     var bg = e.target.getAttribute('data-bg-src');
-    if(bg){
+    if(bg) {
         e.target.style.backgroundImage = 'url(' + bg + ')';
     }
 });
@@ -1835,7 +1833,7 @@ Licensed under the terms of the MIT license.
 			for (var i=0, len=elements.length; i<len; i++) {
 				var $this = elements[i];
 
-				if (options.minWidth && $window.width() <= options.minWidth) {
+				if (options.minWidth && $window.outerWidth() <= options.minWidth) {
 					if ($this.parent().is(".pin-wrapper")) { $this.unwrap(); }
 					$this.css({width: "", left: "", top: "", position: ""});
 					if (options.activeClass) { $this.removeClass(options.activeClass); }
@@ -2561,8 +2559,9 @@ if( $('[data-copy-to-clipboard]').length ) {
 		accY: -80,
 		delay: 100,
 		duration: '750ms',
-		minWindowWidth: 0,
-		forceAnimation: false
+		minWindowWidth: 767,
+		forceAnimation: false,
+		flagClassOnly: false
 	};
 
 	PluginAnimate.prototype = {
@@ -2597,6 +2596,21 @@ if( $('[data-copy-to-clipboard]').length ) {
 
 		build: function() {
 			var self = this;
+
+			// Flag Class Only
+			// - Useful for simple animations like hightlight
+			// - Less process and memory
+			if( self.options.flagClassOnly ) {
+				var delay = self.options.wrapper.attr('data-appear-animation-delay') ? self.options.wrapper.attr('data-appear-animation-delay') : self.options.delay;
+				
+				self.options.wrapper.css({
+					'animation-delay': delay + 'ms',
+					'transition-delay': delay + 'ms'
+				});
+				self.options.wrapper.addClass( self.options.wrapper.attr('data-appear-animation') );
+
+				return this;
+			}
 
 			if($('body').hasClass('loading-overlay-showing')) {
 				$(window).on('loading.overlay.ready', function(){
@@ -2783,14 +2797,35 @@ if( $('[data-copy-to-clipboard]').length ) {
 
 			self.$el.text('');
 
-			setTimeout(function(){
-				for( var i = 0; i < letters.length; i++ ) {
-					var letter = letters[i];
-					
-					self.$el.append( '<span class="letter '+ ( self.options.letterClass ? self.options.letterClass + ' ' : '' ) + self.options.animationName +' animated" style="animation-delay: '+ ( i * self.options.animationSpeed ) +'ms;">' + letter + '</span>' );
+			if( self.options.animationName == 'typeWriter' ) {
+				self.$el.append( '<span class="letters-wrapper"></span><span class="typeWriter"></pre>' );
 
-				}
-			}, self.options.startDelay);
+				var index = 0;
+				var timeout = function(){
+					var st = setTimeout(function(){
+						var letter = letters[index];
+						
+						self.$el.find('.letters-wrapper').append( '<span class="letter '+ ( self.options.letterClass ? self.options.letterClass + ' ' : '' ) +'">' + letter + '</span>' );
+
+						index++;
+						timeout();
+					}, self.options.animationSpeed);
+
+					if( index >= letters.length ) {
+						clearTimeout(st);
+					}
+				};
+				timeout();
+			} else {
+				setTimeout(function(){
+					for( var i = 0; i < letters.length; i++ ) {
+						var letter = letters[i];
+						
+						self.$el.append( '<span class="letter '+ ( self.options.letterClass ? self.options.letterClass + ' ' : '' ) + self.options.animationName +' animated" style="animation-delay: '+ ( i * self.options.animationSpeed ) +'ms;">' + letter + '</span>' );
+	
+					}
+				}, self.options.startDelay);
+			}
 
 			return this;
 		},
@@ -3089,6 +3124,8 @@ if( $('[data-copy-to-clipboard]').length ) {
 				$owlDot = self.$el.find('.owl-dot');
 
 			$owlDot.on('click', function(e){
+				$this = $(this);
+
 				e.preventDefault();
 
 				if( self.options.disableAutoPlayOnClick ) {
@@ -3100,6 +3137,11 @@ if( $('[data-copy-to-clipboard]').length ) {
 				}
 
 				var dotIndex = $(this).index();
+
+				// Do nothing if respective dot slide is active/showing
+				if( $this.hasClass('active') ) {
+					return false;
+				}
 
 				self.changeSlide( self.$el.find('.owl-item').eq( dotIndex ) );
 			});
@@ -3145,8 +3187,8 @@ if( $('[data-copy-to-clipboard]').length ) {
 		},
 
 		autoPlay: function(){
-			var self 	 = this,
-				$el      = this.options.wrapper;
+			var self = this,
+				$el  = this.options.wrapper;
 
 			if( self.options.autoplay ) {
 				self.autoPlayInterval = window.setInterval(function() {
@@ -3171,6 +3213,11 @@ if( $('[data-copy-to-clipboard]').length ) {
 					if( hasCarousel ) {
 
 						$this.on('click', function(){
+
+							if( self.options.disableAutoPlayOnClick ) {
+								window.clearInterval(self.autoPlayInterval);
+							}
+							
 							self.changeSlide( self.$el.find('.owl-item').eq( parseInt(toIndex) - 1 ) );
 						});
 
@@ -3195,7 +3242,7 @@ if( $('[data-copy-to-clipboard]').length ) {
 			self.$el.on('change.owl.carousel', function(event) {
 
 				// Hide elements inside carousel
-			    self.$el.find('[data-appear-animation], [data-plugin-animated-letters]').addClass('d-none');
+			    self.$el.find('[data-appear-animation]:not(.background-image-wrapper), [data-plugin-animated-letters]').addClass('invisible');
 
 			    // Animated Letters
 			    self.$el.find('[data-plugin-animated-letters]').trigger('animated.letters.destroy');
@@ -3223,7 +3270,7 @@ if( $('[data-copy-to-clipboard]').length ) {
 				    }
 
 					// Show elements inside carousel
-				    self.$el.find('.owl-item.active [data-appear-animation], [data-plugin-animated-letters]').removeClass('d-none');
+				    self.$el.find('.owl-item.active [data-appear-animation]:not(.background-image-wrapper), [data-plugin-animated-letters]').removeClass('invisible');
 
 				    // Animated Letters
 				    self.$el.find('.owl-item.active [data-plugin-animated-letters]').trigger('animated.letters.initialize');
@@ -3514,18 +3561,16 @@ if( $('[data-copy-to-clipboard]').length ) {
 					setTimeout(function(){
 
 					    // Appear Animation
-					    if( $el.find('.owl-item.cloned [data-appear-animation]').get(0) ) {
-					    	$el.find('.owl-item.cloned [data-appear-animation]').each(function() {
-								var $this = $(this),
-									opts;
+				    	$el.find('[data-appear-animation]').each(function() {
+							var $this = $(this),
+								opts;
 
-								var pluginOptions = theme.fn.getOptions($this.data('plugin-options'));
-								if (pluginOptions)
-									opts = pluginOptions;
+							var pluginOptions = theme.fn.getOptions($this.data('plugin-options'));
+							if (pluginOptions)
+								opts = pluginOptions;
 
-								$this.themePluginAnimate(opts);
-							});
-					    }
+							$this.themePluginAnimate(opts);
+						});
 
 						// Show elements inside carousel
 					    $el.find('.owl-item.active [data-appear-animation], [data-plugin-animated-letters]').removeClass('d-none');
@@ -3536,7 +3581,7 @@ if( $('[data-copy-to-clipboard]').length ) {
 					    // Background Video
 					    $el.find('.owl-item.cloned.active [data-plugin-video-background]').trigger('video.background.initialize');
 
-					}, 1000);
+					}, 10);
 				    
 				});
 			}
@@ -4512,11 +4557,9 @@ if( $('[data-copy-to-clipboard]').length ) {
 
 			// Show
 			if( !$.cookie( 'porto-privacy-bar' ) ) {
-				$(window).on('load', function(){
-					setTimeout(function(){
-						self.options.wrapper.addClass('show');
-					}, self.options.cookieBarShowDelay);
-				});
+				setTimeout(function(){
+					self.options.wrapper.addClass('show');
+				}, self.options.cookieBarShowDelay);
 			}
 
 			// If already has preferences cookie, check inputs according preferences cookie data
@@ -4711,7 +4754,7 @@ if( $('[data-copy-to-clipboard]').length ) {
 		build: function() {
 			var self = this;
 
-			if( $.cookie( 'porto-gdpr-preferences' ).indexOf( self.options.checkCookie ) != -1 ) {
+			if( $.cookie( 'porto-gdpr-preferences' ) && $.cookie( 'porto-gdpr-preferences' ).indexOf( self.options.checkCookie ) != -1 ) {
 				$.ajax({
 					url: self.options.ajaxURL,
 					cache: false,
@@ -4770,7 +4813,10 @@ if( $('[data-copy-to-clipboard]').length ) {
 		color: '#2388ED',
 		animated: false,
 		delay: 300,
-		onlySVG: false
+		onlySVG: false,
+		removeClassAfterInit: false,
+		fadeIn: true,
+		accY: 0
 	};
 
 	PluginIcon.prototype = {
@@ -4841,10 +4887,14 @@ if( $('[data-copy-to-clipboard]').length ) {
 			var SVGContent = $.get({
 				url: $el.attr('src'), 
 				success: function(data, status, xhr){
-					var iconWrapper = $('<div class="animated-icon animated fadeIn">'+ xhr.responseText +'</div>'),
+					var iconWrapper = self.options.fadeIn ? $('<div class="animated-icon animated fadeIn">'+ xhr.responseText +'</div>') : $('<div class="animated-icon animated">'+ xhr.responseText +'</div>'),
 						uniqid = 'icon_' + Math.floor(Math.random() * 26) + Date.now();
 
+					// Add ID
 					iconWrapper.find('svg').attr('id', uniqid);
+
+					// Identify with filename
+					iconWrapper.find('svg').attr('data-filename', $el.attr('src').split(/(\\|\/)/g).pop());
 
 					if( $el.attr('width') ) {
 						iconWrapper.find('svg')
@@ -4866,6 +4916,10 @@ if( $('[data-copy-to-clipboard]').length ) {
 
 					if( self.options.extraClass ) {
 						iconWrapper.addClass( self.options.extraClass );
+					}
+
+					if( self.options.removeClassAfterInit ) {
+						iconWrapper.removeClass(self.options.removeClassAfterInit);
 					}
 
 					if( self.options.onlySVG ) {
@@ -6108,6 +6162,306 @@ if( $('[data-copy-to-clipboard]').length ) {
 
 }).apply(this, [window.theme, jQuery]);
 
+// Random Images
+(function(theme, $) {
+
+	theme = theme || {};
+
+	var instanceName = '__randomimages';
+
+	var PluginRandomImages = function($el, opts) {
+		return this.initialize($el, opts);
+	};
+
+	PluginRandomImages.defaults = {
+		minWindowWidth: 0,
+		random: true,
+		imagesListURL: null,
+		lightboxImagesListURL: null,
+        delay: null,
+        animateIn: 'fadeIn',
+		animateOut: 'fadeOut',
+		stopAtImageIndex: false, // The value shoudl be the index value of array with images as string. Eg: '2' 
+		stopAfterFewSeconds: false, // The value should be in mili-seconds. Eg: 10000 = 10 seconds
+		stopAfterXTimes: false,
+		accY: 0
+	};
+
+	PluginRandomImages.prototype = {
+		initialize: function($el, opts) {
+			this.$el = $el;
+            this.st = '';
+			this.times = 0;
+			this.perImageIndex = 0;
+
+            if( $el.is('img') && typeof opts.imagesListURL == 'undefined' ) {
+                return false;
+            }
+
+            this
+				.setData()
+				.setOptions(opts)
+				.build();
+
+			return this;
+		},
+
+		setData: function() {
+			this.$el.data(instanceName, this);
+
+			return this;
+		},
+
+		setOptions: function(opts) {
+			this.options = $.extend(true, {}, PluginRandomImages.defaults, opts, {
+				wrapper: this.$el
+			});
+
+			return this;
+		},
+
+		build: function() {
+            var self = this;
+			
+			// Control the screens size we want to have the plugin working
+			if( $(window).width() < self.options.minWindowWidth  ) {
+				return false;
+			}
+
+			// Check if is single image or wrapper with images inside
+            if( self.$el.is('img') ) {
+				
+				// Check it's inside a lightbox
+				self.isInsideLightbox = self.$el.closest('.lightbox').length ? true : false;
+
+				// Push the initial image to lightbox list/array
+				if( self.isInsideLightbox && self.options.lightboxImagesListURL ) {
+					self.options.lightboxImagesListURL.push( self.$el.closest('.lightbox').attr('href') );
+				}
+	
+				// Push the current image src to the array
+				self.options.imagesListURL.push( self.$el.attr('src') );
+
+				// Start with lastIndex as the first image loaded on the page
+				self.lastIndex = self.options.imagesListURL.length - 1;
+
+				// Identify the last random image element (if has more than one on the page)
+				if( self.options.random == false ) {
+					$('.plugin-random-images').each(function(i){
+						if( i == $('.plugin-random-images').length - 1 ) {
+							$(this).addClass('the-last');
+						}
+					});
+				}
+
+				// Start the recursive timeout
+				setTimeout(function(){
+					self.recursiveTimeout( 
+						self.perImageTag, 
+						self.options.delay == null ? 3000 : self.options.delay
+					);
+				}, self.options.delay == null ? 300 : self.options.delay / 3);
+
+			} else {
+				
+				// Start the recursive timeout
+				setTimeout( self.recursiveTimeout( 
+					self.perWrapper, 
+					self.options.delay ? self.options.delay : getPerWrapperHighDelay(), 
+					false 
+				), 300);
+
+			}
+
+			// Stop After Few Seconds
+			if( self.options.stopAfterFewSeconds ) {
+				setTimeout(function(){
+					clearTimeout(self.st);
+				}, self.options.stopAfterFewSeconds);
+			}
+			
+			return this;
+
+		},
+
+		perImageTag: function() {
+			var self = this;
+
+			// Generate a random index to make the images rotate randomly
+			var index = self.options.random ? Math.floor(Math.random() * self.options.imagesListURL.length) : self.lastIndex;
+
+			// Avoid repeat the same image
+			if( self.lastIndex !== '' && self.lastIndex == index ) {
+				if( self.options.random ) {
+					while( index == self.lastIndex ) {
+						index = Math.floor(Math.random() * self.options.imagesListURL.length);
+					}
+				} else {
+					index = index - 1;
+					if( index == -1 ) {
+						index = self.options.imagesListURL.length - 1;
+					}
+				}
+			}
+
+			// Turn the image ready for animations
+			self.$el.addClass('animated');
+
+			// Remove the entrance animation class and add the out animation class
+			self.$el.removeClass( self.options.animateIn ).addClass( self.options.animateOut );
+			
+			// Change the image src and add the class for entrance animation
+			setTimeout( function(){
+				self.$el.attr('src', self.options.imagesListURL[index]).removeClass( self.options.animateOut ).addClass(self.options.animateIn);
+
+				if( self.isInsideLightbox && self.options.lightboxImagesListURL ) {
+					self.$el.closest('.lightbox').attr('href', self.options.lightboxImagesListURL[index]);
+				}
+			}, 1000);
+			
+			// Save the last index for future checks
+			self.lastIndex = index;
+			
+			// Increment the times var
+			self.times++;
+
+			// Save the index for stopAtImageIndex option
+			self.perImageIndex = index;
+
+			return this;
+		},
+
+		// Iterate the imaes loop and get the higher value
+		getPerWrapperHighDelay: function() {
+			var self = this,
+				$wrapper = self.$el,
+				delay = 0;
+
+			$wrapper.find('img').each(function(){
+				var $image = $(this);
+				
+				if( $image.data('rimage-delay') && parseInt( $image.data('rimage-delay') ) > delay ) {
+					delay = parseInt( $image.data('rimage-delay') );
+				}
+			});
+
+			return delay;
+		},
+
+		perWrapper: function() {
+			var self = this,
+				$wrapper = self.$el;
+
+			// Turns the imageLlistURL into an array
+			self.options.imagesListURL = [];
+
+			// Find all images inside the element wrapper and push their sources to image list array
+			$wrapper.find('img').each(function(){
+				var $image = $(this);
+				self.options.imagesListURL.push( $image.attr('src') ); 
+			});
+
+			// Shuffle the images list array (random effect)
+			self.options.imagesListURL = self.shuffle( self.options.imagesListURL );
+
+			// Iterate over each image and make some checks like delay for each image, animations, etc...
+			$wrapper.find('img').each(function(index){
+				var $image = $(this),
+					animateIn  = $image.data('rimage-animate-in') ? $image.data('rimage-animate-in') : self.options.animateIn,
+					animateOut = $image.data('rimage-animate-out') ? $image.data('rimage-animate-out') : self.options.animateOut,
+					delay      = $image.data('rimage-delay') ? $image.data('rimage-delay') : 2000;
+
+				$image.addClass('animated');
+
+				setTimeout( function(){
+					$image.removeClass( animateIn ).addClass( animateOut );
+				}, delay / 2);
+
+				setTimeout( function(){
+					$image.attr('src', self.options.imagesListURL[index]).removeClass( animateOut ).addClass(animateIn);
+				}, delay);
+
+			});
+			
+			// Increment the times variable
+			self.times++;
+
+			return this;
+		},
+
+		recursiveTimeout: function(callback, delay) {
+			var self = this;
+
+			var timeout = function() {
+
+				if( callback !== null ) {
+					callback.call(self);
+				}
+
+				// Recursive
+				self.st = setTimeout(timeout, delay == null ? 1000 : delay);
+
+				if( self.options.random == false ) {
+					if( self.$el.hasClass('the-last') ) {
+						$('.plugin-random-images').trigger('rimages.start');
+					} else {
+						clearTimeout(self.st);
+					}
+				}
+
+				// Stop At Image Index
+				if( self.options.stopAtImageIndex && parseInt(self.options.stopAtImageIndex) == self.perImageIndex ) {
+					clearTimeout(self.st);
+				}
+
+				// Stop After X Timers
+				if( self.options.stopAfterXTimes == self.times ) {
+					clearTimeout(self.st);
+				}
+			}
+			timeout();
+
+			self.$el.on('rimages.start', function(){
+				clearTimeout(self.st);
+				self.st = setTimeout(timeout, delay == null ? 1000 : delay);
+			});
+
+		},
+		
+		shuffle: function( array ) {
+			for (var i = array.length - 1; i > 0; i--) {
+				var j = Math.floor(Math.random() * (i + 1));
+				var temp = array[i];
+				array[i] = array[j];
+				array[j] = temp;
+			}
+
+			return array;
+		}
+
+	};
+
+	// expose to scope
+	$.extend(theme, {
+		PluginRandomImages: PluginRandomImages
+	});
+
+	// jquery plugin
+	$.fn.themePluginRandomImages = function(opts) {
+		return this.map(function() {
+			var $this = $(this);
+
+			if ($this.data(instanceName)) {
+				return $this.data(instanceName);
+			} else {
+				return new PluginRandomImages($this, opts);
+			}
+
+		});
+	}
+
+}).apply(this, [window.theme, jQuery]);
+
 // Read More
 (function(theme, $) {
 
@@ -6120,8 +6474,8 @@ if( $('[data-copy-to-clipboard]').length ) {
 	};
 
 	PluginReadMore.defaults = {
-		buttonOpenLabel: 'Read More <i class="fas fa-chevron-down text-2 ml-1"></i>',
-		buttonCloseLabel: 'Read Less <i class="fas fa-chevron-up text-2 ml-1"></i>',
+		buttonOpenLabel: 'Read More <i class="fas fa-chevron-down text-2 ms-1"></i>',
+		buttonCloseLabel: 'Read Less <i class="fas fa-chevron-up text-2 ms-1"></i>',
 		enableToggle: true,
 		maxHeight: 110,
 		overlayColor: '#FFF',
@@ -6666,6 +7020,299 @@ if( $('[data-copy-to-clipboard]').length ) {
 
 }).apply(this, [window.theme, jQuery]);
 
+// Scroll Spy
+(function(theme, $) {
+
+	theme = theme || {};
+
+	var instanceName = '__scrollSpy';
+
+	var PluginScrollSpy = function($el, opts) {
+		return this.initialize($el, opts);
+	};
+
+	PluginScrollSpy.defaults = {
+		target: '#header',
+		debugMode: false
+	};
+
+	PluginScrollSpy.prototype = {
+		initialize: function($el, opts) {
+
+			if( document.querySelector( opts.target ) == null ) {
+				return false;
+			}
+
+			this.$el = $el;
+
+			this
+				.setData()
+				.setOptions(opts);
+
+			if( this.options.debugMode ) {
+				this.debugMode();
+			} 
+			
+			this.build();
+
+			return this;
+		},
+
+		setData: function() {
+			this.$el.data(instanceName, this);
+
+			return this;
+		},
+
+		setOptions: function(opts) {
+			this.options = $.extend(true, {}, PluginScrollSpy.defaults, opts, {
+				wrapper: this.$el
+			});
+
+			return this;
+		},
+
+		build: function() {
+            var self = this,
+                target = document.querySelector( self.options.target ) != null ? document.querySelector( self.options.target ) : false,
+                navItems = target == '#header' || target == '.wrapper-spy' ? target.querySelectorAll('.header-nav .nav > li a') : target.querySelectorAll('.nav > li a');
+
+			// Get all section ID's
+			var sectionIDs = Object.keys(navItems).map(function(key, index) {
+				return navItems[key].hash;
+			});
+
+			// Remove empty values from sectionIDs array
+			sectionIDs = sectionIDs.filter(function(value){
+				return value != ''; 
+			});
+
+			// Store in a global variable
+			self.sectionIDs = sectionIDs;
+
+			for( var i = 0; i < sectionIDs.length; i++ ) {
+
+				// Default Root Margin
+				var rootMargin = '-20% 0px -80% 0px';
+				
+				// Spy Offset
+				if( $( sectionIDs[i] ).data('spy-offset') ) {
+					var rootMarginOffset = $( sectionIDs[i] ).data('spy-offset'),
+						isNegativeOffset = parseInt( rootMarginOffset ) < 0 ? true : false;
+
+					// Mount a new rootMargin based on offset value
+					rootMargin = rootMargin.split(' ').map(function(element, index){
+						if( element.indexOf('%') > 0 ) {
+							var valueToInt = parseInt( element.replace('%','') ),
+								newValue = 0;
+
+							switch ( index ) {
+								case 0:
+									if( isNegativeOffset ) {
+										newValue = valueToInt - rootMarginOffset;
+									} else {
+										newValue = Math.abs(valueToInt) + rootMarginOffset;
+									}
+									break;
+
+								case 2:
+									if( isNegativeOffset ) {
+										newValue = valueToInt + rootMarginOffset;
+									} else {
+										newValue = Math.abs(valueToInt) - rootMarginOffset;
+									}
+									break;
+							
+							}
+
+							if( isNegativeOffset ) {
+								newValue = newValue + '%';
+							} else {
+								newValue = '-' + newValue + '%';
+							}
+
+							return newValue;
+						} else {
+							return element;
+						}
+					}).join(' ');
+				}
+
+				var selector = sectionIDs[i],
+					callback = function() {
+						var $section = $(this);
+
+						if( target == '#header' || target == '.wrapper-spy' ) {
+							$('#header .header-nav .nav > li a').removeClass('active');
+							$('#header .header-nav .nav > li a[href="#'+ $section[0].id +'"]').addClass('active');
+						} else {
+							$( target ).find('.nav > li a').removeClass('active');
+							$( target ).find('.nav > li a[href="#'+ $section[0].id +'"]').addClass('active');
+						}
+						
+					}
+
+				this.scrollSpyIntObs( selector, callback, { 
+					rootMargin: rootMargin,
+					threshold: 0
+				}, true, i, true);
+
+            }
+
+            return this;
+
+		},
+
+		scrollSpyIntObs: function(selector, functionName, intObsOptions, alwaysObserve, index, firstLoad) {
+			var self = this;
+
+			var $el = document.querySelectorAll( selector );
+			var intersectionObserverOptions = {
+				rootMargin: '0px 0px 200px 0px'
+			}
+
+			if( Object.keys(intObsOptions).length ) {
+				intersectionObserverOptions = $.extend(intersectionObserverOptions, intObsOptions);
+			}
+
+			var observer = new IntersectionObserver(function(entries) {
+
+				for(var i=0; i < entries.length; i++) {
+					var entry = entries[i];
+
+					if (entry.intersectionRatio > 0 ) {
+						if( typeof functionName === 'string' ) {
+							var func = Function( 'return ' + functionName )();
+						} else {
+							var callback = functionName;
+
+							callback.call( $(entry.target) );
+						}
+
+						// Unobserve
+						if( !alwaysObserve ) {
+							observer.unobserve(entry.target);   
+						}
+
+					} else {
+						if( firstLoad == false ) {
+							if( index == self.sectionIDs.length - 1 ) {
+								$('#header .header-nav .nav > li a').removeClass('active');
+								$('#header .header-nav .nav > li a[href="#'+ entry.target.id +'"]').parent().prev().find('a').addClass('active');
+							}
+						}
+						firstLoad = false;
+
+					}
+				}
+			}, intersectionObserverOptions);
+			
+			$( $el ).each(function(){
+				observer.observe( $(this)[0] );
+			});
+
+			return this;
+		},
+
+		debugMode: function() {
+			function wrapCallback(cb) {
+				return (...args) => wrapper(cb, ...args)
+			}
+
+			function addFlashingRect(bounds, style = {}, entry) {
+				const { width, left, height, top } = bounds
+				const div = document.createElement("div")
+				div.style.position = "fixed"
+				div.style.width = width + "px"
+				div.style.left = left + "px"
+				div.style.top = top + "px"
+				div.style.height = height + "px"
+				div.style.pointerEvents = "none"
+				div.style.transition = "opacity 2s ease-in"
+				div.style.zIndex = 9999999999;
+				Object.assign(div.style, style)
+				requestAnimationFrame(() =>
+					requestAnimationFrame(() => {
+					div.style.opacity = 0
+				})
+				)
+				div.addEventListener("transitionend", () => {
+					document.body.removeChild(div)
+				})
+				
+				document.body.appendChild(div)
+
+				if( entry ) {
+					var newdiv = document.createElement("div");
+					
+					newdiv.style.backgroundColor = '#000';
+					newdiv.style.color = '#FFF';
+					newdiv.style.paddingTop = '10px';
+					newdiv.style.paddingRight = '10px';
+					newdiv.style.paddingLeft = '10px';
+					newdiv.style.paddingBottom = '10px';
+					newdiv.innerHTML = entry.target.id;
+					div.appendChild( newdiv );
+				}
+				
+				return div
+			}
+
+			const iodOptions = {
+				rootColor: "#9428AB",
+				enterColor: "#B35C00",
+				exitColor: "#035570",
+				interColor: "#9CAF00BB",
+			}
+
+			function showEntry(entry) {
+				addFlashingRect(entry.rootBounds, {
+					border: `${Math.min(10, entry.rootBounds.height / 2)}px solid ${
+					iodOptions.rootColor
+					}`,
+					overflow: "hidden",
+					boxSizing: "border-box",
+				}, entry);
+			}
+
+			function wrapper(cb, entries, observer) {
+				entries.forEach(showEntry)
+				return cb(entries, observer)
+			}
+
+			if (typeof window != "undefined") {
+				window.IntersectionObserver = class extends IntersectionObserver {
+					constructor(cb, o) {
+						super(wrapCallback(cb), o)
+					}
+				}
+			}
+
+			return this;
+		}
+	};
+
+	// expose to scope
+	$.extend(theme, {
+		PluginScrollSpy: PluginScrollSpy
+	});
+
+	// jquery plugin
+	$.fn.themePluginScrollSpy = function(opts) {
+		return this.map(function() {
+			var $this = $(this);
+
+			if ($this.data(instanceName)) {
+				return $this.data(instanceName);
+			} else {
+				return new PluginScrollSpy($this, opts);
+			}
+
+		});
+	}
+
+}).apply(this, [window.theme, jQuery]);
+
 // Scroll to Top
 (function(theme, $) {
 
@@ -6749,7 +7396,7 @@ if( $('[data-copy-to-clipboard]').length ) {
 				// Click Element Action
 				self.$el.on('click', function(e) {
 					e.preventDefault();
-					$('body, html').animate({
+					$('html').animate({
 						scrollTop: 0
 					}, self.options.delay, self.options.easing);
 					return false;
@@ -7722,6 +8369,11 @@ if( $('[data-copy-to-clipboard]').length ) {
 				hashFilter = null,
 				initHashFilter = '.' + location.hash.replace('#', '');
 
+			// Check if has scroll to section trough URL hash and prevent the sort plugin from show nothing
+			if( $(location.hash).length ) {
+				initHashFilter = '.';
+			}
+
 			if (initHashFilter != '.' && initHashFilter != '.*') {
 				self.setFilter(initHashFilter);
 			}
@@ -8045,9 +8697,9 @@ if( $('[data-copy-to-clipboard]').length ) {
 			}
 
 			// Refresh Sticky Plugin if click in a data-toggle="collapse"
-			if( $('[data-toggle="collapse"]').get(0) ) {
+			if( $('[data-bs-toggle="collapse"]').get(0) ) {
 
-				$('[data-toggle="collapse"]').on('click', function(){
+				$('[data-bs-toggle="collapse"]').on('click', function(){
 					setTimeout(function(){
 						self.build();
 						$(window).trigger('scroll');
@@ -8579,6 +9231,8 @@ if( $('[data-copy-to-clipboard]').length ) {
 					}, 500)
 				});
 			}
+
+			$(window).trigger('vide.video.inserted.on.dom');
 
 			return this;
 		},
@@ -9294,13 +9948,19 @@ if( $('[data-copy-to-clipboard]').length ) {
 						if( !$this.data('__dataHashBinded') ) {
 							var target = $this.attr('href'),
 								offset = ($this.is("[data-hash-offset]") ? $this.data('hash-offset') : 0),
-								delay  = ($this.is("[data-hash-delay]") ? $this.data('hash-delay') : 0);
+								delay  = ($this.is("[data-hash-delay]") ? $this.data('hash-delay') : 0),
+								force  = ($this.is("[data-hash-force]") ? true : false);
+
+							if( !$(target).length ) {
+								target = target.split('#');
+								target = '#'+target[1];
+							}
 
 							if( target.indexOf('#') != -1 && $(target).length) {
 								$this.on('click', function(e) {
 									e.preventDefault();
 
-									if( !$(e.target).is('i') ) {
+									if( !$(e.target).is('i') || force ) {
 
 										setTimeout(function(){
 
@@ -9322,8 +9982,15 @@ if( $('[data-copy-to-clipboard]').length ) {
 													clickDelay = $this.data('hash-trigger-click-delay') ? $this.data('hash-trigger-click-delay') : 0;
 
 												if( $clickTarget.length ) {
+
 													setTimeout(function(){
-														$clickTarget.trigger('click');
+														// If is a "Tabs" plugin link
+														if( $clickTarget.closest('.nav-tabs').length ) {
+															new bootstrap.Tab( $clickTarget[0] ).show();
+														} else {
+															$clickTarget.trigger('click');
+														}
+														
 													}, clickDelay);
 												}
 
@@ -9374,13 +10041,14 @@ if( $('[data-copy-to-clipboard]').length ) {
 
 					$('.side-panel-toggle').on('click', function(e){
 						var extra_class = $(this).data('extra-class'),
-							delay       = ( extra_class ) ? 100 : 0;
+							delay       = ( extra_class ) ? 100 : 0,
+							isActive    = $(this).data('is-active') ? $(this).data('is-active') : false;
 
 						e.preventDefault();
 
-						if( $(this).hasClass('active') ) {
+						if( isActive ) {
 							$('html').removeClass('side-panel-open');
-							$('.hamburguer-btn.side-panel-toggle:not(.side-panel-close)').removeClass('active');
+							$(this).data('is-active', false);
 							return false;
 						}
 
@@ -9391,11 +10059,12 @@ if( $('[data-copy-to-clipboard]').length ) {
 								.addClass( init_html_class )
 								.addClass( extra_class );
 						}
-
 						setTimeout(function(){
 							$('.side-panel-wrapper').css('transition','');
 							$('html').toggleClass('side-panel-open');
 						}, delay);
+
+						$(this).data('is-active', true);						
 					});
 
 					$(document).on('click', function(e){
@@ -9409,7 +10078,7 @@ if( $('[data-copy-to-clipboard]').length ) {
 				return this;
 			},
 
-			scrollToTarget: function(target, offset) {
+			scrollToTarget: function(target, offset, stopFlag) {
 				var self = this;
 
 				$('body').addClass('scrolling');
@@ -9420,8 +10089,12 @@ if( $('[data-copy-to-clipboard]').length ) {
 					$('body').removeClass('scrolling');
 
 					// If by some reason the scroll finishes in a wrong position, this code will run the scrollToTarget() again until get the correct position
+					// We need do it just one time to prevent infinite recursive loop at scrollToTarget() function
 					if( !theme.fn.isElementInView( $(target) ) ) {
-						self.scrollToTarget( target, offset );
+						if( stopFlag == false ) {
+							self.scrollToTarget( target, offset, false );
+							stopFlag = true;
+						}
 					}
 				});
 
@@ -9634,7 +10307,7 @@ if( $('[data-copy-to-clipboard]').length ) {
 				headerBody: $('#header .header-body'),
 				stickyEnabled: true,
 				stickyEnableOnBoxed: true,
-				stickyEnableOnMobile: true,
+				stickyEnableOnMobile: false,
 				stickyStartAt: 0,
 				stickyStartAtElement: false,
 				stickySetTop: 0,
@@ -9642,13 +10315,15 @@ if( $('[data-copy-to-clipboard]').length ) {
 				stickyHeaderContainerHeight: false,
 				stickyChangeLogo: false,
 				stickyChangeLogoWrapper: true,
-				stickyForce: false
+				stickyForce: false,
+				stickyScrollUp: false,
+				stickyScrollValue: 0
 			},
 
 			initialize: function($wrapper, opts) {
 				if (initialized) {
 					return this;
-				}
+				}				
 
 				initialized = true;
 				this.$wrapper = ($wrapper || this.defaults.wrapper);
@@ -9667,11 +10342,15 @@ if( $('[data-copy-to-clipboard]').length ) {
 
 			setOptions: function(opts) {
 				this.options = $.extend(true, {}, this.defaults, opts, theme.fn.getOptions(this.$wrapper.data('plugin-options')));
-
 				return this;
 			},
 
 			build: function() {
+				if( $(window).width() < 992 && this.options.stickyEnableOnMobile == false ) {
+					$('html').addClass('sticky-header-mobile-disabled');
+					return this;
+				}
+
 				if (!this.options.stickyEnableOnBoxed && $('html').hasClass('boxed') || $('html').hasClass('side-header-hamburguer-sidebar') && !this.options.stickyForce || !this.options.stickyEnabled) {
 					return this;
 				}
@@ -9682,7 +10361,6 @@ if( $('[data-copy-to-clipboard]').length ) {
 					self.options.wrapper = $('.header');
 					self.options.headerBody = $('.header .header-body');
 				}
-
 				
 				var	$html = $('html'),
 					$window = $(window),
@@ -9697,6 +10375,10 @@ if( $('[data-copy-to-clipboard]').length ) {
 				if (parseInt(self.options.stickySetTop) < 0) {
 					$html.addClass('sticky-header-negative');
 				}
+
+				if (self.options.stickyScrollUp) {
+					$html.addClass('sticky-header-scroll-direction');
+				}				
 
 				// Notice Top Bar First Load
 				if( $('.notice-top-bar').get(0) ) {
@@ -9814,14 +10496,35 @@ if( $('[data-copy-to-clipboard]').length ) {
 							activate_flag = true;
 						}
 					}
+
+					// Scroll Up
+					if (self.options.stickyScrollUp) {
+						
+					    // Get the new Value
+					    self.options.stickyScrollNewValue = window.pageYOffset;
+
+					    //Subtract the two and conclude
+					    if(self.options.stickyScrollValue - self.options.stickyScrollNewValue < 0){
+					        $html.removeClass('sticky-header-scroll-up').addClass('sticky-header-scroll-down');
+					    } else if(self.options.stickyScrollValue - self.options.stickyScrollNewValue > 0){
+					        $html.removeClass('sticky-header-scroll-down').addClass('sticky-header-scroll-up');
+					    }
+
+					    // Update the old value
+					    self.options.stickyScrollValue = self.options.stickyScrollNewValue;
+
+					}
 				};
 				
 				// Activate Sticky Header
 				self.activateStickyHeader = function() {
 					if ($window.width() < 992) {
-						if (!self.options.stickyEnableOnMobile) {
+						if (self.options.stickyEnableOnMobile == false) {
 							self.deactivateStickyHeader();
-							return;
+							self.options.headerBody.css({
+								position: 'relative'
+							});
+							return false;
 						}
 					} else {
 						if (sideHeader) {
@@ -9906,8 +10609,11 @@ if( $('[data-copy-to-clipboard]').length ) {
 
 				// Deactivate Sticky Header
 				self.deactivateStickyHeader = function() {
-
 					$html.removeClass('sticky-header-active');
+
+					if ( $(window).width() < 992 && self.options.stickyEnableOnMobile == false) {
+						return false;
+					}
 
 					// Sticky Effect - Shrink
 					if( self.options.stickyEffect == 'shrink' ) {
@@ -10046,13 +10752,31 @@ if( $('[data-copy-to-clipboard]').length ) {
 			events: function() {
 				var self = this;
 
+				if( $(window).width() < 992 && this.options.stickyEnableOnMobile == false ) {
+					return this;
+				}
+
 				if (!this.options.stickyEnableOnBoxed && $('body').hasClass('boxed') || $('html').hasClass('side-header-hamburguer-sidebar') && !this.options.stickyForce || !this.options.stickyEnabled) {
 					return this;
 				}
 
 				if (!self.options.alwaysStickyEnabled) {
 					$(window).on('scroll resize', function() {
-						self.checkStickyHeader();
+						if ( $(window).width() < 992 && self.options.stickyEnableOnMobile == false) {
+							self.options.headerBody.css({
+								position: ''
+							});
+
+							if( self.options.stickyEffect == 'shrink' ) {
+								self.options.wrapper.find('.header-top').css({
+									height: ''
+								});
+							}
+
+							self.deactivateStickyHeader();
+						} else {
+							self.checkStickyHeader();
+						}
 					});
 				} else {
 					self.activateStickyHeader();

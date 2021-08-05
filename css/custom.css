@@ -1,4 +1,14 @@
-/* Add here all your CSS customizations */
 .kpl-custom-bg {
-    background-color: #FFEAEE;
+  background-color: #ffeaee !important;
+}
+
+.process-quaternary .process-step-circle {
+  border-color: #439a86;
+}
+.process-quaternary .process-step:hover .process-step-circle {
+  background-color: #439a86;
+}
+
+#header.header-transparent .header-body:not(.header-border-bottom) {
+  border-bottom: 0 !important;
 }

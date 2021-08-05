@@ -1,7 +1,7 @@
 /*
 Name: 			View - Contact
 Written by: 	Okler Themes - (http://www.okler.net)
-Theme Version:	8.3.0
+Theme Version:	9.1.0
 */
 
 (function($) {
@@ -14,11 +14,11 @@ Theme Version:	8.3.0
 	
 	// No White Space
 	$.validator.addMethod("noSpace", function(value, element) {
-    	if( $(element).attr('required') ) {
-    		return value.search(/[a-zA-Z0-9À-žа-яА-ЯёЁα-ωΑ-Ω\s\u0621-\u064A\u0660-\u0669 ]/i) == 0;
-    	}
+		if( $(element).attr('required') ) {
+			return value.search(/^(?! *$)[^]+$/) == 0;
+		}
 
-    	return true;
+		return true;
 	}, 'Please fill this empty field.');
 
 	/*
@@ -64,7 +64,11 @@ Theme Version:	8.3.0
 					data = {};
 
 				$(formData).each(function(index, obj){
-				    data[obj.name] = obj.value;
+					if( data[obj.name] ) {
+						data[obj.name] = data[obj.name] + ', ' + obj.value;						
+					} else {
+						data[obj.name] = obj.value;
+					}
 				});
 
 				// Google Recaptcha v2
@@ -190,7 +194,10 @@ Theme Version:	8.3.0
 
 				$submitButton.val( $submitButton.data('loading-text') ? $submitButton.data('loading-text') : 'Loading...' ).attr('disabled', true);
 
-				var site_key = $('#google-recaptcha-v3').attr('src').split("render=")[1];
+				var recaptchaSrcURL = $('#google-recaptcha-v3').attr('src'),
+					newURL          = new URL(recaptchaSrcURL),
+					site_key        = newURL.searchParams.get("render");
+
 				grecaptcha.execute(site_key, {action: 'contact_us'}).then(function(token) {
 
 					// Fields Data

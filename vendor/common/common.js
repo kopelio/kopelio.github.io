@@ -90,45 +90,29 @@ Theme Version:	8.0.0
 	}
 
 	/*
-	Tooltip and Popover
-	*/
-	$(window).on('load', function() {
-		if( $('[data-toggle="tooltip"]').length ) {
-			$('[data-toggle="tooltip"]').tooltip();
-		}
-		if( $('[data-toggle="popover"]').length ) {
-			$('[data-toggle="popover"]').popover();
-		}
-	});
-
-	/*
 	Tabs
 	*/
-	if( $('a[data-toggle="tab"]').length ) {
-		$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+	if( $('a[data-bs-toggle="tab"]').length ) {
+		$('a[data-bs-toggle="tab"]').on('shown.bs.tab', function (e) {
+			var $tabPane = $($(e.target).attr('href'));
+
+			// Carousel Refresh
+			if($tabPane.length) {
+				$tabPane.find('.owl-carousel').trigger('refresh.owl.carousel');
+			}
+
+			// Change Active Class
 			$(this).parents('.nav-tabs').find('.active').removeClass('active');
 			$(this).addClass('active').parent().addClass('active');
 		});	
-	}
 
-	if( window.location.hash ) {
-		$(window).on('load', function(){
-			if( $( window.location.hash ).get(0) ) {
-				$('a.nav-link[href="'+ window.location.hash +'"]:not([data-hash])').trigger('click');
-			}
-		});
-	}
-
-	if( $('a[data-toggle="tab"]').length ) {
-		$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-			var $tabPane = $($(e.target).attr('href'));
-
-			if($tabPane.length) {
-
-				// Carousel Refresh
-				$tabPane.find('.owl-carousel').trigger('refresh.owl.carousel');
-			}
-		});
+		if( window.location.hash ) {
+			$(window).on('load', function(){
+				if( window.location.hash !== '*' && $( window.location.hash ).get(0) ) {
+					new bootstrap.Tab( $('a.nav-link[href="'+ window.location.hash +'"]:not([data-hash])')[0] ).show();
+				}
+			});
+		}
 	}
 
 	/*
@@ -649,7 +633,7 @@ function aspectRatioSVG() {
 */
 document.addEventListener('lazybeforeunveil', function(e){
     var bg = e.target.getAttribute('data-bg-src');
-    if(bg){
+    if(bg) {
         e.target.style.backgroundImage = 'url(' + bg + ')';
     }
 });
