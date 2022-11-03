@@ -464,10 +464,9 @@
           <!-- CONTENU -->
           <div class="container shop py-5">
             <form
-              role="form"
               class="needs-validation"
-              method="post"
-              action="https://formspree.io/f/mzbyekbl"
+              method="POST"
+              action="https://mailthis.to/kopelio.me@gmail.com"
             >
               <div class="row">
                 <!-- FORMULAIRE -->
@@ -546,11 +545,8 @@
                   </div>
                   <button
                     type="submit"
-                    data-hash
-                    data-hash-offset="70"
-                    class="btn btn-primary btn-rounded font-weight-bold text-3-5 mt-3 px-5 py-3 appear-animation"
-                    data-appear-animation="fadeInUpShorter"
-                    data-appear-animation-delay="1200"
+                    value="Send"
+                    class="btn btn-primary btn-rounded font-weight-bold text-3-5 mt-3 px-5 py-3"
                   >
                     Envoyer
                   </button>
@@ -589,6 +585,22 @@
                   </div>
                 </div>
               </div>
+              <input
+                type="hidden"
+                name="_subject"
+                value="Contact form submitted"
+              />
+              <input
+                type="hidden"
+                name="_after"
+                value="https://myhomepage.net/"
+              />
+              <input type="hidden" name="_honeypot" value="" />
+              <input
+                type="hidden"
+                name="_confirmation"
+                value="Merci pour votre intérêt."
+              />
             </form>
           </div>
         </section>
